@@ -1,3 +1,23 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773150326
+::res://::1773155368
+Comfortaa-Bold.ttf::FontFile::4017747718940744598::1773155368::1773155368::1::::<><><>0<>0<>b99d86fce991cd77ff540d117ca4d88f<>res://.godot/imported/Comfortaa-Bold.ttf-2375c54fcc62998855f058ba7a626adb.fontdata::
+editundo.ttf::FontFile::3731424344729910977::1773155177::1773155177::1::::<><><>0<>0<>d2fb670c884f59daadbc3e441ea1bb57<>res://.godot/imported/editundo.ttf-077e38c22d202da0086250dcfa9a3e95.fontdata::
 icon.svg::CompressedTexture2D::3462513296609380292::1773150315::1773150328::1::::<><><>0<>0<>3756452922b00c53abd25fd2764bb81c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Minecraft.ttf::FontFile::6952198871095206842::1773155267::1773155271::1::::<><><>0<>0<>58e02784e18d15ec084a716cfc2cbbec<>res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata::
+Mini Pixel.ttf::FontFile::8221805947996771014::1773155328::1773155328::1::::<><><>0<>0<>f0cda6cc0e17d21a247670dcd1d3f743<>res://.godot/imported/Mini Pixel.ttf-590bd13d57c2132008e1703337d3fe7c.fontdata::
+README.md::TextFile::-1::1773150389::0::1::::<><><>0<>0<><>::
+Test.tscn::PackedScene::-1::1773152770::0::1::::<><><>0<>0<><>::
+::res://addons/::1773152768
+::res://addons/godot_super-wakatime/::1773152768
+api_key_prompt.tscn::PackedScene::3919262858641749045::1773152768::0::1::::<><><>0<>0<><>::
+counter.tscn::PackedScene::6849360014225833986::1773152768::0::1::::<><><>0<>0<><>::
+decompressor.gd::GDScript::513498479588648040::1773152768::0::1::::<>RefCounted<><>0<>0<><>::
+godot_super-wakatime.gd::GDScript::6277149880384411866::1773152768::0::1::::<>EditorPlugin<><>0<>1<><>::
+plugin.cfg::TextFile::-1::1773152768::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1773152768::0::1::::<><><>0<>0<><>::
+utils.gd::GDScript::5251015809120159908::1773152768::0::1::::<>RefCounted<><>0<>0<><>::
+::res://Assets/::1773151147
+::res://Scenes/::1773153764
+LoadInAnimation.tscn::PackedScene::8868100024952291993::1773153764::0::1::::<><><>0<>0<><>::uid://bpljc84kdevmi::::res://icon.svg
+::res://Scripts/::1773151112
+::res://Sounds/::1773155271
