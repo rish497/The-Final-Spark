@@ -101,7 +101,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxEmpty_x7wcp")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_npgmo")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_lyvr3")
-placeholder_text = "Type \"make new game\""
+placeholder_text = "Type \"make a new game\""
 
 [node name="Button" type="Button" parent="Textpage/SearchBar"]
 layout_mode = 0

@@ -26,7 +26,7 @@ func _on_button_pressed() -> void:
 	text_edit.text = ""
 	text_edit.release_focus()
 
-	if input_text == "make new game":
+	if input_text == "make a new game":
 		label.text = "new game"
 		m_1.visible = true
 		r_1.visible = true
@@ -42,6 +42,7 @@ func _on_button_pressed() -> void:
 		text_edit.editable = false
 		text_edit.placeholder_text = "ask anything"
 		await type_text(r2_label)
+		Transition.change_scene(self,"LoadInAnimation")
 
 	else:
 		if not m_1.visible:
