@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://djfvc2vbxdyk3"]
+
+[ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_v11cg"]
+[ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="2_crdae"]
+[ext_resource type="Script" uid="uid://bnv8e0g0nro4a" path="res://Scripts/upgradesds.gd" id="2_m7i5g"]
+[ext_resource type="Texture2D" uid="uid://b6foi2qq7q8pn" path="res://Assets/New Piskel-10.png (11).png" id="3_m7i5g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6jq0"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[node name="start2" type="NinePatchRect"]
+offset_left = -72.5
+offset_top = -156.25
+offset_right = 244.6875
+offset_bottom = 21.875
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_v11cg")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_m7i5g")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("2_crdae")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 118.75
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("2_crdae")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 90.625015
+offset_top = 129.6875
+offset_right = 212.62502
+offset_bottom = 155.6875
+theme_override_styles/panel = SubResource("StyleBoxFlat_k6jq0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_m7i5g")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("2_crdae")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1

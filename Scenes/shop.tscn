@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://blur4qyv8vfn2"]
+
+[ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_2shtd"]
+[ext_resource type="Script" uid="uid://c85cxp1fd2rho" path="res://Scripts/upgrade.gd" id="2_fdj0q"]
+[ext_resource type="PackedScene" uid="uid://djfvc2vbxdyk3" path="res://Scenes/upgradesds.tscn" id="3_io27d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdj0q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k6jq0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ps1r"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 540.0
+offset_right = 627.0
+offset_bottom = 634.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="start" type="Button" parent="start"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="start2" parent="start" instance=ExtResource("3_io27d")]
+visible = false
+layout_mode = 0
+offset_left = -78.75
+offset_top = -153.75
+offset_right = 238.4375
+offset_bottom = 24.375
+
+[connection signal="mouse_entered" from="start/start" to="start" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="start/start" to="start" method="_on_start_mouse_exited"]

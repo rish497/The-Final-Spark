@@ -1,0 +1,125 @@
+[gd_scene load_steps=11 format=3 uid="uid://dpybfhptul0kh"]
+
+[ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_ptolr"]
+[ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="2_hnmit"]
+[ext_resource type="PackedScene" uid="uid://c8ucf62hrcrep" path="res://Scenes/pfpitem.tscn" id="2_ptolr"]
+[ext_resource type="Texture2D" uid="uid://bwre7vu8d2g16" path="res://Assets/New Piskel-9.png (3).png" id="3_4mau4"]
+[ext_resource type="Texture2D" uid="uid://bgvl0got04m38" path="res://Assets/New Piskel-3.png (3).png" id="4_bb1td"]
+[ext_resource type="Texture2D" uid="uid://dt4ain24db2p4" path="res://Assets/New Piskel-1.png (10).png" id="5_46657"]
+[ext_resource type="Texture2D" uid="uid://dpu7s4jdwbd0a" path="res://Assets/New Piskel-4.png (4).png" id="6_1ne4b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nn5of"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gx5h7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mau4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = 1.0
+offset_right = -35.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="pfp" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 21.0
+offset_right = 1167.0
+offset_bottom = 103.0
+texture = ExtResource("1_ptolr")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="PFP" type="Button" parent="pfp"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 8.14035
+offset_bottom = 82.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nn5of")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gx5h7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4mau4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4mau4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4mau4")
+
+[node name="pfp2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 127.0
+offset_right = 968.0
+offset_bottom = 556.0
+texture = ExtResource("1_ptolr")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="pfp2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 893.0
+offset_bottom = 416.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pfp2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pfp2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+itemname = "AMONG US"
+itemimage = ExtResource("3_4mau4")
+itemprice = "100"
+itemdescription = "It turns out your were the imposter all along"
+
+[node name="Panel2" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+itemname = "GHOST"
+itemimage = ExtResource("4_bb1td")
+itemprice = "100"
+itemdescription = "The ghostbusters better catch this guy fast or who knows what it could boo"
+
+[node name="Panel3" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+itemname = "BEAR"
+itemimage = ExtResource("5_46657")
+itemprice = "100"
+itemdescription = "Is it a black bear or a white bear?"
+
+[node name="Panel4" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+itemname = "Darth Wader"
+itemimage = ExtResource("6_1ne4b")
+itemprice = "100"
+itemdescription = "May the force be with you!"
+
+[node name="Label" type="Label" parent="pfp2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -68.0
+offset_right = 810.0
+offset_bottom = 3.0
+theme_override_fonts/font = ExtResource("2_hnmit")
+theme_override_font_sizes/font_size = 80
+text = "PROFILe PICTURE SHOP"
+vertical_alignment = 1

@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8ucf62hrcrep"]
+
+[ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="1_k55wb"]
+[ext_resource type="Script" uid="uid://c8nqo2ce02ga1" path="res://Scripts/pfpitem.gd" id="1_ow1sb"]
+[ext_resource type="Texture2D" uid="uid://2nw7qveertjq" path="res://Assets/New Piskel-7.png (5).png" id="2_ygrii"]
+[ext_resource type="Texture2D" uid="uid://b6foi2qq7q8pn" path="res://Assets/New Piskel-10.png (11).png" id="3_ygrii"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppcjw"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5qv8"]
+bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k55wb"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ygrii"]
+
+[node name="Panel" type="Panel"]
+offset_right = 238.0
+offset_bottom = 408.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ppcjw")
+script = ExtResource("1_ow1sb")
+
+[node name="BorderPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 231.0
+offset_bottom = 400.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w5qv8")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 275.0
+offset_right = 226.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("1_k55wb")
+text = "this is about a guy who live is francisco and this is a very cool painting ooh test 123"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 15.0
+offset_right = 226.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("1_k55wb")
+theme_override_font_sizes/font_size = 24
+text = "TOUR THE EIFFEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 63.0
+offset_right = 220.0
+offset_bottom = 263.0
+texture = ExtResource("2_ygrii")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 367.0
+offset_right = 182.0
+offset_bottom = 390.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k55wb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_ygrii")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("1_k55wb")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 367.0
+offset_right = 182.0
+offset_bottom = 393.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ygrii")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ygrii")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ygrii")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ygrii")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ygrii")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 408.0
+
+[node name="Label3" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 170.0
+offset_right = 226.0
+offset_bottom = 255.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("1_k55wb")
+theme_override_font_sizes/font_size = 35
+text = "NOT ENOUGH MONEY "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 408.0
+
+[node name="Label3" type="Label" parent="ColorRect2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 170.0
+offset_right = 226.0
+offset_bottom = 255.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("1_k55wb")
+theme_override_font_sizes/font_size = 35
+text = "SUCCESSFULLY BOUGHT"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

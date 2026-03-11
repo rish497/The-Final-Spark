@@ -27,7 +27,7 @@ func _on_button_pressed() -> void:
 	text_edit.release_focus()
 
 	if input_text == "make a new game":
-		label.text = "new game"
+		label.text = "Brand new game"
 		m_1.visible = true
 		r_1.visible = true
 		text_edit.editable = false

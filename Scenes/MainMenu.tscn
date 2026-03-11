@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxybe6rkrn83l"]
+[gd_scene load_steps=9 format=3 uid="uid://dxybe6rkrn83l"]
 
 [ext_resource type="Script" uid="uid://darylyobwq2fo" path="res://Scripts/main_menu.gd" id="1_ghw46"]
 [ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_tt5f1"]
@@ -6,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cbgbmx5uc37ju" path="res://Scenes/electricity.tscn" id="4_ghw46"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8saeu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghw46"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_df05h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8um5k"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -34,7 +40,7 @@ shape = SubResource("WorldBoundaryShape2D_8saeu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+[node name="title" type="NinePatchRect" parent="CanvasLayer"]
 offset_left = 10.0
 offset_top = 26.0
 offset_right = 1143.0
@@ -45,7 +51,7 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 
-[node name="THE" type="Label" parent="CanvasLayer/NinePatchRect"]
+[node name="THE" type="Label" parent="CanvasLayer/title"]
 layout_mode = 0
 offset_left = 24.0
 offset_top = -3.0
@@ -56,7 +62,7 @@ theme_override_fonts/font = ExtResource("2_853f1")
 theme_override_font_sizes/font_size = 150
 text = "THE"
 
-[node name="FINAL" type="Label" parent="CanvasLayer/NinePatchRect"]
+[node name="FINAL" type="Label" parent="CanvasLayer/title"]
 layout_mode = 0
 offset_left = 314.0
 offset_top = -3.0
@@ -67,7 +73,7 @@ theme_override_fonts/font = ExtResource("2_853f1")
 theme_override_font_sizes/font_size = 150
 text = "FINAL"
 
-[node name="SPARK" type="Label" parent="CanvasLayer/NinePatchRect"]
+[node name="SPARK" type="Label" parent="CanvasLayer/title"]
 layout_mode = 0
 offset_left = 753.0
 offset_top = -6.0
@@ -77,3 +83,113 @@ theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 theme_override_fonts/font = ExtResource("2_853f1")
 theme_override_font_sizes/font_size = 150
 text = "SPARK"
+
+[node name="start" type="NinePatchRect" parent="CanvasLayer"]
+offset_left = 324.0
+offset_top = 235.0
+offset_right = 805.0
+offset_bottom = 329.0
+texture = ExtResource("1_tt5f1")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="start game" type="Label" parent="CanvasLayer/start"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 476.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("2_853f1")
+theme_override_font_sizes/font_size = 81
+text = "start game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start" type="Button" parent="CanvasLayer/start"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.86841
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ghw46")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_df05h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
+
+[node name="shop" type="NinePatchRect" parent="CanvasLayer"]
+offset_left = 324.0
+offset_top = 367.0
+offset_right = 805.0
+offset_bottom = 461.0
+texture = ExtResource("1_tt5f1")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="shoplabel" type="Label" parent="CanvasLayer/shop"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 476.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("2_853f1")
+theme_override_font_sizes/font_size = 81
+text = "shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="shop" type="Button" parent="CanvasLayer/shop"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 36.86841
+offset_bottom = 93.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ghw46")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_df05h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
+
+[node name="exit" type="NinePatchRect" parent="CanvasLayer"]
+offset_left = 324.0
+offset_top = 496.0
+offset_right = 805.0
+offset_bottom = 590.0
+texture = ExtResource("1_tt5f1")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="exitgame" type="Label" parent="CanvasLayer/exit"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 476.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("2_853f1")
+theme_override_font_sizes/font_size = 81
+text = "exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit" type="Button" parent="CanvasLayer/exit"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.86841
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ghw46")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_df05h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")

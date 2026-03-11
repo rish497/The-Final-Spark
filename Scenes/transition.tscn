@@ -33,7 +33,7 @@ shader_parameter/progress_bias = Vector2(10, 10)
 
 [sub_resource type="Gradient" id="Gradient_ah04o"]
 offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.12941177, 0.12941177, 0.12941177, 1)
+colors = PackedColorArray(0.8784314, 0.8784314, 0.8784314, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vlteq"]
 gradient = SubResource("Gradient_ah04o")

@@ -1,9 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://dyl1kunvihgdd"]
+[gd_scene load_steps=17 format=3 uid="uid://dyl1kunvihgdd"]
 
 [ext_resource type="Script" uid="uid://eaxo4knw0gs" path="res://Scripts/load_in_animation.gd" id="1_npgmo"]
-[ext_resource type="Texture2D" uid="uid://bpljc84kdevmi" path="res://icon.svg" id="1_t5htj"]
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="1_x7wcp"]
+[ext_resource type="Texture2D" uid="uid://jcmret8s86ln" path="res://Assets/New Piskel-6.png (4).png" id="3_vmbk7"]
 [ext_resource type="Texture2D" uid="uid://c8mr5pxomtisd" path="res://Assets/New Piskel-1.png (5).png" id="4_lyvr3"]
+[ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="5_w37wp"]
+[ext_resource type="Texture2D" uid="uid://d0av0jcvcn1kj" path="res://Assets/New Piskel-5.png (3).png" id="6_vmbk7"]
+[ext_resource type="Texture2D" uid="uid://djocqfqui2mjl" path="res://Assets/New Piskel-1.png (9).png" id="7_80an2"]
+[ext_resource type="Texture2D" uid="uid://cy3mj13ovw35o" path="res://Assets/New Piskel-2.png (5).png" id="8_7nn56"]
+[ext_resource type="Texture2D" uid="uid://c267nmsa1t6x1" path="res://Assets/New Piskel-3.png (2).png" id="9_fl184"]
+[ext_resource type="Texture2D" uid="uid://cv8avwnj5wipw" path="res://Assets/New Piskel-4.png (3).png" id="10_csmqq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x7wcp"]
 
@@ -11,20 +17,12 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lyvr3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w37wp"]
-bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lu04"]
-bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5311i"]
+texture = ExtResource("5_w37wp")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_brrfc"]
 
@@ -74,7 +72,7 @@ offset_bottom = 55.0
 
 [node name="TextureRect" type="TextureRect" parent="Textpage/SearchBar/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_t5htj")
+texture = ExtResource("3_vmbk7")
 expand_mode = 2
 
 [node name="TextEdit" type="TextEdit" parent="Textpage/SearchBar"]
@@ -85,9 +83,9 @@ offset_right = 769.0
 offset_bottom = 55.0
 size_flags_horizontal = 3
 theme_override_colors/caret_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
-theme_override_colors/selection_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+theme_override_colors/selection_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
-theme_override_colors/font_placeholder_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+theme_override_colors/font_placeholder_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_colors/current_line_color = Color(0.25, 0.25, 0.26, 0.8)
 theme_override_fonts/font = ExtResource("1_x7wcp")
 theme_override_font_sizes/font_size = 24
@@ -98,16 +96,19 @@ placeholder_text = "Type \"make a new game\""
 
 [node name="Button" type="Button" parent="Textpage/SearchBar"]
 layout_mode = 0
-offset_left = 742.0
-offset_top = 11.0
-offset_right = 748.2841
-offset_bottom = 17.284134
+offset_left = 748.0
+offset_top = 15.000001
+offset_right = 753.07104
+offset_bottom = 20.054634
 scale = Vector2(7.3200192, 7.3200192)
-theme_override_styles/normal = SubResource("StyleBoxFlat_w37wp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_w37wp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8lu04")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_w37wp")
-theme_override_styles/focus = SubResource("StyleBoxFlat_w37wp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5311i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5311i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5311i")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5311i")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5311i")
+icon = ExtResource("6_vmbk7")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label2" type="Label" parent="Textpage"]
 layout_mode = 0
@@ -304,8 +305,7 @@ theme_override_constants/separation = 7
 
 [node name="TextureRect" type="TextureRect" parent="Sidebar/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_t5htj")
-expand_mode = 2
+texture = ExtResource("7_80an2")
 
 [node name="Label" type="Label" parent="Sidebar/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -327,8 +327,7 @@ theme_override_constants/separation = 7
 
 [node name="TextureRect" type="TextureRect" parent="Sidebar/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-texture = ExtResource("1_t5htj")
-expand_mode = 2
+texture = ExtResource("8_7nn56")
 
 [node name="Label" type="Label" parent="Sidebar/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
@@ -350,8 +349,7 @@ theme_override_constants/separation = 7
 
 [node name="TextureRect" type="TextureRect" parent="Sidebar/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
-texture = ExtResource("1_t5htj")
-expand_mode = 2
+texture = ExtResource("9_fl184")
 
 [node name="Label" type="Label" parent="Sidebar/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
@@ -373,8 +371,7 @@ theme_override_constants/separation = 7
 
 [node name="TextureRect" type="TextureRect" parent="Sidebar/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
-texture = ExtResource("1_t5htj")
-expand_mode = 2
+texture = ExtResource("10_csmqq")
 
 [node name="Label" type="Label" parent="Sidebar/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
