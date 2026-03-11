@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var speed := 200
+var speed := 100
 
 func _physics_process(delta):
 
@@ -39,11 +39,11 @@ func update_animation(dir: Vector2):
 
 	elif deg >= 112.5 and deg < 157.5:
 		sprite.play("SER")
-		sprite.flip_h = true   # SW = flip SE
+		sprite.flip_h = true
 
 	elif deg >= 157.5 or deg < -157.5:
 		sprite.play("ER")
-		sprite.flip_h = true   # W = flip E
+		sprite.flip_h = true
 
 	elif deg >= -157.5 and deg < -112.5:
 		sprite.play("NWR")
@@ -53,7 +53,7 @@ func update_animation(dir: Vector2):
 
 	elif deg >= -67.5 and deg < -22.5:
 		sprite.play("NWR")
-		sprite.flip_h = true   # NE flip NW
+		sprite.flip_h = true
 		
 func play_idle():
 

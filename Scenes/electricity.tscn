@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbgbmx5uc37ju"]
+
+[ext_resource type="Script" uid="uid://cqbyt2akmqa2m" path="res://Scripts/electricity.gd" id="1_07t1r"]
+[ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="1_j25xq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j25xq"]
+size = Vector2(1227, 325)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_07t1r")
+
+[node name="NewPiskel(18)" type="Sprite2D" parent="."]
+position = Vector2(136, -82)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)3" type="Sprite2D" parent="."]
+position = Vector2(364, -76.99999)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)5" type="Sprite2D" parent="."]
+position = Vector2(595, -78.40503)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)7" type="Sprite2D" parent="."]
+position = Vector2(822, -78.40503)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)9" type="Sprite2D" parent="."]
+position = Vector2(1066, -78.405045)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)11" type="Sprite2D" parent="."]
+position = Vector2(29.594955, -210.40501)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)13" type="Sprite2D" parent="."]
+position = Vector2(262.18994, -210.40503)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)15" type="Sprite2D" parent="."]
+position = Vector2(483.18994, -210.40503)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)17" type="Sprite2D" parent="."]
+position = Vector2(715.7849, -210.40503)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)19" type="Sprite2D" parent="."]
+position = Vector2(959.18994, -210.40504)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="NewPiskel(18)21" type="Sprite2D" parent="."]
+position = Vector2(1184, -200.99995)
+rotation = -0.45896235
+scale = Vector2(6, 6)
+texture = ExtResource("1_j25xq")
+
+[node name="Area2D" type="Area2D" parent="." groups=["electricity"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(603.5, -152.5)
+shape = SubResource("RectangleShape2D_j25xq")

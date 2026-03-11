@@ -42,7 +42,8 @@ func _on_button_pressed() -> void:
 		text_edit.editable = false
 		text_edit.placeholder_text = "ask anything"
 		await type_text(r2_label)
-		Transition.change_scene(self,"LoadInAnimation")
+		await get_tree().create_timer(1).timeout
+		Transition.change_scene(self,"MainMenu")
 
 	else:
 		if not m_1.visible:

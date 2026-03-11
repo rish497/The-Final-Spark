@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773207323
+::res://::1773222189
 editundo.ttf::FontFile::3731424344729910977::1773155177::1773155177::1::::<><><>0<>0<>d2fb670c884f59daadbc3e441ea1bb57<>res://.godot/imported/editundo.ttf-077e38c22d202da0086250dcfa9a3e95.fontdata::
 icon.svg::CompressedTexture2D::3462513296609380292::1773150315::1773150328::1::::<><><>0<>0<>3756452922b00c53abd25fd2764bb81c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 Minecraft.ttf::FontFile::6952198871095206842::1773155267::1773155271::1::::<><><>0<>0<>58e02784e18d15ec084a716cfc2cbbec<>res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata::
@@ -16,15 +16,25 @@ godot_super-wakatime.gd::GDScript::6277149880384411866::1773152768::0::1::::<>Ed
 plugin.cfg::TextFile::-1::1773152768::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1773152768::0::1::::<><><>0<>0<><>::
 utils.gd::GDScript::5251015809120159908::1773152768::0::1::::<>RefCounted<><>0<>0<><>::
-::res://Assets/::1773210341
+::res://Assets/::1773229766
 Base_SpriteSheet (1).png::CompressedTexture2D::8105942517688916128::1773210196::1773210196::1::::<><><>0<>0<>accd28b48c26fd8e4826c61cb120e82b<>res://.godot/imported/Base_SpriteSheet (1).png-01e0b9188612c9fde08f8855ec134a24.ctex::
 Base_SpriteSheet (2).png::CompressedTexture2D::1094207874986242712::1773210341::1773210341::1::::<><><>0<>0<>8b9385af2f30f7c50c0cfd14272c934b<>res://.godot/imported/Base_SpriteSheet (2).png-eec9981fa2fc7ce7769adcfb4f3dbbbd.ctex::
 Base_SpriteSheet.png::CompressedTexture2D::6892369451200220236::1773209540::1773209541::1::::<><><>0<>0<>55dcf154e042b021a65a608d4a45ee8c<>res://.godot/imported/Base_SpriteSheet.png-229d7b4be48636a6d0531d418f2e1dcd.ctex::
-::res://Scenes/::1773209516
-LoadInAnimation.tscn::PackedScene::8868100024952291993::1773207589::0::1::::<><><>0<>0<><>::uid://eaxo4knw0gs::::res://Scripts/load_in_animation.gd<>uid://bpljc84kdevmi::::res://icon.svg<>uid://btfsap681ujdx::::res://editundo.ttf
-robot.tscn::PackedScene::5254526944632521100::1773209516::0::1::::<><><>0<>0<><>::
-transition.tscn::PackedScene::7973621904491975513::1773208191::0::1::::<><><>0<>0<><>::uid://cpn454anhhpg0::::res://transition.gdshader<>uid://c63g6lhthg6u5::::res://Scripts/transition.gd
-::res://Scripts/::1773208191
-load_in_animation.gd::GDScript::8299364874902210::1773207589::0::1::::<>Control<><>0<>0<><>::
+ground_grasss.png::CompressedTexture2D::5360034251627410676::1773215518::1773215518::1::::<><><>0<>0<>bef87ead4e12b03aa53b3a748a1191b4<>res://.godot/imported/ground_grasss.png-cde526149677382d26acebea5503c0c9.ctex::
+New Piskel (18).png::CompressedTexture2D::7386678118211313986::1773229766::1773229766::1::::<><><>0<>0<>a0c106ccba5be7390e9148bcd001ba63<>res://.godot/imported/New Piskel (18).png-f853aac4509189cbedcc6f88b60b9c6d.ctex::
+New Piskel-1.png (5).png::CompressedTexture2D::7114932327217807199::1773227744::1773227744::1::::<><><>0<>0<>97657b06a32a5798c739ab722a793412<>res://.godot/imported/New Piskel-1.png (5).png-1104579fbdb46e42f7843083af839171.ctex::
+New Piskel-1.png (6).png::CompressedTexture2D::8811182849975480664::1773229599::1773229600::1::::<><><>0<>0<>f72b7ee9811e3da8059490e88529af27<>res://.godot/imported/New Piskel-1.png (6).png-9e1e72b0a5ce87da3d0242118d53dd48.ctex::
+New Piskel-2.png (3).png::CompressedTexture2D::8240789578532231443::1773228327::1773228327::1::::<><><>0<>0<>484a217056156e346e7df06d9e1dfa0d<>res://.godot/imported/New Piskel-2.png (3).png-0c65a7d67031d3d99338ec7d9f1b1491.ctex::
+Screenshot 2026-03-11 145949.png::CompressedTexture2D::1463938541753452626::1773221418::1773221418::1::::<><><>0<>0<>3a0ce52c4f950e5871214844bfd04f60<>res://.godot/imported/Screenshot 2026-03-11 145949.png-bc5b532bc7e57442c303de01bb1e61bd.ctex::
+Water_coasts.png::CompressedTexture2D::7010354515289599439::1773216102::1773216103::1::::<><><>0<>0<>a695ad4fa32756d72fc009e7adea24f0<>res://.godot/imported/Water_coasts.png-26649e714ac3d3271826efa4df7154c3.ctex::
+::res://Scenes/::1773228933
+LoadInAnimation.tscn::PackedScene::8868100024952291993::1773228129::0::1::::<><><>0<>0<><>::uid://eaxo4knw0gs::::res://Scripts/load_in_animation.gd<>uid://bpljc84kdevmi::::res://icon.svg<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://c8mr5pxomtisd::::res://Assets/New Piskel-1.png (5).png
+MainMap.tscn::PackedScene::396436126543325908::1773222219::0::1::::<><><>0<>0<><>::uid://cimo8mb0wi45e::::res://Assets/ground_grasss.png<>uid://c644rq6pto75t::::res://Assets/Water_coasts.png<>uid://cg4lj5qxq1t5u::::res://Scenes/robot.tscn
+MainMenu.tscn::PackedScene::8823220035983020223::1773228933::0::1::::<><><>0<>0<><>::uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf
+robot.tscn::PackedScene::5254526944632521100::1773220776::0::1::::<><><>0<>0<><>::uid://c5gyk2px1ysd5::::res://Assets/Base_SpriteSheet.png<>uid://dlt4etk8hb2kt::::res://Scripts/robot.gd<>uid://dnqtxopn3uyd1::::res://Assets/Base_SpriteSheet (1).png<>uid://pubpdcra4rrk::::res://Assets/Base_SpriteSheet (2).png
+transition.tscn::PackedScene::7973621904491975513::1773213836::0::1::::<><><>0<>0<><>::uid://cpn454anhhpg0::::res://transition.gdshader<>uid://c63g6lhthg6u5::::res://Scripts/transition.gd
+::res://Scripts/::1773228265
+load_in_animation.gd::GDScript::8299364874902210::1773228265::0::1::::<>Control<><>0<>0<><>::
+robot.gd::GDScript::7972331459291133291::1773220776::0::1::::<>CharacterBody2D<><>0<>0<><>::
 transition.gd::GDScript::7006918348289912578::1773208191::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://Sounds/::1773155271

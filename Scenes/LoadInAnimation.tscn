@@ -1,15 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dyl1kunvihgdd"]
+[gd_scene load_steps=12 format=3 uid="uid://dyl1kunvihgdd"]
 
 [ext_resource type="Script" uid="uid://eaxo4knw0gs" path="res://Scripts/load_in_animation.gd" id="1_npgmo"]
 [ext_resource type="Texture2D" uid="uid://bpljc84kdevmi" path="res://icon.svg" id="1_t5htj"]
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="1_x7wcp"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7wcp"]
-bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
+[ext_resource type="Texture2D" uid="uid://c8mr5pxomtisd" path="res://Assets/New Piskel-1.png (5).png" id="4_lyvr3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x7wcp"]
 
@@ -39,13 +33,6 @@ bg_color = Color(0.03529412, 0.03529412, 0.03529412, 0)
 border_width_top = 1
 border_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyvr3"]
-bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -64,20 +51,26 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 
-[node name="SearchBar" type="Label" parent="Textpage"]
+[node name="SearchBar" type="NinePatchRect" parent="Textpage"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 0
 offset_left = 296.0
-offset_top = 535.0
-offset_right = 1095.0
-offset_bottom = 599.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_x7wcp")
+offset_top = 533.0
+offset_right = 1100.0
+offset_bottom = 601.0
+size_flags_horizontal = 3
+texture = ExtResource("4_lyvr3")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Textpage/SearchBar"]
 layout_mode = 0
 offset_left = 23.0
-offset_top = 10.0
+offset_top = 12.0
 offset_right = 572.0
-offset_bottom = 53.0
+offset_bottom = 55.0
 
 [node name="TextureRect" type="TextureRect" parent="Textpage/SearchBar/HBoxContainer"]
 layout_mode = 2
@@ -87,9 +80,9 @@ expand_mode = 2
 [node name="TextEdit" type="TextEdit" parent="Textpage/SearchBar"]
 layout_mode = 0
 offset_left = 82.0
-offset_top = 17.0
+offset_top = 19.0
 offset_right = 769.0
-offset_bottom = 53.0
+offset_bottom = 55.0
 size_flags_horizontal = 3
 theme_override_colors/caret_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_colors/selection_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
@@ -106,9 +99,9 @@ placeholder_text = "Type \"make a new game\""
 [node name="Button" type="Button" parent="Textpage/SearchBar"]
 layout_mode = 0
 offset_left = 742.0
-offset_top = 9.0
+offset_top = 11.0
 offset_right = 748.2841
-offset_bottom = 15.284134
+offset_bottom = 17.284134
 scale = Vector2(7.3200192, 7.3200192)
 theme_override_styles/normal = SubResource("StyleBoxFlat_w37wp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_w37wp")
@@ -155,14 +148,26 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="M1" type="Label" parent="Textpage/ScrollContainer/VBoxContainer/M1"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Textpage/ScrollContainer/VBoxContainer/M1"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_lyvr3")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="M1" type="Label" parent="Textpage/ScrollContainer/VBoxContainer/M1/NinePatchRect"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
+offset_left = 4.0
+offset_right = 396.0
+offset_bottom = 40.0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_fonts/font = ExtResource("1_x7wcp")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_lyvr3")
 text = "make a new game"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -200,15 +205,27 @@ custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="M1" type="Label" parent="Textpage/ScrollContainer/VBoxContainer/M2"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Textpage/ScrollContainer/VBoxContainer/M2"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_lyvr3")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="M1" type="Label" parent="Textpage/ScrollContainer/VBoxContainer/M2/NinePatchRect"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
+offset_left = 4.0
+offset_right = 92.0
+offset_bottom = 40.0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_fonts/font = ExtResource("1_x7wcp")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_lyvr3")
-text = "YES"
+text = "Yes"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
