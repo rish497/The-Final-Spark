@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773295168
+::res://::1773312669
 editundo.ttf::FontFile::3731424344729910977::1773155177::1773155177::1::::<><><>0<>0<>d2fb670c884f59daadbc3e441ea1bb57<>res://.godot/imported/editundo.ttf-077e38c22d202da0086250dcfa9a3e95.fontdata::
 icon.svg::CompressedTexture2D::3462513296609380292::1773150315::1773150328::1::::<><><>0<>0<>3756452922b00c53abd25fd2764bb81c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 Minecraft.ttf::FontFile::6952198871095206842::1773155267::1773155271::1::::<><><>0<>0<>58e02784e18d15ec084a716cfc2cbbec<>res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata::
@@ -16,7 +16,7 @@ godot_super-wakatime.gd::GDScript::6277149880384411866::1773152768::0::1::::<>Ed
 plugin.cfg::TextFile::-1::1773152768::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1773152768::0::1::::<><><>0<>0<><>::
 utils.gd::GDScript::5251015809120159908::1773152768::0::1::::<>RefCounted<><>0<>0<><>::
-::res://Assets/::1773298316
+::res://Assets/::1773313060
 16x16-character-8D-template-1.png.png::CompressedTexture2D::4261552048026085917::1773298316::1773298316::1::::<><><>0<>0<>04df6f1ade433cbba2c0169475fcb72d<>res://.godot/imported/16x16-character-8D-template-1.png.png-1c04ca151520f16f4ab8f7da9bfe8f0f.ctex::
 Base_SpriteSheet (1).png::CompressedTexture2D::8105942517688916128::1773210196::1773210196::1::::<><><>0<>0<>accd28b48c26fd8e4826c61cb120e82b<>res://.godot/imported/Base_SpriteSheet (1).png-01e0b9188612c9fde08f8855ec134a24.ctex::
 Base_SpriteSheet (2).png::CompressedTexture2D::1094207874986242712::1773210341::1773210341::1::::<><><>0<>0<>8b9385af2f30f7c50c0cfd14272c934b<>res://.godot/imported/Base_SpriteSheet (2).png-eec9981fa2fc7ce7769adcfb4f3dbbbd.ctex::
@@ -45,29 +45,31 @@ New Piskel-7.png (4).png::CompressedTexture2D::1823440991866813143::1773254769::
 New Piskel-7.png (5).png::CompressedTexture2D::1923329481277742870::1773254974::1773254975::1::::<><><>0<>0<>420907a83bf06cfc46b81c982e3778d8<>res://.godot/imported/New Piskel-7.png (5).png-202b78ae23c5056b04ada40100203c64.ctex::
 New Piskel-9.png (3).png::CompressedTexture2D::3965970814315740627::1773259452::1773259452::1::::<><><>0<>0<>f413e2ca2514816ef8ee278d6678f71d<>res://.godot/imported/New Piskel-9.png (3).png-96233c799f7f1b815a10dcce926c7d82.ctex::
 New Piskel-10.png (11).png::CompressedTexture2D::4573462493110095119::1773258113::1773258114::1::::<><><>0<>0<>5159cb9da72b27631ae68137df9fa1b5<>res://.godot/imported/New Piskel-10.png (11).png-689d9d8e3b752d0a628422a14d930ee7.ctex::
+New Piskel-11.png (4).png::CompressedTexture2D::472588054817444537::1773313060::1773313060::1::::<><><>0<>0<>6f23abcb6ab1ebd5f612558c7ea020bb<>res://.godot/imported/New Piskel-11.png (4).png-95ce0761a9a2879059e72a4b6ae31baf.ctex::
 Screenshot 2026-03-11 145949.png::CompressedTexture2D::1463938541753452626::1773221418::1773221418::1::::<><><>0<>0<>3a0ce52c4f950e5871214844bfd04f60<>res://.godot/imported/Screenshot 2026-03-11 145949.png-bc5b532bc7e57442c303de01bb1e61bd.ctex::
 Water_coasts.png::CompressedTexture2D::7010354515289599439::1773216102::1773216103::1::::<><><>0<>0<>a695ad4fa32756d72fc009e7adea24f0<>res://.godot/imported/Water_coasts.png-26649e714ac3d3271826efa4df7154c3.ctex::
-::res://Scenes/::1773297982
+::res://Scenes/::1773312904
 electricity.tscn::PackedScene::4855499879361923142::1773231510::0::1::::<><><>0<>0<><>::uid://cqbyt2akmqa2m::::res://Scripts/electricity.gd<>uid://ddifrk4piejvu::::res://Assets/New Piskel (18).png
 LoadInAnimation.tscn::PackedScene::8868100024952291993::1773251721::0::1::::<><><>0<>0<><>::uid://eaxo4knw0gs::::res://Scripts/load_in_animation.gd<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://jcmret8s86ln::::res://Assets/New Piskel-6.png (4).png<>uid://c8mr5pxomtisd::::res://Assets/New Piskel-1.png (5).png<>uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://d0av0jcvcn1kj::::res://Assets/New Piskel-5.png (3).png<>uid://djocqfqui2mjl::::res://Assets/New Piskel-1.png (9).png<>uid://cy3mj13ovw35o::::res://Assets/New Piskel-2.png (5).png<>uid://c267nmsa1t6x1::::res://Assets/New Piskel-3.png (2).png<>uid://cv8avwnj5wipw::::res://Assets/New Piskel-4.png (3).png
-MainMap.tscn::PackedScene::396436126543325908::1773297982::0::1::::<><><>0<>0<><>::uid://cimo8mb0wi45e::::res://Assets/ground_grasss.png<>uid://c644rq6pto75t::::res://Assets/Water_coasts.png<>uid://cg4lj5qxq1t5u::::res://Scenes/robot.tscn<>uid://chj1wqebn4jpa::::res://Scenes/humans.tscn
-MainMenu.tscn::PackedScene::8823220035983020223::1773262361::0::1::::<><><>0<>0<><>::uid://darylyobwq2fo::::res://Scripts/main_menu.gd<>uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://cbgbmx5uc37ju::::res://Scenes/electricity.tscn
-GUI.tscn::PackedScene::8261709809435493111::1773297235::0::1::::<><><>0<>0<><>::uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://c8ucf62hrcrep::::res://Scenes/pfpitem.tscn<>uid://bwre7vu8d2g16::::res://Assets/New Piskel-9.png (3).png<>uid://bgvl0got04m38::::res://Assets/New Piskel-3.png (3).png<>uid://dt4ain24db2p4::::res://Assets/New Piskel-1.png (10).png<>uid://dpu7s4jdwbd0a::::res://Assets/New Piskel-4.png (4).png<>uid://dj7rlx6aynnak::::res://Scripts/label.gd<>uid://ddifrk4piejvu::::res://Assets/New Piskel (18).png
+MainMap.tscn::PackedScene::396436126543325908::1773312479::0::1::::<><><>0<>0<><>::uid://cimo8mb0wi45e::::res://Assets/ground_grasss.png<>uid://dulpgh62xo8d2::::res://Scripts/main_map.gd<>uid://c644rq6pto75t::::res://Assets/Water_coasts.png<>uid://cg4lj5qxq1t5u::::res://Scenes/robot.tscn<>uid://chj1wqebn4jpa::::res://Scenes/humans.tscn<>uid://dpybfhptul0kh::::res://Scenes/GUI.tscn
+MainMenu.tscn::PackedScene::8823220035983020223::1773312879::0::1::::<><><>0<>0<><>::uid://darylyobwq2fo::::res://Scripts/main_menu.gd<>uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://cbgbmx5uc37ju::::res://Scenes/electricity.tscn<>uid://c8ucf62hrcrep::::res://Scenes/pfpitem.tscn<>uid://bwre7vu8d2g16::::res://Assets/New Piskel-9.png (3).png<>uid://bgvl0got04m38::::res://Assets/New Piskel-3.png (3).png<>uid://dt4ain24db2p4::::res://Assets/New Piskel-1.png (10).png<>uid://dpu7s4jdwbd0a::::res://Assets/New Piskel-4.png (4).png<>uid://dj7rlx6aynnak::::res://Scripts/label.gd<>uid://ddifrk4piejvu::::res://Assets/New Piskel (18).png
+GUI.tscn::PackedScene::8261709809435493111::1773312904::0::1::::<><><>0<>0<><>::uid://btfsap681ujdx::::res://editundo.ttf<>uid://dy83srpcohgwy::::res://Assets/New Piskel-2.png (6).png<>uid://dj7rlx6aynnak::::res://Scripts/label.gd
 pfpitem.tscn::PackedScene::7130492795751961499::1773297228::0::1::::<><><>0<>0<><>::uid://btfsap681ujdx::::res://editundo.ttf<>uid://c8nqo2ce02ga1::::res://Scripts/pfpitem.gd<>uid://2nw7qveertjq::::res://Assets/New Piskel-7.png (5).png<>uid://dgxem4lgur57f::::res://Assets/New Piskel-5.png (4).png
 GameManager.tscn::PackedScene::8311726141359440609::1773258601::0::1::::<><><>0<>0<><>::uid://xtcu4wq2nnlc::::res://scripts/game_manager.gd
-humans.tscn::PackedScene::5284361448533581050::1773297858::0::1::::<><><>0<>0<><>::uid://c5gyk2px1ysd5::::res://Assets/Base_SpriteSheet.png<>uid://3br8oe680ihw::::res://Scripts/humans.gd<>uid://dnqtxopn3uyd1::::res://Assets/Base_SpriteSheet (1).png<>uid://pubpdcra4rrk::::res://Assets/Base_SpriteSheet (2).png
+humans.tscn::PackedScene::5284361448533581050::1773310726::0::1::::<><><>0<>0<><>::uid://3br8oe680ihw::::res://Scripts/humans.gd<>uid://b1yle0nipxmhx::::res://Assets/16x16-character-8D-template-1.png.png
 upgradesds.tscn::PackedScene::7802563611675462840::1773297222::0::1::::<><><>0<>0<><>::uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://bnv8e0g0nro4a::::res://Scripts/upgradesds.gd<>uid://dgxem4lgur57f::::res://Assets/New Piskel-5.png (4).png
 shop.tscn::PackedScene::3200870374140907585::1773296107::0::1::::<><><>0<>0<><>::uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://c85cxp1fd2rho::::res://Scripts/upgrade.gd<>uid://djfvc2vbxdyk3::::res://Scenes/upgradesds.tscn
-robot.tscn::PackedScene::5254526944632521100::1773220776::0::1::::<><><>0<>0<><>::uid://c5gyk2px1ysd5::::res://Assets/Base_SpriteSheet.png<>uid://dlt4etk8hb2kt::::res://Scripts/robot.gd<>uid://dnqtxopn3uyd1::::res://Assets/Base_SpriteSheet (1).png<>uid://pubpdcra4rrk::::res://Assets/Base_SpriteSheet (2).png
+robot.tscn::PackedScene::5254526944632521100::1773310575::0::1::::<><><>0<>0<><>::uid://c5gyk2px1ysd5::::res://Assets/Base_SpriteSheet.png<>uid://dlt4etk8hb2kt::::res://Scripts/robot.gd<>uid://dnqtxopn3uyd1::::res://Assets/Base_SpriteSheet (1).png<>uid://pubpdcra4rrk::::res://Assets/Base_SpriteSheet (2).png
 transition.tscn::PackedScene::7973621904491975513::1773251802::0::1::::<><><>0<>0<><>::uid://cpn454anhhpg0::::res://transition.gdshader<>uid://c63g6lhthg6u5::::res://Scripts/transition.gd
-::res://Scripts/::1773297913
+::res://Scripts/::1773311971
 electricity.gd::GDScript::5899419799860842146::1773230502::0::1::::<>Node2D<><>0<>0<><>::
 load_in_animation.gd::GDScript::8299364874902210::1773251721::0::1::::<>Control<><>0<>0<><>::
-main_menu.gd::GDScript::7195834606720828708::1773231357::0::1::::<>Control<><>0<>0<><>::
+main_menu.gd::GDScript::7195834606720828708::1773310520::0::1::::<>Control<><>0<>0<><>::
 pfpitem.gd::GDScript::7116908012679260826::1773258728::0::1::::<>Panel<><>0<>0<><>::
-game_manager.gd::GDScript::1653725288791936964::1773259684::0::1::::<>Node<><>0<>0<><>::
-label.gd::GDScript::7858074820520079462::1773296629::0::1::::<>Label<><>0<>0<><>::
-humans.gd::GDScript::1968443862654567004::1773297913::0::1::::<>CharacterBody2D<><>0<>0<><>::
+game_manager.gd::GDScript::1653725288791936964::1773309457::0::1::::<>Node<><>0<>0<><>::
+label.gd::GDScript::7858074820520079462::1773310389::0::1::::<>Label<><>0<>0<><>::
+humans.gd::GDScript::1968443862654567004::1773299691::0::1::::<>CharacterBody2D<><>0<>0<><>::
+main_map.gd::GDScript::8586668965600003333::1773311971::0::1::::<>Node2D<><>0<>0<><>::
 upgradesds.gd::GDScript::3344239711266213642::1773263349::0::1::::<>NinePatchRect<><>0<>0<><>::
 upgrade.gd::GDScript::7151167875555843816::1773295919::0::1::::<>NinePatchRect<><>0<>0<><>::
 robot.gd::GDScript::7972331459291133291::1773220776::0::1::::<>CharacterBody2D<><>0<>0<><>::

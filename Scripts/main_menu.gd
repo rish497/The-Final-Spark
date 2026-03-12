@@ -2,6 +2,12 @@ extends Control
 
 @export var electricity_scene: PackedScene
 @onready var area_2d: Area2D = $Area2D
+@onready var title: NinePatchRect = $CanvasLayer/title
+@onready var start: NinePatchRect = $CanvasLayer/start
+@onready var shop: NinePatchRect = $CanvasLayer/shop
+@onready var exit: NinePatchRect = $CanvasLayer/exit
+@onready var pfp: NinePatchRect = $CanvasLayer/pfp
+
 
 var start_position := Vector2(0, 0)
 
@@ -17,3 +23,23 @@ func spawn_electricity():
 func _on_area_entered(area):
 	if area.is_in_group("electricity"):
 		spawn_electricity()
+
+@onready var pfp_2: NinePatchRect = $CanvasLayer/pfp2
+
+func _on_pfp_pressed() -> void:
+	if pfp_2.visible == false:
+		title.visible = false
+		start.visible = false
+		shop.visible = false
+		exit.visible = false
+		GameManager.animate_panel_in(pfp_2)
+	else:
+		title.visible = true
+		start.visible = true
+		shop.visible = true
+		exit.visible = true
+		GameManager.animate_panel_out(pfp_2)
+
+
+func _on_start_pressed() -> void:
+	Transition.change_scene(self,"MainMap")

@@ -47,6 +47,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("robot"):
 		await shock_effect()
 		queue_free()
+		GameManager.humans -= 1
+		
 
 
 func shock_effect():

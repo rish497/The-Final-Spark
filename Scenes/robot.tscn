@@ -416,8 +416,7 @@ script = ExtResource("1_dwnub")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qb0ay")
-animation = &"SD"
-frame_progress = 0.8151766
+animation = &"WR"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 4)
@@ -428,5 +427,5 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-0.5, 0)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_ntbue")

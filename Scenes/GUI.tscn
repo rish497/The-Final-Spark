@@ -1,151 +1,95 @@
-[gd_scene load_steps=13 format=3 uid="uid://dpybfhptul0kh"]
+[gd_scene load_steps=9 format=3 uid="uid://dpybfhptul0kh"]
 
-[ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_ptolr"]
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="2_hnmit"]
-[ext_resource type="PackedScene" uid="uid://c8ucf62hrcrep" path="res://Scenes/pfpitem.tscn" id="2_ptolr"]
-[ext_resource type="Texture2D" uid="uid://bwre7vu8d2g16" path="res://Assets/New Piskel-9.png (3).png" id="3_4mau4"]
-[ext_resource type="Texture2D" uid="uid://bgvl0got04m38" path="res://Assets/New Piskel-3.png (3).png" id="4_bb1td"]
-[ext_resource type="Texture2D" uid="uid://dt4ain24db2p4" path="res://Assets/New Piskel-1.png (10).png" id="5_46657"]
-[ext_resource type="Texture2D" uid="uid://dpu7s4jdwbd0a" path="res://Assets/New Piskel-4.png (4).png" id="6_1ne4b"]
+[ext_resource type="Texture2D" uid="uid://dy83srpcohgwy" path="res://Assets/New Piskel-2.png (6).png" id="3_hnmit"]
+[ext_resource type="Script" uid="uid://bj77sgy14j70e" path="res://Scripts/label_3.gd" id="4_gx5h7"]
+[ext_resource type="Texture2D" uid="uid://gy6prnfaw1b6" path="res://Assets/New Piskel-11.png (4).png" id="4_nn5of"]
+[ext_resource type="Script" uid="uid://bl75h8jf6xr3h" path="res://Scripts/waves.gd" id="6_4mau4"]
 [ext_resource type="Script" uid="uid://dj7rlx6aynnak" path="res://Scripts/label.gd" id="8_1ne4b"]
-[ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="8_46657"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nn5of"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnmit"]
+content_margin_left = 43.0
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gx5h7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mau4"]
+content_margin_left = 18.0
+content_margin_right = 10.0
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mau4"]
+[node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -35.0
-offset_top = 1.0
-offset_right = -35.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="pfp" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_left = 1080.0
-offset_top = 206.0
-offset_right = 1166.0
-offset_bottom = 288.0
-texture = ExtResource("1_ptolr")
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
-
-[node name="PFP" type="Button" parent="pfp"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 8.14035
-offset_bottom = 82.0
-scale = Vector2(13.68, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nn5of")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_gx5h7")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_4mau4")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_4mau4")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4mau4")
-
-[node name="pfp2" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_left = 68.0
-offset_top = 127.0
-offset_right = 968.0
-offset_bottom = 556.0
-texture = ExtResource("1_ptolr")
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
-
-[node name="ScrollContainer" type="ScrollContainer" parent="pfp2"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 9.0
-offset_right = 893.0
-offset_bottom = 416.0
-horizontal_scroll_mode = 3
-vertical_scroll_mode = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="pfp2/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="pfp2/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Panel" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 2
-itemname = "AMONG US"
-itemimage = ExtResource("3_4mau4")
-itemprice = "100"
-itemdescription = "It turns out your were the imposter all along"
-
-[node name="Panel2" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 2
-itemname = "GHOST"
-itemimage = ExtResource("4_bb1td")
-itemprice = "100"
-itemdescription = "The ghostbusters better catch this guy fast or who knows what it could boo"
-
-[node name="Panel3" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 2
-itemname = "BEAR"
-itemimage = ExtResource("5_46657")
-itemprice = "100"
-itemdescription = "Is it a black bear or a white bear?"
-
-[node name="Panel4" parent="pfp2/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_ptolr")]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 2
-itemname = "Darth Wader"
-itemimage = ExtResource("6_1ne4b")
-itemprice = "100"
-itemdescription = "May the force be with you!"
-
-[node name="Label" type="Label" parent="pfp2"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = -68.0
-offset_right = 810.0
-offset_bottom = 3.0
-theme_override_fonts/font = ExtResource("2_hnmit")
-theme_override_font_sizes/font_size = 80
-text = "PROFILe PICTURE SHOP"
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
+[node name="Label2" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = -0.39322916
-anchor_top = -0.010802469
-anchor_right = -0.016493056
-anchor_bottom = -0.010802469
-offset_left = 1111.0
-offset_top = 10.0
-offset_right = 1179.0
-offset_bottom = 42.0
+anchor_top = 0.9883449
+anchor_right = 0.11100001
+anchor_bottom = 1.086056
+offset_left = 22.0
+offset_top = -619.4475
+offset_right = 22.09999
+offset_bottom = -619.3656
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_fonts/font = ExtResource("2_hnmit")
 theme_override_font_sizes/font_size = 35
-text = "10000000000000000000000000000"
-horizontal_alignment = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_hnmit")
+text = "100"
+horizontal_alignment = 3
 vertical_alignment = 1
 script = ExtResource("8_1ne4b")
 metadata/_edit_use_anchors_ = true
 
-[node name="NewPiskel(18)" type="Sprite2D" parent="."]
-position = Vector2(1171, 21)
-rotation = -0.12968029
-texture = ExtResource("8_46657")
+[node name="NewPiskel2_png(6)" type="Sprite2D" parent="Label2"]
+position = Vector2(24, 32)
+rotation = -0.31302366
+texture = ExtResource("3_hnmit")
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.9883449
+anchor_right = 0.11100001
+anchor_bottom = 1.086056
+offset_left = 22.0
+offset_top = -549.4475
+offset_right = 22.09999
+offset_bottom = -549.3656
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("2_hnmit")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hnmit")
+text = "100"
+horizontal_alignment = 3
+vertical_alignment = 1
+script = ExtResource("4_gx5h7")
+metadata/_edit_use_anchors_ = true
+
+[node name="NewPiskel2_png(6)" type="Sprite2D" parent="Label3"]
+position = Vector2(24, 42)
+scale = Vector2(2.5600007, 2.5600007)
+texture = ExtResource("4_nn5of")
+
+[node name="waves" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.9883449
+anchor_right = 0.23862849
+anchor_bottom = 1.086056
+offset_left = 22.0
+offset_top = -480.4475
+offset_right = 22.09999
+offset_bottom = -480.3656
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("2_hnmit")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4mau4")
+text = "Wave number: 1"
+vertical_alignment = 1
+script = ExtResource("6_4mau4")
+metadata/_edit_use_anchors_ = true
