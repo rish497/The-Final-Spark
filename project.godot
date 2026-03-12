@@ -23,6 +23,7 @@ GameManager="*res://Scripts/game_manager.gd"
 [display]
 
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://df3gadbe4uqcs"
 
 [editor_plugins]
 
@@ -32,6 +33,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 electricity=""
 robot=""
+humans=""
 
 [input]
 

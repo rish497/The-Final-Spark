@@ -4,20 +4,28 @@ extends Node2D
 @export var human_scene: PackedScene
 @export var spawn_tile_atlas: Vector2i = Vector2i(3, 2)
 var spawn_count: int
+@onready var label: Label = $CanvasLayer/Label
+
 func _ready():
+	label.text ="3"
+	await get_tree().create_timer(1).timeout
+	label.text ="2"
+	await get_tree().create_timer(1).timeout
+	label.text ="1"
+	await get_tree().create_timer(1).timeout
+	label.visible = false
+	
 	spawn_count = 1
-	GameManager.humans = 1
 	GameManager.wave = 1
 	start_waves()
 
 
 func start_waves():
-	while GameManager.humans != 0:
+	while true:
 		for i in range(spawn_count):
 			spawn_asset()
 		await get_tree().create_timer(20).timeout
 		spawn_count += 3
-		GameManager.humans += 3
 		GameManager.wave += 1
 	
 func get_random_ground_position() -> Vector2:
@@ -42,3 +50,6 @@ func spawn_asset():
 	add_child(item)
 
 	print("Asset spawned at:", pos)
+
+func _process(delta: float) -> void:
+	GameManager.humans = get_tree().get_nodes_in_group("human").size()

@@ -205,12 +205,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uc2ch"]
-size = Vector2(106.88725, 112.983604)
+size = Vector2(76.34804, 96.843094)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcw6h"]
-size = Vector2(76.34804, 86.08275)
+size = Vector2(53.443626, 64.56206)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["humans"]]
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_km6rf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -218,20 +220,31 @@ position = Vector2(0, -2)
 scale = Vector2(1.4375, 1.4375)
 sprite_frames = SubResource("SpriteFrames_mp5h3")
 animation = &"WR"
-frame_progress = 0.53168684
+frame_progress = 0.8681045
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 3
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.1920929e-07, -1.4999998)
+position = Vector2(-1.1920929e-07, -1.0000004)
 scale = Vector2(0.13097914, 0.18586767)
 shape = SubResource("RectangleShape2D_uc2ch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.9999999)
+position = Vector2(0.5, -0.99999994)
 scale = Vector2(0.13097914, 0.18586767)
 shape = SubResource("RectangleShape2D_bcw6h")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+debug_enabled = true
+debug_path_custom_color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

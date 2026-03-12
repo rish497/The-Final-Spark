@@ -82,6 +82,7 @@ offset_top = 19.0
 offset_right = 769.0
 offset_bottom = 55.0
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 0
 theme_override_colors/caret_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_colors/selection_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
@@ -423,4 +424,8 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxEmpty_brrfc")
 text = "new chat"
 
+[connection signal="mouse_entered" from="Textpage/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_entered"]
+[connection signal="mouse_exited" from="Textpage/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_exited"]
+[connection signal="mouse_entered" from="Textpage/SearchBar/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Textpage/SearchBar/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Textpage/SearchBar/Button" to="." method="_on_button_pressed"]

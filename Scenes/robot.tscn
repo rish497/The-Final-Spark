@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://cg4lj5qxq1t5u"]
+[gd_scene load_steps=57 format=3 uid="uid://cg4lj5qxq1t5u"]
 
 [ext_resource type="Texture2D" uid="uid://c5gyk2px1ysd5" path="res://Assets/Base_SpriteSheet.png" id="1_6phhs"]
 [ext_resource type="Script" uid="uid://dlt4etk8hb2kt" path="res://Scripts/robot.gd" id="1_dwnub"]
@@ -404,12 +404,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6phhs"]
-radius = 5.0
-height = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwnub"]
+size = Vector2(15, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbue"]
-size = Vector2(17, 20)
+size = Vector2(17, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8s4wd"]
+size = Vector2(7, 5)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["robot"]]
 script = ExtResource("1_dwnub")
@@ -419,13 +421,17 @@ sprite_frames = SubResource("SpriteFrames_qb0ay")
 animation = &"WR"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 4)
-shape = SubResource("CapsuleShape2D_6phhs")
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_dwnub")
 
 [node name="Area2D2" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(1, 0)
+position = Vector2(0.5, -4)
 shape = SubResource("RectangleShape2D_ntbue")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0.5, 6.5)
+shape = SubResource("RectangleShape2D_8s4wd")

@@ -47,7 +47,7 @@ func _on_button_pressed() -> void:
 
 	else:
 		if not m_1.visible:
-			text_edit.placeholder_text = 'TYPE "MAKE NEW GAME"'
+			text_edit.placeholder_text = 'Type "make a new game"'
 		else:
 			text_edit.placeholder_text = 'TYPE "YES"'
 
@@ -68,3 +68,15 @@ func _input(event):
 func scroll_to_bottom():
 	await get_tree().process_frame
 	scroll_container.scroll_vertical = scroll_container.get_v_scroll_bar().max_value
+
+var point = preload("res://Assets/New Piskel-13.png (5).png")
+var arrow = preload("uid://df3gadbe4uqcs")
+var text = preload("uid://ddq6xba3tb8jm")
+func _on_button_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(point)
+func _on_button_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)
+func _on_text_edit_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)
+func _on_text_edit_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(text)

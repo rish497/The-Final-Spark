@@ -1,14 +1,39 @@
 extends CharacterBody2D
-var speed = 70
+
+var speed: float = 90
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var target: CharacterBody2D = $"../CharacterBody2D"
+@onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 
-func _process(delta: float) -> void:
-	var direction = (target.position-position).normalized()
+
+func _ready():
+	makepath()
+	add_to_group("human")
+
+
+func _physics_process(delta: float) -> void:
+	if nav_agent.is_navigation_finished():
+		velocity = Vector2.ZERO
+		return
+
+	var next_point: Vector2 = nav_agent.get_next_path_position()
+	var direction: Vector2 = (next_point - global_position).normalized()
+
 	velocity = direction * speed
 	move_and_slide()
-	update_animation(direction)
-	
+
+	var anim_dir = (target.global_position - global_position).normalized()
+	update_animation(anim_dir)
+
+
+func makepath():
+	nav_agent.target_position = target.global_position
+
+
+func _on_timer_timeout() -> void:
+	makepath()
+
 
 func update_animation(dir: Vector2):
 	var angle = dir.angle()
@@ -42,14 +67,12 @@ func update_animation(dir: Vector2):
 	elif deg >= -67.5 and deg < -22.5:
 		sprite.play("NWR")
 		sprite.flip_h = true
-		
+
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("robot"):
 		await shock_effect()
 		queue_free()
-		GameManager.humans -= 1
-		
-
 
 func shock_effect():
 	var tween = create_tween()

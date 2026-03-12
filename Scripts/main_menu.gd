@@ -43,3 +43,22 @@ func _on_pfp_pressed() -> void:
 
 func _on_start_pressed() -> void:
 	Transition.change_scene(self,"MainMap")
+
+var point = preload("res://Assets/New Piskel-13.png (5).png")
+var arrow = preload("uid://df3gadbe4uqcs")
+func _on_start_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(point)
+func _on_start_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)
+func _on_exit_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)
+func _on_exit_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(point)
+func _on_shop_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)
+func _on_shop_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(point)
+func _on_pfp_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(point)
+func _on_pfp_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)
