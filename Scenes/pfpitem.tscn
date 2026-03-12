@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="1_k55wb"]
 [ext_resource type="Script" uid="uid://c8nqo2ce02ga1" path="res://Scripts/pfpitem.gd" id="1_ow1sb"]
 [ext_resource type="Texture2D" uid="uid://2nw7qveertjq" path="res://Assets/New Piskel-7.png (5).png" id="2_ygrii"]
-[ext_resource type="Texture2D" uid="uid://b6foi2qq7q8pn" path="res://Assets/New Piskel-10.png (11).png" id="3_ygrii"]
+[ext_resource type="Texture2D" uid="uid://dgxem4lgur57f" path="res://Assets/New Piskel-5.png (4).png" id="4_ow1sb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppcjw"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
@@ -80,7 +80,7 @@ alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_ygrii")
+texture = ExtResource("4_ow1sb")
 expand_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/HBoxContainer"]

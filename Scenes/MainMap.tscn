@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://fwbilk10fsxg"]
+[gd_scene load_steps=9 format=4 uid="uid://fwbilk10fsxg"]
 
 [ext_resource type="Texture2D" uid="uid://cimo8mb0wi45e" path="res://Assets/ground_grasss.png" id="1_e7g1p"]
+[ext_resource type="Script" uid="uid://dulpgh62xo8d2" path="res://Scripts/main_map.gd" id="1_ikcvm"]
 [ext_resource type="Texture2D" uid="uid://c644rq6pto75t" path="res://Assets/Water_coasts.png" id="2_q7xqk"]
 [ext_resource type="PackedScene" uid="uid://cg4lj5qxq1t5u" path="res://Scenes/robot.tscn" id="3_nofk3"]
+[ext_resource type="PackedScene" uid="uid://chj1wqebn4jpa" path="res://Scenes/humans.tscn" id="4_jkfea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7xqk"]
 texture = ExtResource("1_e7g1p")
@@ -1257,6 +1259,8 @@ sources/0 = SubResource("TileSetAtlasSource_q7xqk")
 sources/1 = SubResource("TileSetAtlasSource_nofk3")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ikcvm")
+human_scene = ExtResource("4_jkfea")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-43, 1)

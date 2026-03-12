@@ -1,7 +1,8 @@
 extends NinePatchRect
 
-@onready var ds: NinePatchRect = $start2
-
+@onready var ds: NinePatchRect = $CanvasLayer/ds
+func _ready() -> void:
+	ds.visible = false
 func _on_start_mouse_entered() -> void:
 	ds.visible = true
 

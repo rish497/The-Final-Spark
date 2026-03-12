@@ -408,10 +408,10 @@ animations = [{
 radius = 5.0
 height = 16.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwnub"]
-size = Vector2(17.25, 13.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbue"]
+size = Vector2(17, 20)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["robot"]]
 script = ExtResource("1_dwnub")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -423,10 +423,10 @@ frame_progress = 0.8151766
 position = Vector2(-1, 4)
 shape = SubResource("CapsuleShape2D_6phhs")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D2" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.625, -4)
-shape = SubResource("RectangleShape2D_dwnub")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ntbue")

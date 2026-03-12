@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dpybfhptul0kh"]
+[gd_scene load_steps=13 format=3 uid="uid://dpybfhptul0kh"]
 
 [ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_ptolr"]
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="2_hnmit"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bgvl0got04m38" path="res://Assets/New Piskel-3.png (3).png" id="4_bb1td"]
 [ext_resource type="Texture2D" uid="uid://dt4ain24db2p4" path="res://Assets/New Piskel-1.png (10).png" id="5_46657"]
 [ext_resource type="Texture2D" uid="uid://dpu7s4jdwbd0a" path="res://Assets/New Piskel-4.png (4).png" id="6_1ne4b"]
+[ext_resource type="Script" uid="uid://dj7rlx6aynnak" path="res://Scripts/label.gd" id="8_1ne4b"]
+[ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="8_46657"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nn5of"]
 
@@ -28,10 +30,10 @@ grow_vertical = 2
 
 [node name="pfp" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 1081.0
-offset_top = 21.0
-offset_right = 1167.0
-offset_bottom = 103.0
+offset_left = 1080.0
+offset_top = 206.0
+offset_right = 1166.0
+offset_bottom = 288.0
 texture = ExtResource("1_ptolr")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -123,3 +125,27 @@ theme_override_fonts/font = ExtResource("2_hnmit")
 theme_override_font_sizes/font_size = 80
 text = "PROFILe PICTURE SHOP"
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.39322916
+anchor_top = -0.010802469
+anchor_right = -0.016493056
+anchor_bottom = -0.010802469
+offset_left = 1111.0
+offset_top = 10.0
+offset_right = 1179.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("2_hnmit")
+theme_override_font_sizes/font_size = 35
+text = "10000000000000000000000000000"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("8_1ne4b")
+metadata/_edit_use_anchors_ = true
+
+[node name="NewPiskel(18)" type="Sprite2D" parent="."]
+position = Vector2(1171, 21)
+rotation = -0.12968029
+texture = ExtResource("8_46657")

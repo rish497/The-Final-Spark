@@ -18,12 +18,54 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="start" type="NinePatchRect" parent="."]
+[node name="Survival2" type="Node" parent="."]
+
+[node name="Survival" type="NinePatchRect" parent="Survival2"]
+offset_left = 562.0
+offset_top = 313.0
+offset_right = 657.0
+offset_bottom = 407.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+metadata/_edit_use_anchors_ = true
+
+[node name="start" type="Button" parent="Survival2/Survival"]
 layout_mode = 0
-offset_left = 532.0
-offset_top = 540.0
-offset_right = 627.0
-offset_bottom = 634.0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Survival2/Survival"]
+
+[node name="ds" parent="Survival2/Survival/CanvasLayer" instance=ExtResource("3_io27d")]
+offset_left = 652.0
+offset_top = 285.0
+offset_right = 969.1875
+offset_bottom = 463.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Abilities2" type="Node" parent="."]
+
+[node name="Abilities" type="NinePatchRect" parent="Abilities2"]
+offset_left = 469.0
+offset_top = 313.0
+offset_right = 564.0
+offset_bottom = 407.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -32,7 +74,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="start" type="Button" parent="start"]
+[node name="start" type="Button" parent="Abilities2/Abilities"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -45,13 +87,465 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="start2" parent="start" instance=ExtResource("3_io27d")]
-visible = false
-layout_mode = 0
-offset_left = -78.75
-offset_top = -153.75
-offset_right = 238.4375
-offset_bottom = 24.375
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Abilities"]
 
-[connection signal="mouse_entered" from="start/start" to="start" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="start/start" to="start" method="_on_start_mouse_exited"]
+[node name="ds" parent="Abilities2/Abilities/CanvasLayer" instance=ExtResource("3_io27d")]
+offset_left = 198.99998
+offset_top = 274.0
+offset_right = 516.18744
+offset_bottom = 452.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Speed" type="Node" parent="Abilities2"]
+
+[node name="Speed1" type="NinePatchRect" parent="Abilities2/Speed"]
+offset_left = 364.0
+offset_top = 220.0
+offset_right = 459.0
+offset_bottom = 314.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="speed" type="Button" parent="Abilities2/Speed/Speed1"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed1"]
+
+[node name="ds" parent="Abilities2/Speed/Speed1/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 283.0
+offset_top = 65.0
+offset_right = 600.1875
+offset_bottom = 243.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Speed2" type="NinePatchRect" parent="Abilities2/Speed"]
+offset_left = 251.0
+offset_top = 220.0
+offset_right = 346.0
+offset_bottom = 314.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="speed" type="Button" parent="Abilities2/Speed/Speed2"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed2"]
+
+[node name="ds" parent="Abilities2/Speed/Speed2/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 172.00003
+offset_top = 65.00001
+offset_right = 489.18753
+offset_bottom = 243.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Speed3" type="NinePatchRect" parent="Abilities2/Speed"]
+offset_left = 145.0
+offset_top = 220.0
+offset_right = 240.0
+offset_bottom = 314.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="speed" type="Button" parent="Abilities2/Speed/Speed3"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed3"]
+
+[node name="ds" parent="Abilities2/Speed/Speed3/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 56.0
+offset_top = 65.0
+offset_right = 373.1875
+offset_bottom = 243.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Speed4" type="NinePatchRect" parent="Abilities2/Speed"]
+offset_left = 35.000008
+offset_top = 220.0
+offset_right = 130.0
+offset_bottom = 314.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="speed" type="Button" parent="Abilities2/Speed/Speed4"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed4"]
+
+[node name="ds" parent="Abilities2/Speed/Speed4/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = -49.0
+offset_top = 65.0
+offset_right = 268.1875
+offset_bottom = 243.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Speed5" type="NinePatchRect" parent="Abilities2/Speed"]
+offset_left = -72.0
+offset_top = 220.0
+offset_right = 22.999992
+offset_bottom = 314.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="speed" type="Button" parent="Abilities2/Speed/Speed5"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed5"]
+
+[node name="ds" parent="Abilities2/Speed/Speed5/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = -160.99994
+offset_top = 65.00001
+offset_right = 156.18756
+offset_bottom = 243.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="PushAbility" type="Node" parent="Abilities2"]
+
+[node name="Push" type="NinePatchRect" parent="Abilities2/PushAbility"]
+offset_left = 464.0
+offset_top = 109.00001
+offset_right = 559.0
+offset_bottom = 203.00002
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Push"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Push"]
+
+[node name="ds" parent="Abilities2/PushAbility/Push/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 381.0
+offset_top = -42.0
+offset_right = 698.1875
+offset_bottom = 136.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Strength" type="Node" parent="Abilities2/PushAbility"]
+
+[node name="Strength1" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
+offset_left = 354.0
+offset_top = 109.00001
+offset_right = 449.0
+offset_bottom = 203.00002
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength1"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Strength/Strength1"]
+
+[node name="ds" parent="Abilities2/PushAbility/Strength/Strength1/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 270.0
+offset_top = -42.0
+offset_right = 587.1875
+offset_bottom = 136.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Strength2" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
+offset_left = 246.0
+offset_top = 109.00001
+offset_right = 341.0
+offset_bottom = 203.00002
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength2"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Strength/Strength2"]
+
+[node name="ds" parent="Abilities2/PushAbility/Strength/Strength2/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 163.0
+offset_top = -42.0
+offset_right = 480.1875
+offset_bottom = 136.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Strength3" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
+offset_left = 140.0
+offset_top = 109.00001
+offset_right = 235.0
+offset_bottom = 203.00002
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength3"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Strength/Strength3"]
+
+[node name="ds" parent="Abilities2/PushAbility/Strength/Strength3/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 56.0
+offset_top = -42.0
+offset_right = 373.1875
+offset_bottom = 136.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="Reload speed" type="Node" parent="Abilities2/PushAbility"]
+
+[node name="ReloadSpeed1" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed"]
+offset_left = 464.0
+offset_top = 14.000008
+offset_right = 559.0
+offset_bottom = 108.000015
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1"]
+
+[node name="ds" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/CanvasLayer" instance=ExtResource("3_io27d")]
+visible = false
+offset_left = 387.0
+offset_top = -136.0
+offset_right = 704.1875
+offset_bottom = 42.125
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[node name="ReloadSpeed2" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed"]
+offset_left = 464.0
+offset_top = -80.99999
+offset_right = 559.0
+offset_bottom = 13.000015
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2"]
+
+[node name="ds" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/CanvasLayer" instance=ExtResource("3_io27d")]
+offset_left = 381.0
+offset_top = -230.99997
+offset_right = 698.1875
+offset_bottom = -52.87497
+itemname = "Survival"
+itemprice = "10"
+description = "All the upgrades that you need to survive longer"
+
+[connection signal="mouse_entered" from="Survival2/Survival/start" to="Survival2/Survival" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Survival2/Survival/start" to="Survival2/Survival" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Abilities/start" to="Abilities2/Abilities" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Abilities/start" to="Abilities2/Abilities" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed1/speed" to="Abilities2/Speed/Speed1" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed1/speed" to="Abilities2/Speed/Speed1" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed2/speed" to="Abilities2/Speed/Speed2" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed2/speed" to="Abilities2/Speed/Speed2" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed3/speed" to="Abilities2/Speed/Speed3" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed3/speed" to="Abilities2/Speed/Speed3" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed4/speed" to="Abilities2/Speed/Speed4" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed4/speed" to="Abilities2/Speed/Speed4" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed5/speed" to="Abilities2/Speed/Speed5" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed5/speed" to="Abilities2/Speed/Speed5" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Push/button" to="Abilities2/PushAbility/Push" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Push/button" to="Abilities2/PushAbility/Push" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Strength/Strength1/button" to="Abilities2/PushAbility/Strength/Strength1" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Strength/Strength1/button" to="Abilities2/PushAbility/Strength/Strength1" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Strength/Strength2/button" to="Abilities2/PushAbility/Strength/Strength2" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Strength/Strength2/button" to="Abilities2/PushAbility/Strength/Strength2" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Strength/Strength3/button" to="Abilities2/PushAbility/Strength/Strength3" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Strength/Strength3/button" to="Abilities2/PushAbility/Strength/Strength3" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Reload speed/ReloadSpeed1/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed1" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Reload speed/ReloadSpeed1/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed1" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Reload speed/ReloadSpeed2/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed2" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Reload speed/ReloadSpeed2/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed2" method="_on_start_mouse_exited"]
