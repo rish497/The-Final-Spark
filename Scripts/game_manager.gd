@@ -1,7 +1,49 @@
 extends Node
-var humans:int
+var humans:int = 1
 var money:int = 10000
 var wave:int = 1
+var timer =false
+var pause = false
+var play = false
+var besttime: int
+var tm:int
+var wb:int
+var wm:int
+var st:int
+var sm:int
+var death = false
+
+func _process(delta: float) -> void:
+	if humans == 0:
+		death = true
+
+func fade_in(node: CanvasItem, duration: float = .2):
+	node.visible = true
+	if node == null:
+		return
+	
+	node.modulate.a = 0.0
+	
+	var tween = node.create_tween()
+	tween.tween_property(node, "modulate:a", 1.0, duration)\
+		.set_trans(Tween.TRANS_SINE)\
+		.set_ease(Tween.EASE_IN_OUT)
+
+func move_to(node: Node, target_pos: Vector2, duration: float = .1):
+	if node == null:
+		return
+	
+	var tween = node.create_tween()
+
+	if node is Node2D:
+		tween.tween_property(node, "position", target_pos, duration)\
+			.set_trans(Tween.TRANS_SINE)\
+			.set_ease(Tween.EASE_IN_OUT)
+
+	elif node is Control:
+		tween.tween_property(node, "position", target_pos, duration)\
+			.set_trans(Tween.TRANS_SINE)\
+			.set_ease(Tween.EASE_IN_OUT)
 
 func animate_panel_in(panel):
 	panel.visible = true

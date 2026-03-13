@@ -13,6 +13,11 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
+	if GameManager.pause:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+
 	if nav_agent.is_navigation_finished():
 		velocity = Vector2.ZERO
 		return

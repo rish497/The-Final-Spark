@@ -6,6 +6,11 @@ var speed := 100
 
 func _physics_process(delta):
 
+	if GameManager.pause:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+
 	var input_dir = Vector2(
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -18,11 +23,9 @@ func _physics_process(delta):
 
 
 func update_animation(dir: Vector2):
-
 	if dir == Vector2.ZERO:
 		play_idle()
 		return
-
 	var angle = dir.angle()
 	var deg = rad_to_deg(angle)
 

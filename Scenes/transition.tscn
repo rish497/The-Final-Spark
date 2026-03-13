@@ -77,6 +77,7 @@ _data = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
+layer = 20
 script = ExtResource("1_vlteq")
 
 [node name="TextureRect" type="TextureRect" parent="."]
