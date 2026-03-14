@@ -1,21 +1,23 @@
 extends Node
-var humans:int = 1
-var money:int = 10000
-var wave:int = 1
-var timer =false
-var pause = false
-var play = false
-var besttime: int
-var tm:int
-var wb:int
-var wm:int
-var st:int
-var sm:int
-var death = false
 
-func _process(delta: float) -> void:
-	if humans == 0:
-		death = true
+var humans: int = 1
+var money: int = 0
+var wave: int = 1
+
+var timer: bool = false
+var pause: bool = false
+var play: bool = false
+var death: bool = false
+var time = 0
+var besttime: int = 0
+var tm: int = 0
+
+var wb: int = 0
+var wm: int = 0
+
+var sb: int = 0
+var sm: int = 0
+var st: int = 0
 
 func fade_in(node: CanvasItem, duration: float = .2):
 	node.visible = true

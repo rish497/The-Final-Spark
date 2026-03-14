@@ -1799,6 +1799,7 @@ bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ikcvm")
 human_scene = ExtResource("4_jkfea")
+spawn_tile_atlas = null
 
 [node name="BasicMap" type="TileMapLayer" parent="."]
 position = Vector2(-43, 1)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://d35egpabblf2e"]
+
+[ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="1_ycw00"]
+[ext_resource type="Script" uid="uid://dj8y8a21u4utp" path="res://Scripts/timer.gd" id="2_4hjkw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mau4"]
+content_margin_left = 18.0
+content_margin_right = 10.0
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+
+[node name="timer" type="Label"]
+anchors_preset = -1
+anchor_top = 0.9883449
+anchor_right = 0.23862849
+anchor_bottom = 1.086056
+offset_left = 774.0
+offset_top = -619.4475
+offset_right = 855.1
+offset_bottom = -619.3656
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("1_ycw00")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4mau4")
+text = "TIME SURVIVED 00:00"
+vertical_alignment = 1
+script = ExtResource("2_4hjkw")
+metadata/_edit_use_anchors_ = true

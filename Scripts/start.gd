@@ -21,3 +21,10 @@ func _on_start_pressed() -> void:
 		GameManager.play = true
 		pause_icon.visible = true
 		play_icon.visible = false
+
+var point = preload("res://Assets/New Piskel-13.png (5).png")
+var arrow = preload("uid://df3gadbe4uqcs")
+func _on_start_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(point)
+func _on_start_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)

@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773413896
+::res://::1773468117
 editundo.ttf::FontFile::3731424344729910977::1773155177::1773155177::1::::<><><>0<>0<>d2fb670c884f59daadbc3e441ea1bb57<>res://.godot/imported/editundo.ttf-077e38c22d202da0086250dcfa9a3e95.fontdata::
 icon.svg::CompressedTexture2D::3462513296609380292::1773150315::1773150328::1::::<><><>0<>0<>3756452922b00c53abd25fd2764bb81c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 Minecraft.ttf::FontFile::6952198871095206842::1773155267::1773155271::1::::<><><>0<>0<>58e02784e18d15ec084a716cfc2cbbec<>res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata::
 Mini Pixel.ttf::FontFile::8221805947996771014::1773155328::1773155328::1::::<><><>0<>0<>f0cda6cc0e17d21a247670dcd1d3f743<>res://.godot/imported/Mini Pixel.ttf-590bd13d57c2132008e1703337d3fe7c.fontdata::
 README.md::TextFile::-1::1773150389::0::1::::<><><>0<>0<><>::
 Test.tscn::PackedScene::-1::1773152770::0::1::::<><><>0<>0<><>::
-transition.gdshader::Shader::5854326823144301033::1773383413::0::1::::<><><>0<>0<><>::
+transition.gdshader::Shader::5854326823144301033::1773463777::0::1::::<><><>0<>0<><>::
 ::res://addons/::1773152768
 ::res://addons/godot_super-wakatime/::1773152768
 api_key_prompt.tscn::PackedScene::3919262858641749045::1773152768::0::1::::<><><>0<>0<><>::
@@ -56,36 +56,36 @@ New Piskel-16.png (3).png::CompressedTexture2D::222363970211245753::1773379757::
 Screenshot 2026-03-11 145949.png::CompressedTexture2D::1463938541753452626::1773221418::1773221418::1::::<><><>0<>0<>3a0ce52c4f950e5871214844bfd04f60<>res://.godot/imported/Screenshot 2026-03-11 145949.png-bc5b532bc7e57442c303de01bb1e61bd.ctex::
 Trees_rocks-1.png.png::CompressedTexture2D::3598775947839377016::1773327318::1773327318::1::::<><><>0<>0<>90aa7898e0c55ec140659c96305efbf3<>res://.godot/imported/Trees_rocks-1.png.png-f1b52209d0ba2a83292e204875520152.ctex::
 Water_coasts.png::CompressedTexture2D::7010354515289599439::1773216102::1773216103::1::::<><><>0<>0<>a695ad4fa32756d72fc009e7adea24f0<>res://.godot/imported/Water_coasts.png-26649e714ac3d3271826efa4df7154c3.ctex::
-::res://Scenes/::1773413769
+::res://Scenes/::1773468084
 electricity.tscn::PackedScene::4855499879361923142::1773231510::0::1::::<><><>0<>0<><>::uid://cqbyt2akmqa2m::::res://Scripts/electricity.gd<>uid://ddifrk4piejvu::::res://Assets/New Piskel (18).png
 GameManager.tscn::PackedScene::8311726141359440609::1773380564::0::1::::<><><>0<>0<><>::uid://xtcu4wq2nnlc::::res://scripts/game_manager.gd
-GUI.tscn::PackedScene::8261709809435493111::1773407779::0::1::::<><><>0<>0<><>::uid://btfsap681ujdx::::res://editundo.ttf<>uid://dy83srpcohgwy::::res://Assets/New Piskel-2.png (6).png<>uid://bj77sgy14j70e::::res://Scripts/label_3.gd<>uid://gy6prnfaw1b6::::res://Assets/New Piskel-11.png (4).png<>uid://bl75h8jf6xr3h::::res://Scripts/waves.gd<>uid://c6bgveh7b1tig::::res://Scripts/time.gd<>uid://dj7rlx6aynnak::::res://Scripts/label.gd<>uid://dnpw3658r8goy::::res://Assets/New Piskel-2.png (7).png<>uid://yox422vnfqgl::::res://Assets/New Piskel-15.png (4).png<>uid://byy0v5wptqtkx::::res://Scripts/start.gd<>uid://dfykjh2ieqq0::::res://Assets/New Piskel-16.png (3).png<>uid://bbiayqhq4xgaa::::res://Scripts/pausemenu.gd
+GUI.tscn::PackedScene::8261709809435493111::1773468084::0::1::::<><><>0<>0<><>::uid://btfsap681ujdx::::res://editundo.ttf<>uid://dy83srpcohgwy::::res://Assets/New Piskel-2.png (6).png<>uid://bj77sgy14j70e::::res://Scripts/label_3.gd<>uid://gy6prnfaw1b6::::res://Assets/New Piskel-11.png (4).png<>uid://bl75h8jf6xr3h::::res://Scripts/waves.gd<>uid://c6bgveh7b1tig::::res://Scripts/time.gd<>uid://dj7rlx6aynnak::::res://Scripts/label.gd<>uid://dnpw3658r8goy::::res://Assets/New Piskel-2.png (7).png<>uid://yox422vnfqgl::::res://Assets/New Piskel-15.png (4).png<>uid://byy0v5wptqtkx::::res://Scripts/start.gd<>uid://dfykjh2ieqq0::::res://Assets/New Piskel-16.png (3).png<>uid://bbiayqhq4xgaa::::res://Scripts/pausemenu.gd
 humans.tscn::PackedScene::5284361448533581050::1773408333::0::1::::<><><>0<>0<><>::uid://3br8oe680ihw::::res://Scripts/humans.gd<>uid://b1yle0nipxmhx::::res://Assets/16x16-character-8D-template-1.png.png
 LoadInAnimation.tscn::PackedScene::8868100024952291993::1773325420::0::1::::<><><>0<>0<><>::uid://eaxo4knw0gs::::res://Scripts/load_in_animation.gd<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://jcmret8s86ln::::res://Assets/New Piskel-6.png (4).png<>uid://c8mr5pxomtisd::::res://Assets/New Piskel-1.png (5).png<>uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://d0av0jcvcn1kj::::res://Assets/New Piskel-5.png (3).png<>uid://djocqfqui2mjl::::res://Assets/New Piskel-1.png (9).png<>uid://cy3mj13ovw35o::::res://Assets/New Piskel-2.png (5).png<>uid://c267nmsa1t6x1::::res://Assets/New Piskel-3.png (2).png<>uid://cv8avwnj5wipw::::res://Assets/New Piskel-4.png (3).png
-MainMap.tscn::PackedScene::396436126543325908::1773413769::0::1::::<><><>0<>0<><>::uid://cimo8mb0wi45e::::res://Assets/ground_grasss.png<>uid://dulpgh62xo8d2::::res://Scripts/main_map.gd<>uid://c644rq6pto75t::::res://Assets/Water_coasts.png<>uid://cg4lj5qxq1t5u::::res://Scenes/robot.tscn<>uid://chj1wqebn4jpa::::res://Scenes/humans.tscn<>uid://brjjkxcljtmyq::::res://Assets/Trees_rocks-1.png.png<>uid://dpybfhptul0kh::::res://Scenes/GUI.tscn<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://b3fx8bnsqckxb::::res://Scripts/death_screen.gd
-MainMenu.tscn::PackedScene::8823220035983020223::1773387559::0::1::::<><><>0<>0<><>::uid://darylyobwq2fo::::res://Scripts/main_menu.gd<>uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://cbgbmx5uc37ju::::res://Scenes/electricity.tscn<>uid://c8ucf62hrcrep::::res://Scenes/pfpitem.tscn<>uid://bwre7vu8d2g16::::res://Assets/New Piskel-9.png (3).png<>uid://bgvl0got04m38::::res://Assets/New Piskel-3.png (3).png<>uid://dt4ain24db2p4::::res://Assets/New Piskel-1.png (10).png<>uid://dpu7s4jdwbd0a::::res://Assets/New Piskel-4.png (4).png<>uid://dj7rlx6aynnak::::res://Scripts/label.gd<>uid://ddifrk4piejvu::::res://Assets/New Piskel (18).png
+MainMap.tscn::PackedScene::396436126543325908::1773467570::0::1::::<><><>0<>0<><>::uid://cimo8mb0wi45e::::res://Assets/ground_grasss.png<>uid://dulpgh62xo8d2::::res://Scripts/main_map.gd<>uid://c644rq6pto75t::::res://Assets/Water_coasts.png<>uid://cg4lj5qxq1t5u::::res://Scenes/robot.tscn<>uid://chj1wqebn4jpa::::res://Scenes/humans.tscn<>uid://brjjkxcljtmyq::::res://Assets/Trees_rocks-1.png.png<>uid://dpybfhptul0kh::::res://Scenes/GUI.tscn<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://b3fx8bnsqckxb::::res://Scripts/death_screen.gd
+MainMenu.tscn::PackedScene::8823220035983020223::1773467973::0::1::::<><><>0<>0<><>::uid://darylyobwq2fo::::res://Scripts/main_menu.gd<>uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://cbgbmx5uc37ju::::res://Scenes/electricity.tscn<>uid://c8ucf62hrcrep::::res://Scenes/pfpitem.tscn<>uid://bwre7vu8d2g16::::res://Assets/New Piskel-9.png (3).png<>uid://bgvl0got04m38::::res://Assets/New Piskel-3.png (3).png<>uid://dt4ain24db2p4::::res://Assets/New Piskel-1.png (10).png<>uid://dpu7s4jdwbd0a::::res://Assets/New Piskel-4.png (4).png<>uid://dj7rlx6aynnak::::res://Scripts/label.gd<>uid://ddifrk4piejvu::::res://Assets/New Piskel (18).png
 pfpitem.tscn::PackedScene::7130492795751961499::1773297228::0::1::::<><><>0<>0<><>::uid://btfsap681ujdx::::res://editundo.ttf<>uid://c8nqo2ce02ga1::::res://Scripts/pfpitem.gd<>uid://2nw7qveertjq::::res://Assets/New Piskel-7.png (5).png<>uid://dgxem4lgur57f::::res://Assets/New Piskel-5.png (4).png
 robot.tscn::PackedScene::5254526944632521100::1773408286::0::1::::<><><>0<>0<><>::uid://c5gyk2px1ysd5::::res://Assets/Base_SpriteSheet.png<>uid://dlt4etk8hb2kt::::res://Scripts/robot.gd<>uid://dnqtxopn3uyd1::::res://Assets/Base_SpriteSheet (1).png<>uid://pubpdcra4rrk::::res://Assets/Base_SpriteSheet (2).png
 shop.tscn::PackedScene::3200870374140907585::1773296107::0::1::::<><><>0<>0<><>::uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://c85cxp1fd2rho::::res://Scripts/upgrade.gd<>uid://djfvc2vbxdyk3::::res://Scenes/upgradesds.tscn
 transition.tscn::PackedScene::7973621904491975513::1773387848::0::1::::<><><>0<>0<><>::uid://cpn454anhhpg0::::res://transition.gdshader<>uid://c63g6lhthg6u5::::res://Scripts/transition.gd
 upgradesds.tscn::PackedScene::7802563611675462840::1773297222::0::1::::<><><>0<>0<><>::uid://dpn5uoaya6ctn::::res://Assets/New Piskel-2.png (3).png<>uid://btfsap681ujdx::::res://editundo.ttf<>uid://bnv8e0g0nro4a::::res://Scripts/upgradesds.gd<>uid://dgxem4lgur57f::::res://Assets/New Piskel-5.png (4).png
-::res://Scripts/::1773413769
-death_screen.gd::GDScript::4363485689805914439::1773408068::0::1::::<>ColorRect<><>0<>0<><>::
+::res://Scripts/::1773468084
+death_screen.gd::GDScript::4363485689805914439::1773467418::0::1::::<>ColorRect<><>0<>0<><>::
 electricity.gd::GDScript::5899419799860842146::1773230502::0::1::::<>Node2D<><>0<>0<><>::
-game_manager.gd::GDScript::1653725288791936964::1773413718::0::1::::<>Node<><>0<>0<><>::
+game_manager.gd::GDScript::1653725288791936964::1773468084::0::1::::<>Node<><>0<>0<><>::
 humans.gd::GDScript::1968443862654567004::1773383208::0::1::::<>CharacterBody2D<><>0<>0<><>::
-label.gd::GDScript::7858074820520079462::1773313925::0::1::::<>Label<><>0<>0<><>::
-label_3.gd::GDScript::3086155806059993518::1773407923::0::1::::<>Label<><>0<>0<><>::
+label.gd::GDScript::7858074820520079462::1773466849::0::1::::<>Label<><>0<>0<><>::
+label_3.gd::GDScript::3086155806059993518::1773417478::0::1::::<>Label<><>0<>0<><>::
 load_in_animation.gd::GDScript::8299364874902210::1773325421::0::1::::<>Control<><>0<>0<><>::
-main_map.gd::GDScript::8586668965600003333::1773413769::0::1::::<>Node2D<><>0<>0<><>::
+main_map.gd::GDScript::8586668965600003333::1773467570::0::1::::<>Node2D<><>0<>0<><>::
 main_menu.gd::GDScript::7195834606720828708::1773324688::0::1::::<>Control<><>0<>0<><>::
 pausemenu.gd::GDScript::2473168260371193824::1773387991::0::1::::<>NinePatchRect<><>0<>0<><>::
 pfpitem.gd::GDScript::7116908012679260826::1773258728::0::1::::<>Panel<><>0<>0<><>::
 robot.gd::GDScript::7972331459291133291::1773386655::0::1::::<>CharacterBody2D<><>0<>0<><>::
 start.gd::GDScript::4122055033988251719::1773382662::0::1::::<>NinePatchRect<><>0<>0<><>::
-time.gd::GDScript::6951161923911212930::1773378165::0::1::::<>Label<><>0<>0<><>::
+time.gd::GDScript::6951161923911212930::1773467872::0::1::::<>Label<><>0<>0<><>::
 transition.gd::GDScript::7006918348289912578::1773208191::0::1::::<>CanvasLayer<><>0<>0<><>::
 upgrade.gd::GDScript::7151167875555843816::1773295919::0::1::::<>NinePatchRect<><>0<>0<><>::
 upgradesds.gd::GDScript::3344239711266213642::1773263349::0::1::::<>NinePatchRect<><>0<>0<><>::
-waves.gd::GDScript::3226393809625020939::1773407762::0::1::::<>Label<><>0<>0<><>::
+waves.gd::GDScript::3226393809625020939::1773426026::0::1::::<>Label<><>0<>0<><>::
 ::res://Sounds/::1773155271
