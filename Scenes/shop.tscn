@@ -1,14 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://blur4qyv8vfn2"]
+[gd_scene load_steps=18 format=3 uid="uid://blur4qyv8vfn2"]
 
 [ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_2shtd"]
+[ext_resource type="Script" uid="uid://d1b8qyui02j2q" path="res://Scripts/shop.gd" id="1_ymrm4"]
 [ext_resource type="Script" uid="uid://c85cxp1fd2rho" path="res://Scripts/upgrade.gd" id="2_fdj0q"]
-[ext_resource type="PackedScene" uid="uid://djfvc2vbxdyk3" path="res://Scenes/upgradesds.tscn" id="3_io27d"]
+[ext_resource type="Script" uid="uid://bnv8e0g0nro4a" path="res://Scripts/upgradesds.gd" id="3_ymrm4"]
+[ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="4_3ps1r"]
+[ext_resource type="Texture2D" uid="uid://dgxem4lgur57f" path="res://Assets/New Piskel-5.png (4).png" id="5_s8dlv"]
+[ext_resource type="Script" uid="uid://cv27c0i8gxl8x" path="res://Scripts/shocktotal.gd" id="5_ymrm4"]
+[ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="6_s8dlv"]
+[ext_resource type="Script" uid="uid://ch6oh4brjgpse" path="res://Scripts/drag.gd" id="8_s8dlv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdj0q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k6jq0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ps1r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8dlv"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyrku"]
+content_margin_left = 43.0
+bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tyrku"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xp22"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ow1eo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,14 +41,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ymrm4")
 
 [node name="Survival2" type="Node" parent="."]
 
 [node name="Survival" type="NinePatchRect" parent="Survival2"]
-offset_left = 562.0
-offset_top = 313.0
-offset_right = 657.0
-offset_bottom = 407.0
+offset_left = 539.0
+offset_top = 272.0
+offset_right = 634.0
+offset_bottom = 366.00003
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -32,7 +57,6 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
-metadata/_edit_use_anchors_ = true
 
 [node name="start" type="Button" parent="Survival2/Survival"]
 layout_mode = 0
@@ -46,26 +70,339 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
-metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Survival2/Survival"]
+[node name="ds" type="NinePatchRect" parent="Survival2/Survival" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Debuff Humans"
+itemprice = 100
+description = "Reduce the humans effectiveness and abilities"
+button = NodePath("../start")
+notenough = NodePath("../../../CanvasLayer/notenough")
+success = NodePath("../../../CanvasLayer/success")
 
-[node name="ds" parent="Survival2/Survival/CanvasLayer" instance=ExtResource("3_io27d")]
-offset_left = 652.0
-offset_top = 285.0
-offset_right = 969.1875
-offset_bottom = 463.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Survival2/Survival/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Survival2/Survival/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Survival2/Survival/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Survival2/Survival/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Survival2/Survival/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Survival2/Survival/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Survival2/Survival/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="humanspeed" type="NinePatchRect" parent="Survival2"]
+offset_left = 684.0
+offset_top = 382.0
+offset_right = 779.0
+offset_bottom = 476.00003
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="start" type="Button" parent="Survival2/humanspeed"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="ds" type="NinePatchRect" parent="Survival2/humanspeed" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Walking Speed"
+itemprice = 350
+description = "Decrease the walking speed of humans"
+button = NodePath("../start")
+notenough = NodePath("../../../CanvasLayer/notenough")
+success = NodePath("../../../CanvasLayer/success")
+
+[node name="Label" type="Label" parent="Survival2/humanspeed/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Survival2/humanspeed/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Survival2/humanspeed/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Survival2/humanspeed/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Survival2/humanspeed/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Survival2/humanspeed/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Survival2/humanspeed/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="spawnrate" type="NinePatchRect" parent="Survival2"]
+offset_left = 684.0
+offset_top = 164.00002
+offset_right = 779.0
+offset_bottom = 258.00006
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="start" type="Button" parent="Survival2/spawnrate"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="ds" type="NinePatchRect" parent="Survival2/spawnrate" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Spawn Rate"
+itemprice = 500
+description = "less humans spawn per wave"
+button = NodePath("../start")
+notenough = NodePath("../../../CanvasLayer/notenough")
+success = NodePath("../../../CanvasLayer/success")
+
+[node name="Label" type="Label" parent="Survival2/spawnrate/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Survival2/spawnrate/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Survival2/spawnrate/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Survival2/spawnrate/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Survival2/spawnrate/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Survival2/spawnrate/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Survival2/spawnrate/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Abilities2" type="Node" parent="."]
 
 [node name="Abilities" type="NinePatchRect" parent="Abilities2"]
-offset_left = 469.0
-offset_top = 313.0
-offset_right = 564.0
-offset_bottom = 407.0
+offset_left = 446.0
+offset_top = 272.0
+offset_right = 541.0
+offset_bottom = 366.00003
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -74,7 +411,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="start" type="Button" parent="Abilities2/Abilities"]
+[node name="Ablities" type="Button" parent="Abilities2/Abilities"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -87,24 +424,104 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Abilities"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/Abilities" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -68.75
+offset_top = -149.99997
+offset_right = 248.4375
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Abilities"
+itemprice = 100
+description = "Unlock the abilities for the Robot"
+button = NodePath("../Ablities")
+notenough = NodePath("../../../CanvasLayer/notenough")
+success = NodePath("../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/Abilities/CanvasLayer" instance=ExtResource("3_io27d")]
-offset_left = 198.99998
-offset_top = 274.0
-offset_right = 516.18744
-offset_bottom = 452.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/Abilities/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/Abilities/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/Abilities/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/Abilities/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/Abilities/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/Abilities/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/Abilities/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Speed" type="Node" parent="Abilities2"]
 
 [node name="Speed1" type="NinePatchRect" parent="Abilities2/Speed"]
-offset_left = 364.0
-offset_top = 220.0
-offset_right = 459.0
-offset_bottom = 314.0
+offset_left = 283.0
+offset_top = 382.0
+offset_right = 378.0
+offset_bottom = 476.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -113,7 +530,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="speed" type="Button" parent="Abilities2/Speed/Speed1"]
+[node name="speed1" type="Button" parent="Abilities2/Speed/Speed1"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -126,23 +543,102 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed1"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/Speed/Speed1" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Speed I"
+itemprice = 120
+description = "Move slightly faster"
+button = NodePath("../speed1")
+notenough = NodePath("../../../../CanvasLayer/notenough")
+success = NodePath("../../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/Speed/Speed1/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 283.0
-offset_top = 65.0
-offset_right = 600.1875
-offset_bottom = 243.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed1/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed1/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/Speed/Speed1/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/Speed/Speed1/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/Speed/Speed1/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/Speed/Speed1/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed1/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Speed2" type="NinePatchRect" parent="Abilities2/Speed"]
-offset_left = 251.0
-offset_top = 220.0
-offset_right = 346.0
-offset_bottom = 314.0
+offset_left = 170.0
+offset_top = 382.0
+offset_right = 265.0
+offset_bottom = 476.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -151,7 +647,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="speed" type="Button" parent="Abilities2/Speed/Speed2"]
+[node name="speed2" type="Button" parent="Abilities2/Speed/Speed2"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -164,23 +660,102 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed2"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/Speed/Speed2" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Speed II"
+itemprice = 240
+description = "Movement speed increased"
+button = NodePath("../speed2")
+notenough = NodePath("../../../../CanvasLayer/notenough")
+success = NodePath("../../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/Speed/Speed2/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 172.00003
-offset_top = 65.00001
-offset_right = 489.18753
-offset_bottom = 243.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed2/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed2/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/Speed/Speed2/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/Speed/Speed2/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/Speed/Speed2/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/Speed/Speed2/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed2/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Speed3" type="NinePatchRect" parent="Abilities2/Speed"]
-offset_left = 145.0
-offset_top = 220.0
-offset_right = 240.0
-offset_bottom = 314.0
+offset_left = 64.0
+offset_top = 382.0
+offset_right = 159.0
+offset_bottom = 476.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -189,7 +764,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="speed" type="Button" parent="Abilities2/Speed/Speed3"]
+[node name="speed3" type="Button" parent="Abilities2/Speed/Speed3"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -202,23 +777,102 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed3"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/Speed/Speed3" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Speed III"
+itemprice = 420
+description = "Noticeably faster movement"
+button = NodePath("../speed3")
+notenough = NodePath("../../../../CanvasLayer/notenough")
+success = NodePath("../../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/Speed/Speed3/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 56.0
-offset_top = 65.0
-offset_right = 373.1875
-offset_bottom = 243.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed3/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed3/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/Speed/Speed3/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/Speed/Speed3/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/Speed/Speed3/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/Speed/Speed3/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed3/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Speed4" type="NinePatchRect" parent="Abilities2/Speed"]
-offset_left = 35.000008
-offset_top = 220.0
-offset_right = 130.0
-offset_bottom = 314.0
+offset_left = -45.999985
+offset_top = 382.0
+offset_right = 49.0
+offset_bottom = 476.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -227,7 +881,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="speed" type="Button" parent="Abilities2/Speed/Speed4"]
+[node name="speed4" type="Button" parent="Abilities2/Speed/Speed4"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -240,23 +894,102 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed4"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/Speed/Speed4" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Speed IV"
+itemprice = 700
+description = "Greatly improves movement speed"
+button = NodePath("../speed4")
+notenough = NodePath("../../../../CanvasLayer/notenough")
+success = NodePath("../../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/Speed/Speed4/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = -49.0
-offset_top = 65.0
-offset_right = 268.1875
-offset_bottom = 243.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed4/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed4/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/Speed/Speed4/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/Speed/Speed4/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/Speed/Speed4/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/Speed/Speed4/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed4/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Speed5" type="NinePatchRect" parent="Abilities2/Speed"]
-offset_left = -72.0
-offset_top = 220.0
-offset_right = 22.999992
-offset_bottom = 314.0
+offset_left = -153.0
+offset_top = 382.0
+offset_right = -58.000008
+offset_bottom = 476.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -265,7 +998,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="speed" type="Button" parent="Abilities2/Speed/Speed5"]
+[node name="speed5" type="Button" parent="Abilities2/Speed/Speed5"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -278,25 +1011,104 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/Speed/Speed5"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/Speed/Speed5" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Speed V"
+itemprice = 1100
+description = "Maximum movement speed"
+button = NodePath("../speed5")
+notenough = NodePath("../../../../CanvasLayer/notenough")
+success = NodePath("../../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/Speed/Speed5/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = -160.99994
-offset_top = 65.00001
-offset_right = 156.18756
-offset_bottom = 243.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed5/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed5/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/Speed/Speed5/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/Speed/Speed5/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/Speed/Speed5/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/Speed/Speed5/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed5/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PushAbility" type="Node" parent="Abilities2"]
 
 [node name="Push" type="NinePatchRect" parent="Abilities2/PushAbility"]
-offset_left = 464.0
-offset_top = 109.00001
-offset_right = 559.0
-offset_bottom = 203.00002
+offset_left = 282.99997
+offset_top = 162.00009
+offset_right = 377.99997
+offset_bottom = 256.0001
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -305,7 +1117,7 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 script = ExtResource("2_fdj0q")
 
-[node name="button" type="Button" parent="Abilities2/PushAbility/Push"]
+[node name="Push" type="Button" parent="Abilities2/PushAbility/Push"]
 layout_mode = 0
 offset_left = -4.4584274e-05
 offset_top = 2.0
@@ -318,141 +1130,104 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Push"]
-
-[node name="ds" parent="Abilities2/PushAbility/Push/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 381.0
-offset_top = -42.0
-offset_right = 698.1875
-offset_bottom = 136.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
-
-[node name="Strength" type="Node" parent="Abilities2/PushAbility"]
-
-[node name="Strength1" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
-offset_left = 354.0
-offset_top = 109.00001
-offset_right = 449.0
-offset_bottom = 203.00002
+[node name="ds" type="NinePatchRect" parent="Abilities2/PushAbility/Push" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
 patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
-script = ExtResource("2_fdj0q")
+script = ExtResource("3_ymrm4")
+itemname = "Shock Burst"
+itemprice = 850
+description = "Releases a powerful electro burst that pushes nearby humans away"
+button = NodePath("../Push")
+notenough = NodePath("../../../../CanvasLayer/notenough")
+success = NodePath("../../../../CanvasLayer/success")
 
-[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength1"]
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Push/ds"]
 layout_mode = 0
-offset_left = -4.4584274e-05
-offset_top = 2.0
-offset_right = 6.9444017
-offset_bottom = 95.0
-scale = Vector2(13.68, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Strength/Strength1"]
-
-[node name="ds" parent="Abilities2/PushAbility/Strength/Strength1/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 270.0
-offset_top = -42.0
-offset_right = 587.1875
-offset_bottom = 136.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
-
-[node name="Strength2" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
-offset_left = 246.0
-offset_top = 109.00001
-offset_right = 341.0
-offset_bottom = 203.00002
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_2shtd")
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
-script = ExtResource("2_fdj0q")
-
-[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength2"]
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Push/ds"]
 layout_mode = 0
-offset_left = -4.4584274e-05
-offset_top = 2.0
-offset_right = 6.9444017
-offset_bottom = 95.0
-scale = Vector2(13.68, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Strength/Strength2"]
-
-[node name="ds" parent="Abilities2/PushAbility/Strength/Strength2/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 163.0
-offset_top = -42.0
-offset_right = 480.1875
-offset_bottom = 136.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
-
-[node name="Strength3" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
-offset_left = 140.0
-offset_top = 109.00001
-offset_right = 235.0
-offset_bottom = 203.00002
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_2shtd")
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
-script = ExtResource("2_fdj0q")
-
-[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength3"]
+[node name="Label3" type="Label" parent="Abilities2/PushAbility/Push/ds"]
 layout_mode = 0
-offset_left = -4.4584274e-05
-offset_top = 2.0
-offset_right = 6.9444017
-offset_bottom = 95.0
-scale = Vector2(13.68, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Strength/Strength3"]
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/PushAbility/Push/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
 
-[node name="ds" parent="Abilities2/PushAbility/Strength/Strength3/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 56.0
-offset_top = -42.0
-offset_right = 373.1875
-offset_bottom = 136.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/PushAbility/Push/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/PushAbility/Push/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Push/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Reload speed" type="Node" parent="Abilities2/PushAbility"]
 
 [node name="ReloadSpeed1" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed"]
-offset_left = 464.0
-offset_top = 14.000008
-offset_right = 559.0
-offset_bottom = 108.000015
+offset_left = 282.99997
+offset_top = 67.0
+offset_right = 377.99997
+offset_bottom = 161.00002
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -474,23 +1249,102 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Cooling Optimization"
+itemprice = 420
+description = "Cooldown reduced by 20%"
+button = NodePath("../button")
+notenough = NodePath("../../../../../CanvasLayer/notenough")
+success = NodePath("../../../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/CanvasLayer" instance=ExtResource("3_io27d")]
-visible = false
-offset_left = 387.0
-offset_top = -136.0
-offset_right = 704.1875
-offset_bottom = 42.125
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ReloadSpeed2" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed"]
-offset_left = 464.0
-offset_top = -80.99999
-offset_right = 559.0
-offset_bottom = 13.000015
+offset_left = 282.99997
+offset_top = -28.000002
+offset_right = 377.99997
+offset_bottom = 66.000015
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2shtd")
 patch_margin_left = 10
@@ -512,40 +1366,599 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2"]
+[node name="ds" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Hyper Recharge"
+itemprice = 540
+description = "Cooldown reduced by 40% total"
+button = NodePath("../button")
+notenough = NodePath("../../../../../CanvasLayer/notenough")
+success = NodePath("../../../../../CanvasLayer/success")
 
-[node name="ds" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/CanvasLayer" instance=ExtResource("3_io27d")]
-offset_left = 381.0
-offset_top = -230.99997
-offset_right = 698.1875
-offset_bottom = -52.87497
-itemname = "Survival"
-itemprice = "10"
-description = "All the upgrades that you need to survive longer"
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Strength" type="Node" parent="Abilities2/PushAbility"]
+
+[node name="Strength1" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
+offset_left = 173.0
+offset_top = 162.00009
+offset_right = 268.0
+offset_bottom = 256.0001
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength1"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="ds" type="NinePatchRect" parent="Abilities2/PushAbility/Strength/Strength1" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Minor Repulse"
+itemprice = 520
+description = "Small push distance"
+button = NodePath("../button")
+notenough = NodePath("../../../../../CanvasLayer/notenough")
+success = NodePath("../../../../../CanvasLayer/success")
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Strength/Strength1/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Strength/Strength1/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/PushAbility/Strength/Strength1/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/PushAbility/Strength/Strength1/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/PushAbility/Strength/Strength1/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/PushAbility/Strength/Strength1/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Strength/Strength1/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Strength2" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
+offset_left = 65.0
+offset_top = 162.00009
+offset_right = 160.0
+offset_bottom = 256.0001
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength2"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="ds" type="NinePatchRect" parent="Abilities2/PushAbility/Strength/Strength2" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Force Repulse"
+itemprice = 640
+description = "Medium push power and range"
+button = NodePath("../button")
+notenough = NodePath("../../../../../CanvasLayer/notenough")
+success = NodePath("../../../../../CanvasLayer/success")
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Strength/Strength2/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Strength/Strength2/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/PushAbility/Strength/Strength2/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/PushAbility/Strength/Strength2/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/PushAbility/Strength/Strength2/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/PushAbility/Strength/Strength2/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Strength/Strength2/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Strength3" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
+offset_left = -41.000004
+offset_top = 162.00009
+offset_right = 53.999996
+offset_bottom = 256.0001
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_fdj0q")
+
+[node name="button" type="Button" parent="Abilities2/PushAbility/Strength/Strength3"]
+layout_mode = 0
+offset_left = -4.4584274e-05
+offset_top = 2.0
+offset_right = 6.9444017
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdj0q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k6jq0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ps1r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ps1r")
+
+[node name="ds" type="NinePatchRect" parent="Abilities2/PushAbility/Strength/Strength3" node_paths=PackedStringArray("button", "notenough", "success")]
+layout_mode = 0
+offset_left = -72.500015
+offset_top = -149.99997
+offset_right = 244.68748
+offset_bottom = 28.12503
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2shtd")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("3_ymrm4")
+itemname = "Overload Repulse"
+itemprice = 760
+description = "Massive burst that throws humans far away"
+button = NodePath("../button")
+notenough = NodePath("../../../../../CanvasLayer/notenough")
+success = NodePath("../../../../../CanvasLayer/success")
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Strength/Strength3/ds"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 304.6875
+offset_bottom = 61.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 25
+text = "TITLE
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Strength/Strength3/ds"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 43.75
+offset_right = 304.6875
+offset_bottom = 104.06249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "makes the player go faster and dig dipper down the hole and can "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Abilities2/PushAbility/Strength/Strength3/ds"]
+layout_mode = 0
+offset_left = 75.625
+offset_top = 152.8125
+offset_right = 367.8125
+offset_bottom = 170.8125
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 20
+text = "click item to buy"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Abilities2/PushAbility/Strength/Strength3/ds"]
+layout_mode = 0
+offset_left = 90.625
+offset_top = 111.5625
+offset_right = 212.625
+offset_bottom = 137.5625
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8dlv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Abilities2/PushAbility/Strength/Strength3/ds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Abilities2/PushAbility/Strength/Strength3/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s8dlv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Abilities2/PushAbility/Strength/Strength3/ds/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 28
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(522, 316)
+zoom = Vector2(1.29, 1.29)
+limit_left = -300
+limit_top = -300
+limit_right = 1350
+limit_bottom = 800
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+script = ExtResource("8_s8dlv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0078125
+anchor_top = 0.8765432
+anchor_right = 0.11881251
+anchor_bottom = 0.8765432
+offset_left = 21.0
+offset_top = 6.0
+offset_right = 112.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_tyrku")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tyrku")
+text = "100"
+horizontal_alignment = 3
+vertical_alignment = 1
+script = ExtResource("5_ymrm4")
+metadata/_edit_use_anchors_ = true
+
+[node name="NewPiskel(18)" type="Sprite2D" parent="CanvasLayer/Label"]
+position = Vector2(23.000004, 25.000002)
+rotation = -0.12968028
+scale = Vector2(1.2862769, 1.2862769)
+texture = ExtResource("6_s8dlv")
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0078125
+anchor_top = 0.8765432
+anchor_right = 0.059027776
+anchor_bottom = 0.8765432
+offset_left = 959.0
+offset_top = 6.0
+offset_right = 1050.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_tyrku")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tyrku")
+text = "BACK"
+horizontal_alignment = 3
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="exit" type="Button" parent="CanvasLayer/Label2"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 12.81871
+offset_bottom = 42.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tyrku")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5xp22")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ow1eo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ow1eo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ow1eo")
+
+[node name="notenough" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.5
+offset_top = -132.0
+offset_right = 221.5
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(221, 132)
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_colors/font_outline_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 57
+text = "Not enough shocks"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="success" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.5
+offset_top = -132.0
+offset_right = 221.5
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(221, 132)
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_colors/font_outline_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("4_3ps1r")
+theme_override_font_sizes/font_size = 57
+text = "bought successfully"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="Survival2/Survival/start" to="Survival2/Survival" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Survival2/Survival/start" to="Survival2/Survival" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/Abilities/start" to="Abilities2/Abilities" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/Abilities/start" to="Abilities2/Abilities" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/Speed/Speed1/speed" to="Abilities2/Speed/Speed1" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/Speed/Speed1/speed" to="Abilities2/Speed/Speed1" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/Speed/Speed2/speed" to="Abilities2/Speed/Speed2" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/Speed/Speed2/speed" to="Abilities2/Speed/Speed2" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/Speed/Speed3/speed" to="Abilities2/Speed/Speed3" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/Speed/Speed3/speed" to="Abilities2/Speed/Speed3" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/Speed/Speed4/speed" to="Abilities2/Speed/Speed4" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/Speed/Speed4/speed" to="Abilities2/Speed/Speed4" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/Speed/Speed5/speed" to="Abilities2/Speed/Speed5" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/Speed/Speed5/speed" to="Abilities2/Speed/Speed5" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/PushAbility/Push/button" to="Abilities2/PushAbility/Push" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/PushAbility/Push/button" to="Abilities2/PushAbility/Push" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Survival2/humanspeed/start" to="Survival2/humanspeed" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Survival2/humanspeed/start" to="Survival2/humanspeed" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Survival2/spawnrate/start" to="Survival2/spawnrate" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Survival2/spawnrate/start" to="Survival2/spawnrate" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Abilities/Ablities" to="Abilities2/Abilities" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Abilities/Ablities" to="Abilities2/Abilities" method="_on_start_mouse_exited"]
+[connection signal="pressed" from="Abilities2/Abilities/Ablities" to="." method="_on_ablities_pressed"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed1/speed1" to="Abilities2/Speed/Speed1" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed1/speed1" to="Abilities2/Speed/Speed1" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed2/speed2" to="Abilities2/Speed/Speed2" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed2/speed2" to="Abilities2/Speed/Speed2" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed3/speed3" to="Abilities2/Speed/Speed3" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed3/speed3" to="Abilities2/Speed/Speed3" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed4/speed4" to="Abilities2/Speed/Speed4" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed4/speed4" to="Abilities2/Speed/Speed4" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/Speed/Speed5/speed5" to="Abilities2/Speed/Speed5" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/Speed/Speed5/speed5" to="Abilities2/Speed/Speed5" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Push/Push" to="Abilities2/PushAbility/Push" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Push/Push" to="Abilities2/PushAbility/Push" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Reload speed/ReloadSpeed1/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed1" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Reload speed/ReloadSpeed1/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed1" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Abilities2/PushAbility/Reload speed/ReloadSpeed2/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed2" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Abilities2/PushAbility/Reload speed/ReloadSpeed2/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed2" method="_on_start_mouse_exited"]
 [connection signal="mouse_entered" from="Abilities2/PushAbility/Strength/Strength1/button" to="Abilities2/PushAbility/Strength/Strength1" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Abilities2/PushAbility/Strength/Strength1/button" to="Abilities2/PushAbility/Strength/Strength1" method="_on_start_mouse_exited"]
 [connection signal="mouse_entered" from="Abilities2/PushAbility/Strength/Strength2/button" to="Abilities2/PushAbility/Strength/Strength2" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Abilities2/PushAbility/Strength/Strength2/button" to="Abilities2/PushAbility/Strength/Strength2" method="_on_start_mouse_exited"]
 [connection signal="mouse_entered" from="Abilities2/PushAbility/Strength/Strength3/button" to="Abilities2/PushAbility/Strength/Strength3" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Abilities2/PushAbility/Strength/Strength3/button" to="Abilities2/PushAbility/Strength/Strength3" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/PushAbility/Reload speed/ReloadSpeed1/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed1" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/PushAbility/Reload speed/ReloadSpeed1/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed1" method="_on_start_mouse_exited"]
-[connection signal="mouse_entered" from="Abilities2/PushAbility/Reload speed/ReloadSpeed2/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed2" method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Abilities2/PushAbility/Reload speed/ReloadSpeed2/button" to="Abilities2/PushAbility/Reload speed/ReloadSpeed2" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Label2/exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Label2/exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Label2/exit" to="." method="_on_exit_pressed"]

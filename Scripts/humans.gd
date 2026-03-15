@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
-var speed: float = 90
-
+var speed: float = GameManager.humanspeed
+var push_force: Vector2 = Vector2.ZERO
+var push_decay: float = 700
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var target: CharacterBody2D = $"../CharacterBody2D"
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
-
+var was_pushed := false
 
 func _ready():
 	makepath()
@@ -17,7 +18,24 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
+	if GameManager.nowpushbackhumans and !was_pushed:
+		var dist = global_position.distance_to(target.global_position)
+		if dist < GameManager.strength: 
+			var dir = (global_position - target.global_position).normalized()
+			var falloff = 1.0 - (dist / GameManager.strength)
+			push_force = dir * (falloff * 250)
+			was_pushed = true
+	
+	if !GameManager.nowpushbackhumans:
+		was_pushed = false
+	
+	if push_force.length() > 0:
+		velocity = push_force
+		push_force = push_force.move_toward(Vector2.ZERO, push_decay * delta)
+		move_and_slide()
 
+		return
+		
 	if nav_agent.is_navigation_finished():
 		velocity = Vector2.ZERO
 		return

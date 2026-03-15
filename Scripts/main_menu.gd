@@ -62,3 +62,7 @@ func _on_pfp_mouse_entered() -> void:
 	Input.set_custom_mouse_cursor(point)
 func _on_pfp_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(arrow)
+
+
+func _on_shop_pressed() -> void:
+	Transition.change_scene(self,"shop")

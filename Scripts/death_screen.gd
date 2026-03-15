@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 	shocks_gaiined_this_match.text= str(GameManager.money)
 	tsbm.text = format_time(GameManager.besttime)
 	tstm.text = format_time(GameManager.tm)
-	wth.text = str(GameManager.wm)
-	wbt.text = str(GameManager.wb)
+	wth.text = str(GameManager.wm - 1)
+	wbt.text = str(GameManager.wb - 1)
 
 func format_time(time_seconds) -> String:
 	var t = int(time_seconds)

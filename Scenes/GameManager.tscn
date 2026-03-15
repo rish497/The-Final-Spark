@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dqoi6d7vc0g7b"]
 
-[ext_resource type="Script" uid="uid://xtcu4wq2nnlc" path="res://scripts/game_manager.gd" id="1_m2tc1"]
+[ext_resource type="Script" uid="uid://xtcu4wq2nnlc" path="res://Scripts/game_manager.gd" id="1_m2tc1"]
 
 [node name="Node" type="Node"]
 process_mode = 3

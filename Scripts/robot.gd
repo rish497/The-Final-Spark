@@ -1,12 +1,57 @@
 extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var c1: CollisionShape2D = $CollisionShape2D
+@onready var c2: CollisionShape2D = $CollisionShape2D2
+@onready var c3: CollisionShape2D = $Area2D2/CollisionShape2D2
+@onready var c4: CollisionShape2D = $Area2D2/CollisionShape2D3
+@onready var area_2d_2: Area2D = $Area2D2
 
-var speed := 100
+var speed := GameManager.speed
+var pushing := false
+
+func _process(_delta):
+	if GameManager.do_push_ability and !pushing:
+		pushing = true
+		pushability()
+			
+
+func pushability():
+	sprite.play("pushup")
+	set_collision_layer_value(1, false)
+	set_collision_mask_value(1, false)
+	c1.set_deferred("disabled", true)
+	c2.set_deferred("disabled", true)
+	c3.set_deferred("disabled", true)
+	c4.set_deferred("disabled", true)
+	area_2d_2.monitoring = false
+	area_2d_2.monitorable = false
+	await sprite.animation_finished
+	await get_tree().create_timer(.5).timeout
+	sprite.play("pushdown")
+	GameManager.nowpushbackhumans = true
+	await get_tree().create_timer(.1).timeout
+	set_collision_layer_value(1, true)
+	set_collision_mask_value(1, true)
+	c1.set_deferred("disabled", false)
+	c2.set_deferred("disabled", false)
+	c3.set_deferred("disabled", false)
+	c4.set_deferred("disabled", false)
+	area_2d_2.monitoring = true
+	area_2d_2.monitorable = true
+	GameManager.do_push_ability = false
+	GameManager.pushabilityfinished = true
+	GameManager.nowpushbackhumans = false
+	pushing = false
 
 func _physics_process(delta):
 
 	if GameManager.pause:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+
+	if pushing:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
@@ -21,8 +66,9 @@ func _physics_process(delta):
 
 	update_animation(input_dir)
 
-
 func update_animation(dir: Vector2):
+	if pushing:
+		return
 	if dir == Vector2.ZERO:
 		play_idle()
 		return
@@ -66,3 +112,6 @@ func play_idle():
 		anim = anim.replace("R", "D")
 
 	sprite.play(anim)
+
+
+		
