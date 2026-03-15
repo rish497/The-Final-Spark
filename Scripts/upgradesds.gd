@@ -8,18 +8,29 @@ extends NinePatchRect
 @export var button: Button
 @export var notenough: Label
 @export var success: Label
+
+var bought := false
 func _ready() -> void:
 	title.text = itemname
 	price.text = str(itemprice)
 	ds.text = description
 	if button:
 		button.pressed.connect(_on_button_pressed)
+	check_if_bought()
 
+func check_if_bought():
+	if GameManager.purchased_items.get(itemname, false):
+		bought = true
+		button.visible = false
+		
 func _on_button_pressed():
 	if itemprice <= GameManager.shocktotal:
+		GameManager.purchase()
+		bought = true
+		button.visible = false
+		GameManager.purchased_items[itemname] = true
 		fadeio(success)
 		GameManager.shocktotal -= itemprice
-		button.visible = false
 		if itemname == "Abilities":
 			GameManager.abilities = true
 		elif itemname == "Speed I":
@@ -41,19 +52,19 @@ func _on_button_pressed():
 			GameManager.pushability = true
 		elif itemname == "Minor Repulse":
 			GameManager.ps1 = true
-			GameManager.strength = 150
+			GameManager.strength = 200
 		elif itemname == "Force Repulse":
 			GameManager.ps2 = true
-			GameManager.strength = 200
+			GameManager.strength = 250
 		elif itemname == "Overload Repulse":
 			GameManager.ps3 = true
-			GameManager.strength = 250
+			GameManager.strength = 300
 		elif itemname == "Cooling Optimization":
 			GameManager.pr1 = true
-			GameManager.reloadspeed = 3
+			GameManager.reloadspeed = 5
 		elif itemname == "Hyper Recharge":
 			GameManager.pr2 = true
-			GameManager.reloadspeed = 4
+			GameManager.reloadspeed = 7
 		elif itemname == "Debuff Humans":
 			GameManager.survival = true
 		elif itemname == "Walking Speed":
@@ -62,16 +73,12 @@ func _on_button_pressed():
 		elif itemname == "Spawn Rate":
 			GameManager.sr = true
 			GameManager.spawnrate = 2
-			
-		
-		
-		
-			
 	elif itemprice > GameManager.shocktotal:
+		GameManager.click()
 		fadeio(notenough)
 
 func fadeio(panel):
-	GameManager.fade_in(panel, 1)
+	GameManager.animate_panel_in(panel)
 	await get_tree().create_timer(1).timeout
-	await GameManager.fade_out(panel, 1)
+	await GameManager.animate_panel_out(panel)
 	

@@ -27,6 +27,7 @@ func _on_area_entered(area):
 @onready var pfp_2: NinePatchRect = $CanvasLayer/pfp2
 
 func _on_pfp_pressed() -> void:
+	GameManager.click()
 	if pfp_2.visible == false:
 		title.visible = false
 		start.visible = false
@@ -42,6 +43,7 @@ func _on_pfp_pressed() -> void:
 
 
 func _on_start_pressed() -> void:
+	GameManager.click()
 	Transition.change_scene(self,"MainMap")
 
 var point = preload("res://Assets/New Piskel-13.png (5).png")
@@ -65,4 +67,10 @@ func _on_pfp_mouse_exited() -> void:
 
 
 func _on_shop_pressed() -> void:
+	GameManager.click()
 	Transition.change_scene(self,"shop")
+
+
+func _on_exit_pressed() -> void:
+	GameManager.click()
+	get_tree().quit()

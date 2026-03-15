@@ -1,9 +1,10 @@
-[gd_scene load_steps=62 format=3 uid="uid://cg4lj5qxq1t5u"]
+[gd_scene load_steps=63 format=3 uid="uid://cg4lj5qxq1t5u"]
 
 [ext_resource type="Texture2D" uid="uid://c5gyk2px1ysd5" path="res://Assets/Base_SpriteSheet.png" id="1_6phhs"]
 [ext_resource type="Script" uid="uid://dlt4etk8hb2kt" path="res://Scripts/robot.gd" id="1_dwnub"]
 [ext_resource type="Texture2D" uid="uid://dnqtxopn3uyd1" path="res://Assets/Base_SpriteSheet (1).png" id="2_dwnub"]
 [ext_resource type="Texture2D" uid="uid://pubpdcra4rrk" path="res://Assets/Base_SpriteSheet (2).png" id="3_ntbue"]
+[ext_resource type="AudioStream" uid="uid://id2j4522j76d" path="res://Sounds/phoenix_connection_brazil-slow-wind-sound-effect-108401.mp3" id="5_ntbue"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8s4wd"]
 atlas = ExtResource("1_6phhs")
@@ -459,7 +460,7 @@ script = ExtResource("1_dwnub")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qb0ay")
-animation = &"pushdown"
+animation = &"ND"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 2.5)
@@ -480,3 +481,6 @@ shape = SubResource("RectangleShape2D_ntbue")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(0.5, 6.5)
 shape = SubResource("RectangleShape2D_8s4wd")
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ntbue")

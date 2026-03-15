@@ -9,14 +9,17 @@ extends CharacterBody2D
 
 var speed := GameManager.speed
 var pushing := false
-
+var step_timer := 0.0
+var step_interval := 0.35
 func _process(_delta):
 	if GameManager.do_push_ability and !pushing:
 		pushing = true
 		pushability()
 			
+@onready var audio_stream_player_8: AudioStreamPlayer = $AudioStreamPlayer8
 
 func pushability():
+	audio_stream_player_8.play()
 	sprite.play("pushup")
 	set_collision_layer_value(1, false)
 	set_collision_mask_value(1, false)
@@ -43,7 +46,6 @@ func pushability():
 	GameManager.pushabilityfinished = true
 	GameManager.nowpushbackhumans = false
 	pushing = false
-
 func _physics_process(delta):
 
 	if GameManager.pause:
@@ -66,6 +68,13 @@ func _physics_process(delta):
 
 	update_animation(input_dir)
 
+	if input_dir != Vector2.ZERO and !pushing:
+		if !GameManager.humanwalkingsound.playing:
+			GameManager.humanwalkingsound.play()
+	else:
+		if GameManager.humanwalkingsound.playing:
+			GameManager.humanwalkingsound.stop()
+		
 func update_animation(dir: Vector2):
 	if pushing:
 		return

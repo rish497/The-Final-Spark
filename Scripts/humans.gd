@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		if dist < GameManager.strength: 
 			var dir = (global_position - target.global_position).normalized()
 			var falloff = 1.0 - (dist / GameManager.strength)
-			push_force = dir * (falloff * 250)
+			push_force = dir * (falloff * 350)
 			was_pushed = true
 	
 	if !GameManager.nowpushbackhumans:
@@ -98,6 +98,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		queue_free()
 
 func shock_effect():
+	GameManager.electric()
 	var tween = create_tween()
 
 	for i in range(4):

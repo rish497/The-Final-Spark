@@ -22,6 +22,8 @@ func format_time(time_seconds) -> String:
 	return "%02d:%02d" % [minutes, seconds]
 
 func _on_button_pressed() -> void:
+	GameManager.click()
+	GameManager.pause = false
 	Transition.change_scene(self,"MainMenu")
 
 var point = preload("res://Assets/New Piskel-13.png (5).png")

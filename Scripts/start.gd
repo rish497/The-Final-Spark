@@ -7,6 +7,7 @@ func _ready() -> void:
 	pause_icon.visible = true
 	play_icon.visible = false
 func _on_start_pressed() -> void:
+	GameManager.click()
 	if pausemenu.visible == false:
 		GameManager.animate_panel_in(pausemenu)
 		GameManager.timer = false

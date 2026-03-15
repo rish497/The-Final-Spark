@@ -9,7 +9,7 @@ func _ready() -> void:
 	pushability.visible = false
 
 	GameManager.do_push_ability = false
-	GameManager.pushabilityfinished = false
+	GameManager.pushabilityfinished = true
 
 
 var reloading := false
@@ -17,21 +17,24 @@ var reloading := false
 func _process(_delta):
 	if Input.is_action_just_pressed("escape"):
 		start.emit_signal("pressed")
-		
-	pushability.speed_scale = 0 if GameManager.pause else GameManager.reloadspeed
-	if GameManager.pause or GameManager.tto:
-		return
-	if GameManager.pushability:
-		pushability.visible = true
-	if Input.is_action_just_pressed("pushability") and reload:
-		GameManager.do_push_ability = true
-		color_rect.visible = false
-	if GameManager.pushabilityfinished and !reloading:
+	if GameManager.pushability == true:
+		if GameManager.pause:
+			pushability.speed_scale = 0
+		else:
+			pushability.speed_scale = GameManager.reloadspeed
+		if GameManager.pause or GameManager.tto:
+			return
+		if GameManager.pushability:
+			pushability.visible = true
+		if Input.is_action_just_pressed("pushability") and reload:
+			GameManager.do_push_ability = true
 			color_rect.visible = false
-			GameManager.pushabilityfinished = false
-			start_reload()
-	if GameManager.do_push_ability:
-		pushability.play("no reload")
+		if GameManager.pushabilityfinished and !reloading:
+				color_rect.visible = false
+				GameManager.pushabilityfinished = false
+				start_reload()
+		if GameManager.do_push_ability:
+			pushability.play("no reload")
 
 	
 func start_reload():

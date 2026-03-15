@@ -1,7 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqoi6d7vc0g7b"]
+[gd_scene load_steps=10 format=3 uid="uid://dqoi6d7vc0g7b"]
 
 [ext_resource type="Script" uid="uid://xtcu4wq2nnlc" path="res://Scripts/game_manager.gd" id="1_m2tc1"]
+[ext_resource type="AudioStream" uid="uid://bt8hwbpi6h82j" path="res://Sounds/universfield-computer-mouse-click-351398 (1).mp3" id="2_bwyv8"]
+[ext_resource type="AudioStream" uid="uid://cy25o4n0y0vb1" path="res://Sounds/dragon-studio-electric-discharge-386160.mp3" id="3_7cxpe"]
+[ext_resource type="AudioStream" uid="uid://qi3qbivnt700" path="res://Sounds/freesounds123-running-363346 (1).mp3" id="4_je8vj"]
+[ext_resource type="AudioStream" uid="uid://dfuhfd3xqgq2q" path="res://Sounds/freesound_community-hand-crank-generator-slow-76850.mp3" id="5_mmuqr"]
+[ext_resource type="AudioStream" uid="uid://ckpfi8t6mpbjw" path="res://Sounds/soul_serenity_sounds-typing-sound-02-229861 (1).mp3" id="6_xqbpr"]
+[ext_resource type="AudioStream" uid="uid://cear2v35yx4bx" path="res://Sounds/ribhavagrawal-purchase-succesful-ingame-230550.mp3" id="7_je8vj"]
+[ext_resource type="AudioStream" uid="uid://cs2upjf22y62y" path="res://Sounds/u_s026io00zm-beep-401570.mp3" id="8_f5c43"]
+[ext_resource type="AudioStream" uid="uid://co4b7xpoqopl4" path="res://Sounds/Long Preparation.ogg" id="9_8mb02"]
 
 [node name="Node" type="Node"]
 process_mode = 3
 script = ExtResource("1_m2tc1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bwyv8")
+volume_db = 8.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7cxpe")
+volume_db = -27.67
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_je8vj")
+volume_db = 2.0
+pitch_scale = 0.6
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mmuqr")
+volume_db = -20.991
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xqbpr")
+volume_db = -20.037
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_je8vj")
+volume_db = -15.266
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_f5c43")
+volume_db = -11.0
+
+[node name="BgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_8mb02")
+volume_db = -25.761

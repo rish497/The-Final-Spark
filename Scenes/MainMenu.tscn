@@ -1,16 +1,19 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxybe6rkrn83l"]
+[gd_scene load_steps=24 format=3 uid="uid://dxybe6rkrn83l"]
 
 [ext_resource type="Script" uid="uid://darylyobwq2fo" path="res://Scripts/main_menu.gd" id="1_ghw46"]
 [ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_tt5f1"]
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="2_853f1"]
 [ext_resource type="PackedScene" uid="uid://cbgbmx5uc37ju" path="res://Scenes/electricity.tscn" id="4_ghw46"]
 [ext_resource type="PackedScene" uid="uid://c8ucf62hrcrep" path="res://Scenes/pfpitem.tscn" id="5_cmrfp"]
+[ext_resource type="Texture2D" uid="uid://cpirb8mcjwss5" path="res://Assets/New Piskel-8.png (5).png" id="5_rrcx7"]
+[ext_resource type="Script" uid="uid://b5638t674tdc0" path="res://Scripts/texture_rect.gd" id="6_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://bwre7vu8d2g16" path="res://Assets/New Piskel-9.png (3).png" id="6_loo7a"]
 [ext_resource type="Texture2D" uid="uid://bgvl0got04m38" path="res://Assets/New Piskel-3.png (3).png" id="7_if7li"]
 [ext_resource type="Texture2D" uid="uid://dt4ain24db2p4" path="res://Assets/New Piskel-1.png (10).png" id="8_rrcx7"]
 [ext_resource type="Texture2D" uid="uid://dpu7s4jdwbd0a" path="res://Assets/New Piskel-4.png (4).png" id="9_fh7cp"]
 [ext_resource type="Script" uid="uid://cv27c0i8gxl8x" path="res://Scripts/shocktotal.gd" id="10_if7li"]
 [ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="11_rrcx7"]
+[ext_resource type="Script" uid="uid://djspjjkimvcka" path="res://scripts/nameprofiledisplay.gd" id="14_8e205"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8saeu"]
 
@@ -34,6 +37,8 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fh7cp"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -108,9 +113,9 @@ text = "SPARK"
 
 [node name="start" type="NinePatchRect" parent="CanvasLayer"]
 offset_left = 324.0
-offset_top = 235.0
+offset_top = 202.0
 offset_right = 805.0
-offset_bottom = 329.0
+offset_bottom = 296.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -145,9 +150,9 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
 
 [node name="shop" type="NinePatchRect" parent="CanvasLayer"]
 offset_left = 324.0
-offset_top = 367.0
+offset_top = 334.0
 offset_right = 805.0
-offset_bottom = 461.0
+offset_bottom = 428.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -163,7 +168,7 @@ offset_bottom = 94.0
 theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 theme_override_fonts/font = ExtResource("2_853f1")
 theme_override_font_sizes/font_size = 81
-text = "shop"
+text = "Upgrades"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -181,9 +186,9 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
 
 [node name="exit" type="NinePatchRect" parent="CanvasLayer"]
 offset_left = 324.0
-offset_top = 496.0
+offset_top = 463.0
 offset_right = 805.0
-offset_bottom = 590.0
+offset_bottom = 557.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -217,10 +222,11 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_8um5k")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
 
 [node name="pfp" type="NinePatchRect" parent="CanvasLayer"]
-offset_left = 1046.0
-offset_top = 208.0
-offset_right = 1132.0
-offset_bottom = 290.0
+clip_children = 2
+offset_left = 10.0
+offset_top = 536.0
+offset_right = 107.0
+offset_bottom = 632.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -228,11 +234,13 @@ patch_margin_right = 10
 patch_margin_bottom = 10
 
 [node name="PFP" type="Button" parent="CanvasLayer/pfp"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 8.14035
-offset_bottom = 82.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -89.909355
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(13.68, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8e205")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_7467j")
@@ -240,12 +248,26 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_2x1g0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_2x1g0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2x1g0")
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 540.0
+offset_right = -1048.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_rrcx7")
+script = ExtResource("6_fh7cp")
+
 [node name="pfp2" type="NinePatchRect" parent="CanvasLayer"]
 visible = false
-offset_left = 68.0
-offset_top = 127.0
-offset_right = 968.0
-offset_bottom = 556.0
+offset_left = 180.0
+offset_top = 105.0
+offset_right = 1080.0
+offset_bottom = 534.0
 pivot_offset = Vector2(450, 215)
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
@@ -351,6 +373,19 @@ rotation = -0.12968028
 scale = Vector2(1.2862769, 1.2862769)
 texture = ExtResource("11_rrcx7")
 
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 122.0
+offset_top = 536.0
+offset_right = 550.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("2_853f1")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fh7cp")
+text = "ChatGPT12222222221212121212"
+vertical_alignment = 1
+script = ExtResource("14_8e205")
+
 [connection signal="mouse_entered" from="CanvasLayer/start/start" to="." method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/start/start" to="." method="_on_start_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/start/start" to="." method="_on_start_pressed"]
@@ -359,6 +394,7 @@ texture = ExtResource("11_rrcx7")
 [connection signal="pressed" from="CanvasLayer/shop/shop" to="." method="_on_shop_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/exit/exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/exit/exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/exit/exit" to="." method="_on_exit_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/pfp/PFP" to="." method="_on_pfp_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/pfp/PFP" to="." method="_on_pfp_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/pfp/PFP" to="." method="_on_pfp_pressed"]

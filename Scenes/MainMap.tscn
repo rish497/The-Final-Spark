@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://fwbilk10fsxg"]
+[gd_scene load_steps=24 format=4 uid="uid://fwbilk10fsxg"]
 
 [ext_resource type="Texture2D" uid="uid://cimo8mb0wi45e" path="res://Assets/ground_grasss.png" id="1_e7g1p"]
 [ext_resource type="Script" uid="uid://dulpgh62xo8d2" path="res://Scripts/main_map.gd" id="1_ikcvm"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dpybfhptul0kh" path="res://Scenes/GUI.tscn" id="6_mcxqp"]
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="7_iocve"]
 [ext_resource type="Script" uid="uid://b3fx8bnsqckxb" path="res://Scripts/death_screen.gd" id="9_ch5ch"]
+[ext_resource type="Texture2D" uid="uid://gy6prnfaw1b6" path="res://Assets/New Piskel-11.png (4).png" id="10_l8a21"]
+[ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="10_v2ie4"]
+[ext_resource type="Texture2D" uid="uid://d3qcyy3q20rxs" path="res://Assets/Base_SpriteSheet-1.png.png" id="12_ftth4"]
+[ext_resource type="AudioStream" uid="uid://do77bwrn5sut7" path="res://Sounds/ribhavagrawal-game-over-2-sound-effect-230463.mp3" id="13_qp6sq"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ch5ch"]
 tile_data = PackedInt32Array(0, 458754, 10, 65536, 458754, 11, 1, 524290, 10, 65537, 524290, 11)
@@ -1811,6 +1815,7 @@ tile_map_data = PackedByteArray("AAD+/xwAAgAMABAAAAD+/x0AAgAMABEAAAD+/x4AAgAMABI
 tile_set = SubResource("TileSet_nofk3")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 position = Vector2(-9, 7)
 navigation_polygon = SubResource("NavigationPolygon_ch5ch")
 
@@ -2131,6 +2136,100 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l8a21")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_l8a21")
 theme_override_styles/focus = SubResource("StyleBoxFlat_l8a21")
 text = "Main menu"
+
+[node name="person1" type="NinePatchRect" parent="CanvasLayer"]
+visible = false
+offset_left = 306.0
+offset_top = 436.0
+offset_right = 1130.0
+offset_bottom = 623.0
+texture = ExtResource("10_v2ie4")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="start game" type="Label" parent="CanvasLayer/person1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 814.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("7_iocve")
+theme_override_font_sizes/font_size = 40
+text = "OH NO! We finished our energy resources. we must catch the robot to get his energy source! Only then can we live on! ALL CATCH HIM !!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="robo1" type="NinePatchRect" parent="CanvasLayer"]
+visible = false
+offset_left = 75.0
+offset_top = 436.0
+offset_right = 899.0
+offset_bottom = 623.0
+texture = ExtResource("10_v2ie4")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="start game" type="Label" parent="CanvasLayer/robo1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 814.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("7_iocve")
+theme_override_font_sizes/font_size = 40
+text = "NO STOP!!! I HAVE TOO MUCH LEAKED ENERGY! IF YOU TOUCH ME THEN YOU WILL GET SHOCKED AND DIE!!! I WILL FAIL IN MY MISSION TO KEEP HUMANS ALIVE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="person 2" type="NinePatchRect" parent="CanvasLayer"]
+visible = false
+offset_left = 305.0
+offset_top = 436.0
+offset_right = 1129.0
+offset_bottom = 623.0
+texture = ExtResource("10_v2ie4")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="start game" type="Label" parent="CanvasLayer/person 2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 814.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("7_iocve")
+theme_override_font_sizes/font_size = 40
+text = "does it look like i care? we humans have exploited energy resources for ages even with the death of millions along the way! We wont stop now!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="human" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(195.99998, 540)
+scale = Vector2(16.3125, 16.3125)
+texture = ExtResource("10_l8a21")
+
+[node name="robo" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(1051, 572)
+scale = Vector2(9.5625, 9.5625)
+texture = ExtResource("12_ftth4")
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_qp6sq")
+volume_db = 3.0
 
 [connection signal="mouse_entered" from="CanvasLayer/Death Screen/Button" to="CanvasLayer/Death Screen" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Death Screen/Button" to="CanvasLayer/Death Screen" method="_on_button_mouse_exited"]

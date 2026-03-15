@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://co4b7xpoqopl4"
+path="res://.godot/imported/Long Preparation.ogg-f24c46287831568b1a70566aad44669c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Long Preparation.ogg"
+dest_files=["res://.godot/imported/Long Preparation.ogg-f24c46287831568b1a70566aad44669c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

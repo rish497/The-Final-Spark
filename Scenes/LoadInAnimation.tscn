@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dyl1kunvihgdd"]
+[gd_scene load_steps=25 format=3 uid="uid://dyl1kunvihgdd"]
 
 [ext_resource type="Script" uid="uid://eaxo4knw0gs" path="res://Scripts/load_in_animation.gd" id="1_npgmo"]
 [ext_resource type="FontFile" uid="uid://btfsap681ujdx" path="res://editundo.ttf" id="1_x7wcp"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://cy3mj13ovw35o" path="res://Assets/New Piskel-2.png (5).png" id="8_7nn56"]
 [ext_resource type="Texture2D" uid="uid://c267nmsa1t6x1" path="res://Assets/New Piskel-3.png (2).png" id="9_fl184"]
 [ext_resource type="Texture2D" uid="uid://cv8avwnj5wipw" path="res://Assets/New Piskel-4.png (3).png" id="10_csmqq"]
+[ext_resource type="Texture2D" uid="uid://cpirb8mcjwss5" path="res://Assets/New Piskel-8.png (5).png" id="11_80an2"]
+[ext_resource type="Script" uid="uid://cejbflaie70oh" path="res://scripts/sign_up_chat.gd" id="11_csmqq"]
+[ext_resource type="Texture2D" uid="uid://b8j22woui0ctp" path="res://Assets/New Piskel-2.png (8).png" id="12_7nn56"]
+[ext_resource type="Texture2D" uid="uid://dnc5a7bww2uj0" path="res://Assets/New Piskel-20.png (1).png" id="13_fl184"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x7wcp"]
 
@@ -30,6 +34,19 @@ expand_margin_bottom = 1.0
 bg_color = Color(0.03529412, 0.03529412, 0.03529412, 0)
 border_width_top = 1
 border_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmbk7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_top = 2
+border_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl184"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7nn56"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_csmqq"]
+texture = ExtResource("13_fl184")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -424,8 +441,203 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxEmpty_brrfc")
 text = "new chat"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 651.0
+color = Color(1, 1, 1, 0)
+
+[node name="SignUpChat" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45800003
+anchor_top = 0.16900001
+anchor_right = 0.71300006
+anchor_bottom = 0.72900003
+offset_left = -36.365997
+offset_top = -45.38698
+offset_right = 37.3739
+offset_bottom = 45.48297
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(183, 226)
+texture = ExtResource("5_w37wp")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("11_csmqq")
+
+[node name="Label" type="Label" parent="SignUpChat"]
+layout_mode = 0
+offset_left = 10.9375
+offset_top = 12.5
+offset_right = 358.74994
+offset_bottom = 87.5
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("1_x7wcp")
+theme_override_font_sizes/font_size = 41
+text = "Sign up"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="SignUpChat"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 51.25
+offset_right = 357.49994
+offset_bottom = 111.56249
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("1_x7wcp")
+theme_override_font_sizes/font_size = 20
+text = "You’ll get smarter responses and faster responses"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="SignUpChat"]
+layout_mode = 0
+offset_left = 15.000008
+offset_top = 110.000015
+offset_right = 357.49994
+offset_bottom = 170.00002
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("1_x7wcp")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmbk7")
+text = "ENTER YOUR USERNAME and choose a profile picture"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="SearchBar" type="NinePatchRect" parent="SignUpChat"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
+offset_left = 24.999992
+offset_top = 188.75
+offset_right = 348.74994
+offset_bottom = 237.5
+size_flags_horizontal = 3
+texture = ExtResource("4_lyvr3")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="TextEdit" type="TextEdit" parent="SignUpChat/SearchBar"]
+layout_mode = 0
+offset_left = 12.499962
+offset_top = 8.749985
+offset_right = 308.74997
+offset_bottom = 44.749985
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 0
+theme_override_colors/caret_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_colors/selection_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_colors/font_placeholder_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_colors/current_line_color = Color(0.25, 0.25, 0.26, 0.8)
+theme_override_fonts/font = ExtResource("1_x7wcp")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x7wcp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_npgmo")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lyvr3")
+placeholder_text = "username"
+
+[node name="TextureRect" type="TextureRect" parent="SignUpChat"]
+layout_mode = 0
+offset_left = 46.25
+offset_top = 248.74998
+offset_right = 177.5
+offset_bottom = 380.0
+texture = ExtResource("11_80an2")
+
+[node name="Button" type="Button" parent="SignUpChat/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fl184")
+
+[node name="TextureRect2" type="TextureRect" parent="SignUpChat"]
+layout_mode = 0
+offset_left = 198.74998
+offset_top = 248.74998
+offset_right = 330.0
+offset_bottom = 380.0
+texture = ExtResource("12_7nn56")
+
+[node name="pfp2" type="Button" parent="SignUpChat/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fl184")
+
+[node name="PanelContainer" type="PanelContainer" parent="SignUpChat"]
+layout_mode = 0
+offset_left = 121.25
+offset_top = 407.49997
+offset_right = 243.25
+offset_bottom = 433.49997
+theme_override_styles/panel = SubResource("StyleBoxFlat_7nn56")
+
+[node name="Label" type="Label" parent="SignUpChat/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("1_x7wcp")
+theme_override_font_sizes/font_size = 28
+text = "sign up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="signupsubmit" type="Button" parent="SignUpChat/PanelContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fl184")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fl184")
+
+[node name="selector" type="Label" parent="SignUpChat"]
+visible = false
+layout_mode = 0
+offset_left = 192.49998
+offset_top = 242.5
+offset_right = 336.25
+offset_bottom = 386.24997
+theme_override_styles/normal = SubResource("StyleBoxTexture_csmqq")
+
 [connection signal="mouse_entered" from="Textpage/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_entered"]
 [connection signal="mouse_exited" from="Textpage/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_exited"]
 [connection signal="mouse_entered" from="Textpage/SearchBar/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Textpage/SearchBar/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Textpage/SearchBar/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="SignUpChat/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_entered"]
+[connection signal="mouse_exited" from="SignUpChat/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_exited"]
+[connection signal="mouse_entered" from="SignUpChat/TextureRect/Button" to="SignUpChat" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="SignUpChat/TextureRect/Button" to="SignUpChat" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="SignUpChat/TextureRect/Button" to="SignUpChat" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="SignUpChat/TextureRect2/pfp2" to="SignUpChat" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="SignUpChat/TextureRect2/pfp2" to="SignUpChat" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="SignUpChat/TextureRect2/pfp2" to="SignUpChat" method="_on_pfp_2_pressed"]
+[connection signal="mouse_entered" from="SignUpChat/PanelContainer/signupsubmit" to="SignUpChat" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="SignUpChat/PanelContainer/signupsubmit" to="SignUpChat" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="SignUpChat/PanelContainer/signupsubmit" to="SignUpChat" method="_on_signupsubmit_pressed"]

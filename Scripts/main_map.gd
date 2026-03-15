@@ -1,13 +1,21 @@
 extends Node2D
-
+@onready var person_1: NinePatchRect = $CanvasLayer/person1
+@onready var robo_1: NinePatchRect = $CanvasLayer/robo1
+@onready var person_2: NinePatchRect = $"CanvasLayer/person 2"
+@onready var human: Sprite2D = $CanvasLayer/human
+@onready var robo: Sprite2D = $CanvasLayer/robo
 @onready var tilemap: TileMapLayer = $BasicMap
 @export var human_scene: PackedScene
 @export var spawn_tile_atlas: Vector2i = Vector2i(3, 2)
+@onready var audio_stream_player_8: AudioStreamPlayer = $AudioStreamPlayer8
 var spawn_count: int
 @onready var label: Label = $CanvasLayer/Label
 @onready var nws: Label = $"CanvasLayer/next wave in"
 @onready var death_screen: ColorRect = $"CanvasLayer/Death Screen"
 @onready var color_rect: ColorRect = $CanvasLayer/ColorRect2
+@onready var p1: Label = $"CanvasLayer/person1/start game"
+@onready var r1: Label = $"CanvasLayer/robo1/start game"
+@onready var p2: Label = $"CanvasLayer/person 2/start game"
 var death_played = false
 var counting_started = false
 var game_started = false
@@ -20,12 +28,43 @@ func _ready():
 	death_screen.visible = false
 	GameManager.wave = 0
 	color_rect.visible = true
+	if GameManager.tutorial == false:
+		label.visible = false
+		GameManager.pause = true
+		await get_tree().create_timer(1.5).timeout
+		human.visible = true
+		person_1.visible = true
+		await GameManager.type_text(p1)
+		await get_tree().create_timer(4).timeout
+		human.visible = false
+		person_1.visible = false
+		robo.visible = true
+		robo_1.visible = true
+		await GameManager.type_text(r1)
+		await get_tree().create_timer(4).timeout
+		robo.visible = false
+		robo_1.visible = false
+		human.visible = true
+		person_2.visible = true
+		await GameManager.type_text(p2)
+		await get_tree().create_timer(4).timeout
+		human.visible = false
+		person_2.visible = false
+		GameManager.tutorial = true
+		GameManager.pause = false
+		label.visible = true
+		pass
+	else:
+		pass
 	await get_tree().create_timer(1.5).timeout
 	label.text ="3"
+	GameManager.beep()
 	await get_tree().create_timer(1).timeout
 	label.text ="2"
+	GameManager.beep()
 	await get_tree().create_timer(1).timeout
 	label.text ="1"
+	GameManager.beep()
 	await get_tree().create_timer(1).timeout
 	GameManager.tto = false
 	label.visible = false
@@ -52,16 +91,21 @@ func start_waves():
 		
 		await wait_if_paused()
 		GameManager.animate_panel_in(nws)
-
+		GameManager.beep()
 		nws.text = "NEXT WAVE IN 3..."
+		
 		await get_tree().create_timer(1).timeout
 
 		await wait_if_paused()
+		GameManager.beep()
 		nws.text = "NEXT WAVE IN 2..."
+		
 		await get_tree().create_timer(1).timeout
 
 		await wait_if_paused()
+		GameManager.beep()
 		nws.text = "NEXT WAVE IN 1..."
+		
 		await get_tree().create_timer(1).timeout
 
 		await wait_if_paused()
@@ -90,7 +134,8 @@ func _process(delta: float) -> void:
 @onready var a: Label = $CanvasLayer/a
 
 func death():
-	
+	GameManager.pause = true
+	audio_stream_player_8.play()
 	GameManager.wm = GameManager.wave
 	GameManager.sm = GameManager.money
 	GameManager.shocktotal += GameManager.money

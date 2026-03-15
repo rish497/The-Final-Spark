@@ -4,8 +4,10 @@ extends Panel
 @export var itemimage: Texture2D
 @export var itemprice: String
 @export var itemdescription: String
-@onready var label_4: ColorRect = $ColorRect2
 @onready var spend: AudioStreamPlayer = $AudioStreamPlayer
+@onready var button_2: Button = $PanelContainer2/Button2
+@onready var equip: Label = $PanelContainer2/EQUIP
+@onready var panel_container_2: PanelContainer = $PanelContainer2
 
 
 func _ready():
@@ -15,37 +17,84 @@ func _ready():
 	$Label2.text = itemdescription
 	
 func _process(delta: float) -> void:
-	if GameManager.money >= int(itemprice):
+	if GameManager.shocktotal >= int(itemprice):
 		label_3.visible = false
 	else:
 		label_3.visible = true
-	if label_4.visible == true:
-			label_3.visible = false
-		
-		
+var point = preload("res://Assets/New Piskel-13.png (5).png")
+var arrow = preload("uid://df3gadbe4uqcs")
+func _on_button_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(point)
+func _on_button_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(arrow)
 
 func _on_button_pressed() -> void:
-	spend.play()
-	GameManager.play_button_click()
-	if GameManager.money>=int(itemprice):
-		GameManager.loose_money_smooth(int(itemprice))
-		label_4.visible = true
-		if itemname == "T.P. TO SELL":
-			pass
-		elif itemname == "SELL AT SPOT":
-			pass
-		elif itemname == "Cheap Walking":
-			pass
-		elif itemname == "Valuable Pigs":
-			pass
-		elif itemname == "Walking is free (5min)":
-			pass
-		elif itemname == "2x Everything (5min)":
-			pass
+	if GameManager.shocktotal>=int(itemprice):
+		GameManager.purchase()
+		GameManager.shocktotal -= int(itemprice)
+		panel_container_2.visible = true
+		if itemname == "AMONG US":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = true
+			GameManager.p4 = false
+			GameManager.p5 = false
+			GameManager.p6 = false
+		elif itemname == "GHOST":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = false
+			GameManager.p4 = true
+			GameManager.p5 = false
+			GameManager.p6 = false
+		elif itemname == "BEAR":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = false
+			GameManager.p4 = false
+			GameManager.p5 = true
+			GameManager.p6 = false
+		elif itemname == "Darth Wader":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = false
+			GameManager.p4 = false
+			GameManager.p5 = false
+			GameManager.p6 = true
 	else:
+		GameManager.click()
 		pass
-		
-			
 
-	
+
+func _on_button_2_pressed() -> void:
+	GameManager.click()
+	if equip.text == "EQUIP":
+		if itemname == "AMONG US":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = true
+			GameManager.p4 = false
+			GameManager.p5 = false
+			GameManager.p6 = false
+		elif itemname == "GHOST":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = false
+			GameManager.p4 = true
+			GameManager.p5 = false
+			GameManager.p6 = false
+		elif itemname == "BEAR":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = false
+			GameManager.p4 = false
+			GameManager.p5 = true
+			GameManager.p6 = false
+		elif itemname == "Darth Wader":
+			GameManager.p1 = false
+			GameManager.p2 = false
+			GameManager.p3 = false
+			GameManager.p4 = false
+			GameManager.p5 = false
+			GameManager.p6 = true
 		

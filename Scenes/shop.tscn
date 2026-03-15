@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://blur4qyv8vfn2"]
+[gd_scene load_steps=48 format=3 uid="uid://blur4qyv8vfn2"]
 
 [ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_2shtd"]
 [ext_resource type="Script" uid="uid://d1b8qyui02j2q" path="res://Scripts/shop.gd" id="1_ymrm4"]
@@ -8,7 +8,22 @@
 [ext_resource type="Texture2D" uid="uid://dgxem4lgur57f" path="res://Assets/New Piskel-5.png (4).png" id="5_s8dlv"]
 [ext_resource type="Script" uid="uid://cv27c0i8gxl8x" path="res://Scripts/shocktotal.gd" id="5_ymrm4"]
 [ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="6_s8dlv"]
+[ext_resource type="Texture2D" uid="uid://djn26fwupab1k" path="res://Assets/New Piskel-17.png (1).png" id="7_0vsm1"]
+[ext_resource type="Texture2D" uid="uid://c33r72vhy5xl" path="res://Assets/New Piskel-18.png (1).png" id="7_5xp22"]
+[ext_resource type="Texture2D" uid="uid://iyy1umb2jfea" path="res://Assets/New Piskel-29.png.png" id="7_jhx1v"]
+[ext_resource type="Texture2D" uid="uid://2q8b742woc0v" path="res://Assets/New Piskel-30.png.png" id="8_dvu38"]
+[ext_resource type="Texture2D" uid="uid://0r3s8foepfs1" path="res://Assets/New Piskel-19.png.png" id="8_ow1eo"]
 [ext_resource type="Script" uid="uid://ch6oh4brjgpse" path="res://Scripts/drag.gd" id="8_s8dlv"]
+[ext_resource type="Texture2D" uid="uid://bfa7gcjlsa1f6" path="res://Assets/New Piskel-20.png.png" id="9_k6pkm"]
+[ext_resource type="Texture2D" uid="uid://b6kdigpg6rniq" path="res://Assets/New Piskel-31.png.png" id="9_k7yfq"]
+[ext_resource type="Texture2D" uid="uid://c2puui0nkovsd" path="res://Assets/New Piskel-21.png.png" id="10_1sjcd"]
+[ext_resource type="Texture2D" uid="uid://chsngra8qr3hh" path="res://Assets/New Piskel-22.png.png" id="11_1cyt5"]
+[ext_resource type="Texture2D" uid="uid://g7gahtry6sj" path="res://Assets/New Piskel-23.png.png" id="13_3568l"]
+[ext_resource type="Texture2D" uid="uid://dxlpf0u5yujpu" path="res://Assets/New Piskel-27.png.png" id="14_m13ki"]
+[ext_resource type="Texture2D" uid="uid://bur6un5mohf03" path="res://Assets/New Piskel-24.png.png" id="15_3mbjb"]
+[ext_resource type="Texture2D" uid="uid://cv2fp3gmlgan7" path="res://Assets/New Piskel-28.png.png" id="15_jhx1v"]
+[ext_resource type="Texture2D" uid="uid://bctrqbtcivkrw" path="res://Assets/New Piskel-25.png.png" id="16_jhx1v"]
+[ext_resource type="Texture2D" uid="uid://ch7v41xmw72c5" path="res://Assets/New Piskel-26.png.png" id="17_dvu38"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdj0q"]
 
@@ -18,6 +33,51 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8dlv"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ik0jt"]
+texture = ExtResource("7_jhx1v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkkvn"]
+texture = ExtResource("8_dvu38")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xv2t3"]
+texture = ExtResource("9_k7yfq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3568l"]
+texture = ExtResource("7_0vsm1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ow1eo"]
+texture = ExtResource("7_5xp22")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k6pkm"]
+texture = ExtResource("8_ow1eo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1sjcd"]
+texture = ExtResource("9_k6pkm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1cyt5"]
+texture = ExtResource("10_1sjcd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vsm1"]
+texture = ExtResource("11_1cyt5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjtuy"]
+texture = ExtResource("13_3568l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7yfq"]
+texture = ExtResource("14_m13ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvu38"]
+texture = ExtResource("15_jhx1v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6rctg"]
+texture = ExtResource("15_3mbjb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1shhe"]
+texture = ExtResource("16_jhx1v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1qjt"]
+texture = ExtResource("17_dvu38")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyrku"]
 content_margin_left = 43.0
@@ -162,6 +222,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Survival2/Survival"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ik0jt")
+
 [node name="humanspeed" type="NinePatchRect" parent="Survival2"]
 offset_left = 684.0
 offset_top = 382.0
@@ -279,6 +352,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Survival2/humanspeed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_lkkvn")
+
 [node name="spawnrate" type="NinePatchRect" parent="Survival2"]
 offset_left = 684.0
 offset_top = 164.00002
@@ -395,6 +481,19 @@ theme_override_font_sizes/font_size = 28
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Survival2/spawnrate"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_xv2t3")
 
 [node name="Abilities2" type="Node" parent="."]
 
@@ -515,6 +614,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Abilities2/Abilities"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_3568l")
+
 [node name="Speed" type="Node" parent="Abilities2"]
 
 [node name="Speed1" type="NinePatchRect" parent="Abilities2/Speed"]
@@ -634,6 +746,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="Abilities2/Speed/Speed1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ow1eo")
+
 [node name="Speed2" type="NinePatchRect" parent="Abilities2/Speed"]
 offset_left = 170.0
 offset_top = 382.0
@@ -750,6 +875,19 @@ theme_override_font_sizes/font_size = 28
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_k6pkm")
 
 [node name="Speed3" type="NinePatchRect" parent="Abilities2/Speed"]
 offset_left = 64.0
@@ -868,6 +1006,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1sjcd")
+
 [node name="Speed4" type="NinePatchRect" parent="Abilities2/Speed"]
 offset_left = -45.999985
 offset_top = 382.0
@@ -985,6 +1136,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1cyt5")
+
 [node name="Speed5" type="NinePatchRect" parent="Abilities2/Speed"]
 offset_left = -153.0
 offset_top = 382.0
@@ -1101,6 +1265,19 @@ theme_override_font_sizes/font_size = 28
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Abilities2/Speed/Speed5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_0vsm1")
 
 [node name="PushAbility" type="Node" parent="Abilities2"]
 
@@ -1221,6 +1398,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Push"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_mjtuy")
+
 [node name="Reload speed" type="Node" parent="Abilities2/PushAbility"]
 
 [node name="ReloadSpeed1" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed"]
@@ -1340,6 +1530,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_k7yfq")
+
 [node name="ReloadSpeed2" type="NinePatchRect" parent="Abilities2/PushAbility/Reload speed"]
 offset_left = 282.99997
 offset_top = -28.000002
@@ -1456,6 +1659,19 @@ theme_override_font_sizes/font_size = 28
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Reload speed/ReloadSpeed2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_dvu38")
 
 [node name="Strength" type="Node" parent="Abilities2/PushAbility"]
 
@@ -1576,6 +1792,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Strength/Strength1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_6rctg")
+
 [node name="Strength2" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
 offset_left = 65.0
 offset_top = 162.00009
@@ -1693,6 +1922,19 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Strength/Strength2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1shhe")
+
 [node name="Strength3" type="NinePatchRect" parent="Abilities2/PushAbility/Strength"]
 offset_left = -41.000004
 offset_top = 162.00009
@@ -1809,6 +2051,19 @@ theme_override_font_sizes/font_size = 28
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Abilities2/PushAbility/Strength/Strength3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.843079
+offset_top = 8.75
+offset_right = -9.095749
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_n1qjt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(522, 316)

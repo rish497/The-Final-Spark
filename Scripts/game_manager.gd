@@ -1,9 +1,9 @@
 extends Node
-var strength = 90
+var strength = 110
 var humans: int = 1
 var money: int = 0
 var wave: int = 1
-var shocktotal:int = 1000000000
+var shocktotal:int = 0
 var timer: bool = false
 var pause: bool = false
 var play: bool = false
@@ -39,8 +39,41 @@ var survival = false
 var hs = false
 var spawnrate: int = 5
 var sr = false
-
-
+var purchased_items := {}
+var profilename: String
+var p1 = false
+var p2 = false
+var p3 = false
+var p4 = false
+var p5 = false
+var p6 = false
+var signupdone = false
+var tutorial = false
+@onready var electricsound: AudioStreamPlayer = $AudioStreamPlayer2
+@onready var clicksound: AudioStreamPlayer = $AudioStreamPlayer
+@onready var humanwalkingsound: AudioStreamPlayer = $AudioStreamPlayer3
+@onready var robotwalkingsound: AudioStreamPlayer = $AudioStreamPlayer4
+@onready var typesound: AudioStreamPlayer = $AudioStreamPlayer5
+@onready var purchasesound: AudioStreamPlayer = $AudioStreamPlayer6
+@onready var beepsound: AudioStreamPlayer = $AudioStreamPlayer7
+@onready var bg_music: AudioStreamPlayer = $BgMusic
+func click():
+	clicksound.play()
+func electric():
+	electricsound.play()
+func humanwalk():
+	humanwalkingsound.play()
+func robotwalking():
+	robotwalkingsound.play()
+func type():
+	typesound.pitch_scale = randf_range(0.9, 1.1)
+	typesound.play()
+func purchase():
+	purchasesound.play()
+func beep():
+	beepsound.play()
+func bgmusic():
+	bg_music.play()
 func fade_in(node: CanvasItem, duration: float = .2):
 	node.visible = true
 	if node == null:
@@ -96,3 +129,16 @@ func animate_panel_out(panel):
 	tween.tween_property(panel, "scale", Vector2(0, 0), 0.6)
 	await get_tree().create_timer(0.2).timeout
 	panel.visible = false
+var sound_counter := 0
+
+func type_text(label: Label):
+	var full_text = label.text
+	label.text = ""
+	for i in range(full_text.length()):
+		label.text += full_text[i]
+		if full_text[i] != " ":
+			sound_counter += 1
+			if sound_counter >= 2:
+				type()
+				sound_counter = 0
+		await get_tree().create_timer(0.02).timeout

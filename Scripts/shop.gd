@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	if GameManager.s4:
 		speed_5.visible = true
 	if GameManager.pushability:
-		GameManager.reloadspeed = 2
+		GameManager.reloadspeed = 3
 		strength_1.visible = true
 		reload_speed_1.visible = true
 	if GameManager.ps1:
@@ -64,4 +64,5 @@ func _on_exit_mouse_exited() -> void:
 
 
 func _on_exit_pressed() -> void:
+	GameManager.click()
 	Transition.change_scene(self, "MainMenu")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qi3qbivnt700"
+path="res://.godot/imported/freesounds123-running-363346 (1).mp3-23fe17328fa29188f9bcb9894544b1a5.mp3str"
+
+[deps]
+
+source_file="res://Sounds/freesounds123-running-363346 (1).mp3"
+dest_files=["res://.godot/imported/freesounds123-running-363346 (1).mp3-23fe17328fa29188f9bcb9894544b1a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

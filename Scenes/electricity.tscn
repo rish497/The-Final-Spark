@@ -78,5 +78,6 @@ texture = ExtResource("1_j25xq")
 [node name="Area2D" type="Area2D" parent="." groups=["electricity"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(603.5, -152.5)
 shape = SubResource("RectangleShape2D_j25xq")
