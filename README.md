@@ -2,7 +2,7 @@
 <h4>Hello and welcome to the game where&nbsp;&nbsp;you are the only robot left on earth&nbsp;trying to kill the least amount of humans</h4>
 <h3>BETTER PLAYING EXPERIENCE IN FULL SCREEN</h3>
 <p><strong>DISCLAMER: The profile picture is customizable. THERE IS A EASTER EGG IN THE GAME!</strong></p>
-<p><strong>Public Github Repo:&nbsp;<a href="https://github.com/rish497/The-Final-Spark">https://github.com/rish497/The-Final-Spark</a></strong></p>
+<p><strong>Public Github Repo:&nbsp;<a href="https://github.com/rish497/The-Final-Spark">https://github.com/rish497/The-Final-Spark</a></strong></p><p><strong>Features Of Game</strong></p><ol><li>The CHATGPT is just a showcase... the side buttons don't work</li><li>When you exit in ITCH it doesnt exit the game literally because it is a web version. This is not my codes problem but ITCH doesnt allow to exit. Download the APP for better experience.</li><li>If the HUMANS touch the robot they die!!!</li><li>THE UPGRADES&nbsp;ARE&nbsp;IN THE FORM OF SKILL TREE!! Unlocking 1 upgrades opens up more!!!</li></ol>
 <p><strong>About Game 🎮</strong>
 </p>
 <ol><li>Game was built in&nbsp;<em>Godot</em>
