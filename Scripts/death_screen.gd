@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	tsbm.text = format_time(GameManager.besttime)
 	tstm.text = format_time(GameManager.tm)
 	wth.text = str(GameManager.wm - 1)
-	wbt.text = str(GameManager.wb - 1)
+	wbt.text = str(GameManager.wb)
 
 func format_time(time_seconds) -> String:
 	var t = int(time_seconds)

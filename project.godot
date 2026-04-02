@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Transition="*res://Scenes/transition.tscn"
 GameManager="*res://Scenes/GameManager.tscn"
+SilentWolf="*res://addons/silent_wolf/SilentWolf.gd"
 
 [display]
 
@@ -27,7 +28,7 @@ mouse_cursor/custom_image="uid://df3gadbe4uqcs"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/silent_wolf/plugin.cfg")
 
 [global_group]
 
@@ -85,4 +86,3 @@ pushability={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.12941177, 0.12941177, 0.12941177, 1)

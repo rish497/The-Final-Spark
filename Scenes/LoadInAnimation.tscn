@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c267nmsa1t6x1" path="res://Assets/New Piskel-3.png (2).png" id="9_fl184"]
 [ext_resource type="Texture2D" uid="uid://cv8avwnj5wipw" path="res://Assets/New Piskel-4.png (3).png" id="10_csmqq"]
 [ext_resource type="Texture2D" uid="uid://cpirb8mcjwss5" path="res://Assets/New Piskel-8.png (5).png" id="11_80an2"]
-[ext_resource type="Script" uid="uid://cejbflaie70oh" path="res://scripts/sign_up_chat.gd" id="11_csmqq"]
+[ext_resource type="Script" uid="uid://cejbflaie70oh" path="res://Scripts/sign_up_chat.gd" id="11_csmqq"]
 [ext_resource type="Texture2D" uid="uid://b8j22woui0ctp" path="res://Assets/New Piskel-2.png (8).png" id="12_7nn56"]
 [ext_resource type="Texture2D" uid="uid://dnc5a7bww2uj0" path="res://Assets/New Piskel-20.png (1).png" id="13_fl184"]
 
@@ -154,6 +154,8 @@ offset_left = 302.0
 offset_top = 64.0
 offset_right = 1123.0
 offset_bottom = 511.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Textpage/ScrollContainer"]
 layout_mode = 2

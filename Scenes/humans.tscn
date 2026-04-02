@@ -1,7 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://chj1wqebn4jpa"]
+[gd_scene load_steps=31 format=3 uid="uid://chj1wqebn4jpa"]
 
 [ext_resource type="Script" uid="uid://3br8oe680ihw" path="res://Scripts/humans.gd" id="1_km6rf"]
 [ext_resource type="Texture2D" uid="uid://b1yle0nipxmhx" path="res://Assets/16x16-character-8D-template-1.png.png" id="2_idx6y"]
+[ext_resource type="AudioStream" uid="uid://cy25o4n0y0vb1" path="res://Sounds/dragon-studio-electric-discharge-386160.mp3" id="3_43glq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mp5h3"]
 atlas = ExtResource("2_idx6y")
@@ -237,11 +238,16 @@ shape = SubResource("RectangleShape2D_bcw6h")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
+debug_enabled = true
 debug_path_custom_color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_43glq")
+volume_db = -27.67
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

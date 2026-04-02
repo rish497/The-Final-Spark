@@ -72,7 +72,7 @@ func _on_button_pressed():
 			GameManager.humanspeed = 85
 		elif itemname == "Spawn Rate":
 			GameManager.sr = true
-			GameManager.spawnrate = 2
+			GameManager.spawnrate = 10
 	elif itemprice > GameManager.shocktotal:
 		GameManager.click()
 		fadeio(notenough)

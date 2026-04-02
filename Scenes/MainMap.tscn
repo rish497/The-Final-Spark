@@ -23,7 +23,7 @@ tile_data = PackedInt32Array(0, 720898, 10, 65536, 720898, 11, 1, 786434, 10, 65
 [sub_resource type="TileMapPattern" id="TileMapPattern_v2ie4"]
 tile_data = PackedInt32Array(0, 786434, 16, 65536, 786434, 17, 131072, 786434, 18, 1, 851970, 16, 65537, 851970, 17, 131073, 851970, 18, 2, 917506, 16, 65538, 917506, 17, 131074, 917506, 18, 3, 983042, 16, 65539, 983042, 17, 131075, 983042, 18)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7xqk"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp6sq"]
 texture = ExtResource("1_e7g1p")
 1:0/0 = 0
 1:0/0/terrain_set = 0
@@ -492,7 +492,7 @@ texture = ExtResource("1_e7g1p")
 34:13/0 = 0
 35:13/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nofk3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_87m0o"]
 texture = ExtResource("2_q7xqk")
 2:1/0 = 0
 2:1/0/terrain_set = 0
@@ -1266,7 +1266,7 @@ texture = ExtResource("2_q7xqk")
 27:42/0 = 0
 28:42/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftth4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_af27v"]
 texture = ExtResource("5_cp4eh")
 0:0/0 = 0
 1:0/0 = 0
@@ -1779,9 +1779,9 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Terrain 1"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_q7xqk")
-sources/1 = SubResource("TileSetAtlasSource_nofk3")
-sources/2 = SubResource("TileSetAtlasSource_ftth4")
+sources/0 = SubResource("TileSetAtlasSource_qp6sq")
+sources/1 = SubResource("TileSetAtlasSource_87m0o")
+sources/2 = SubResource("TileSetAtlasSource_af27v")
 pattern_0 = SubResource("TileMapPattern_ch5ch")
 pattern_1 = SubResource("TileMapPattern_l8a21")
 pattern_2 = SubResource("TileMapPattern_v2ie4")
@@ -1815,7 +1815,6 @@ tile_map_data = PackedByteArray("AAD+/xwAAgAMABAAAAD+/x0AAgAMABEAAAD+/x4AAgAMABI
 tile_set = SubResource("TileSet_nofk3")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 position = Vector2(-9, 7)
 navigation_polygon = SubResource("NavigationPolygon_ch5ch")
 

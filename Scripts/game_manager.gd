@@ -37,7 +37,7 @@ var speed:int = 100
 var humanspeed:int = 93
 var survival = false
 var hs = false
-var spawnrate: int = 5
+var spawnrate: int = 15
 var sr = false
 var purchased_items := {}
 var profilename: String
@@ -48,8 +48,7 @@ var p4 = false
 var p5 = false
 var p6 = false
 var signupdone = false
-var tutorial = false
-@onready var electricsound: AudioStreamPlayer = $AudioStreamPlayer2
+var tutorial = true
 @onready var clicksound: AudioStreamPlayer = $AudioStreamPlayer
 @onready var humanwalkingsound: AudioStreamPlayer = $AudioStreamPlayer3
 @onready var robotwalkingsound: AudioStreamPlayer = $AudioStreamPlayer4
@@ -59,8 +58,6 @@ var tutorial = false
 @onready var bg_music: AudioStreamPlayer = $BgMusic
 func click():
 	clicksound.play()
-func electric():
-	electricsound.play()
 func humanwalk():
 	humanwalkingsound.play()
 func robotwalking():
@@ -142,3 +139,17 @@ func type_text(label: Label):
 				type()
 				sound_counter = 0
 		await get_tree().create_timer(0.02).timeout
+func _ready() -> void:
+	print("Spawnrate:", GameManager.spawnrate)
+	SilentWolf.configure({
+		"api_key": "iXNVMVArkV22UrBQoZSU33u9Q0oODSG97KMhTnBH",
+		"game_id": "thefinalspark",
+		"log_level": 1
+	})
+
+	SilentWolf.configure_scores({
+		"open_scene_on_close": "res://scenes/MainMenu.tscn"
+	})
+
+func savescore():
+	SilentWolf.Scores.save_score(profilename, wb)

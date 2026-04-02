@@ -19,7 +19,6 @@ func _process(_delta):
 @onready var audio_stream_player_8: AudioStreamPlayer = $AudioStreamPlayer8
 
 func pushability():
-	audio_stream_player_8.play()
 	sprite.play("pushup")
 	set_collision_layer_value(1, false)
 	set_collision_mask_value(1, false)
@@ -33,6 +32,7 @@ func pushability():
 	await get_tree().create_timer(.5).timeout
 	sprite.play("pushdown")
 	GameManager.nowpushbackhumans = true
+	audio_stream_player_8.play()
 	await get_tree().create_timer(.1).timeout
 	set_collision_layer_value(1, true)
 	set_collision_mask_value(1, true)

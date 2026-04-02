@@ -6,6 +6,7 @@ var push_decay: float = 700
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var target: CharacterBody2D = $"../CharacterBody2D"
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
+@onready var electric: AudioStreamPlayer = $AudioStreamPlayer2
 var was_pushed := false
 
 func _ready():
@@ -98,13 +99,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		queue_free()
 
 func shock_effect():
-	GameManager.electric()
 	var tween = create_tween()
-
+	electric.play()
 	for i in range(4):
 		tween.tween_property(self, "rotation_degrees", 10, 0.05)
 		tween.tween_property(self, "rotation_degrees", -10, 0.05)
 
 	tween.tween_property(self, "rotation_degrees", 0, 0.05)
-
 	return tween.finished

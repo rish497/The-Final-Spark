@@ -25,6 +25,7 @@ func _on_area_entered(area):
 		spawn_electricity()
 
 @onready var pfp_2: NinePatchRect = $CanvasLayer/pfp2
+@onready var leaderboard: NinePatchRect = $CanvasLayer/leaderboard
 
 func _on_pfp_pressed() -> void:
 	GameManager.click()
@@ -33,18 +34,24 @@ func _on_pfp_pressed() -> void:
 		start.visible = false
 		shop.visible = false
 		exit.visible = false
+		leaderboard.visible = false
 		GameManager.animate_panel_in(pfp_2)
 	else:
 		title.visible = true
 		start.visible = true
 		shop.visible = true
 		exit.visible = true
+		leaderboard.visible = true
 		GameManager.animate_panel_out(pfp_2)
 
-
+var number = [1,2,3]
 func _on_start_pressed() -> void:
 	GameManager.click()
-	Transition.change_scene(self,"MainMap")
+	if GameManager.tutorial == false:
+		Transition.change_scene(self,"MainMap")
+	else:
+		var numrandom = number.pick_random() 
+		Transition.change_scene(self, "Map" + str(numrandom))
 
 var point = preload("res://Assets/New Piskel-13.png (5).png")
 var arrow = preload("uid://df3gadbe4uqcs")
@@ -74,3 +81,8 @@ func _on_shop_pressed() -> void:
 func _on_exit_pressed() -> void:
 	GameManager.click()
 	get_tree().quit()
+
+
+func _on_lb_pressed() -> void:
+	GameManager.click()
+	get_tree().change_scene_to_file("res://addons/silent_wolf/Scores/Leaderboard.tscn")

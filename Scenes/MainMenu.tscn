@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dpu7s4jdwbd0a" path="res://Assets/New Piskel-4.png (4).png" id="9_fh7cp"]
 [ext_resource type="Script" uid="uid://cv27c0i8gxl8x" path="res://Scripts/shocktotal.gd" id="10_if7li"]
 [ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="11_rrcx7"]
-[ext_resource type="Script" uid="uid://djspjjkimvcka" path="res://scripts/nameprofiledisplay.gd" id="14_8e205"]
+[ext_resource type="Script" uid="uid://djspjjkimvcka" path="res://Scripts/nameprofiledisplay.gd" id="14_8e205"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8saeu"]
 
@@ -69,9 +69,9 @@ shape = SubResource("WorldBoundaryShape2D_8saeu")
 
 [node name="title" type="NinePatchRect" parent="CanvasLayer"]
 offset_left = 10.0
-offset_top = 26.0
+offset_top = 16.0
 offset_right = 1143.0
-offset_bottom = 154.0
+offset_bottom = 144.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -112,10 +112,10 @@ theme_override_font_sizes/font_size = 150
 text = "SPARK"
 
 [node name="start" type="NinePatchRect" parent="CanvasLayer"]
-offset_left = 324.0
-offset_top = 202.0
-offset_right = 805.0
-offset_bottom = 296.0
+offset_left = 319.0
+offset_top = 161.0
+offset_right = 800.0
+offset_bottom = 255.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -149,10 +149,10 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_8um5k")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
 
 [node name="shop" type="NinePatchRect" parent="CanvasLayer"]
-offset_left = 324.0
-offset_top = 334.0
-offset_right = 805.0
-offset_bottom = 428.0
+offset_left = 319.0
+offset_top = 271.0
+offset_right = 800.0
+offset_bottom = 365.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -185,10 +185,10 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_8um5k")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
 
 [node name="exit" type="NinePatchRect" parent="CanvasLayer"]
-offset_left = 324.0
-offset_top = 463.0
-offset_right = 805.0
-offset_bottom = 557.0
+offset_left = 319.0
+offset_top = 381.0
+offset_right = 800.0
+offset_bottom = 475.0
 texture = ExtResource("1_tt5f1")
 patch_margin_left = 10
 patch_margin_top = 10
@@ -209,6 +209,42 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="exit" type="Button" parent="CanvasLayer/exit"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.86841
+offset_bottom = 95.0
+scale = Vector2(13.68, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ghw46")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_df05h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8um5k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8um5k")
+
+[node name="leaderboard" type="NinePatchRect" parent="CanvasLayer"]
+offset_left = 319.0
+offset_top = 490.0
+offset_right = 800.0
+offset_bottom = 584.0
+texture = ExtResource("1_tt5f1")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="exitgame" type="Label" parent="CanvasLayer/leaderboard"]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 476.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("2_853f1")
+theme_override_font_sizes/font_size = 81
+text = "leaderboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lb" type="Button" parent="CanvasLayer/leaderboard"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
@@ -374,10 +410,10 @@ scale = Vector2(1.2862769, 1.2862769)
 texture = ExtResource("11_rrcx7")
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
-offset_left = 122.0
-offset_top = 536.0
-offset_right = 550.0
-offset_bottom = 632.0
+offset_left = 115.0
+offset_top = 565.0
+offset_right = 543.0
+offset_bottom = 661.0
 theme_override_colors/font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 theme_override_fonts/font = ExtResource("2_853f1")
 theme_override_font_sizes/font_size = 36
@@ -395,6 +431,9 @@ script = ExtResource("14_8e205")
 [connection signal="mouse_entered" from="CanvasLayer/exit/exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/exit/exit" to="." method="_on_exit_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/exit/exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/leaderboard/lb" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/leaderboard/lb" to="." method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/leaderboard/lb" to="." method="_on_lb_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/pfp/PFP" to="." method="_on_pfp_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/pfp/PFP" to="." method="_on_pfp_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/pfp/PFP" to="." method="_on_pfp_pressed"]
