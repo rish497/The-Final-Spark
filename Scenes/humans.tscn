@@ -238,7 +238,6 @@ shape = SubResource("RectangleShape2D_bcw6h")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
-debug_enabled = true
 debug_path_custom_color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="."]

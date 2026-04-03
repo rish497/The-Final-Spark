@@ -16,6 +16,8 @@ var reloading := false
 
 func _process(_delta):
 	if Input.is_action_just_pressed("escape"):
+		if GameManager.tutorial == false:
+			return
 		start.emit_signal("pressed")
 	if GameManager.pushability == true:
 		if GameManager.pause:

@@ -24,6 +24,12 @@ extends Node2D
 @onready var bbb: ColorRect = $CanvasLayer/BBB
 @onready var bbb_2: ColorRect = $CanvasLayer/BBB2
 @onready var a: Label = $CanvasLayer/a
+@onready var tutorial: NinePatchRect = $CanvasLayer/Tutorial
+@onready var mission: Label = $CanvasLayer/Tutorial/Mission
+@onready var desc: Label = $CanvasLayer/Tutorial/Desc
+@onready var desc_2: Label = $CanvasLayer/Tutorial/Desc2
+@onready var roboman: AnimatedSprite2D = $CanvasLayer/Tutorial/roboman
+@onready var human_man: AnimatedSprite2D = $CanvasLayer/Tutorial/HumanMan
 
 var spawn_count: int = 0
 var death_played = false
@@ -55,6 +61,7 @@ func _ready():
 		h.queue_free()
 
 	if GameManager.tutorial == false:
+		 
 		label.visible = false
 		GameManager.pause = true
 
@@ -87,9 +94,30 @@ func _ready():
 		human.visible = false
 		person_2.visible = false
 
-		GameManager.tutorial = true
 		GameManager.pause = false
+		await get_tree().create_timer(1).timeout
+		
+		GameManager.animate_panel_in(tutorial)
+		mission.visible = true
+		await  get_tree().create_timer(1).timeout
+		desc.visible = true
+		GameManager.type_text(desc)
+		await get_tree().create_timer(2.5).timeout
+		roboman.visible = true
+		human_man.visible = true
+		human_man.play("WR")
+		GameManager.move_to(human_man,Vector2(161,173.5),2)
+		await get_tree().create_timer(.5).timeout
+		desc_2.visible = true
+		GameManager.type_text(desc_2)
+		await get_tree().create_timer(2).timeout
+		await shock_effect()
+		human_man.queue_free()
+		await get_tree().create_timer(2).timeout
+		GameManager.animate_panel_out(tutorial)
 		label.visible = true
+		GameManager.tutorial = true
+		
 
 	await get_tree().create_timer(1.5).timeout
 
@@ -126,7 +154,17 @@ func _ready():
 func wait_if_paused():
 	while GameManager.pause:
 		await get_tree().process_frame
+@onready var electric: AudioStreamPlayer = $AudioStreamPlayer2
 
+func shock_effect():
+	var tween = create_tween()
+	electric.play()
+	for i in range(4):
+		tween.tween_property(human_man, "rotation_degrees", 10, 0.05)
+		tween.tween_property(human_man, "rotation_degrees", -10, 0.05)
+
+	tween.tween_property(human_man, "rotation_degrees", 0, 0.05)
+	return tween.finished
 
 func start_waves():
 	while !GameManager.death:
