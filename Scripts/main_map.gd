@@ -265,5 +265,3 @@ func spawn_asset():
 	var item = human_scene.instantiate()
 	item.global_position = pos
 	add_child(item)
-
-	print("Asset spawned at:", pos)

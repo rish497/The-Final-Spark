@@ -241,7 +241,7 @@ avoidance_enabled = true
 debug_path_custom_color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.3
 autostart = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]

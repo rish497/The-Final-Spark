@@ -44,7 +44,7 @@ func _on_pfp_pressed() -> void:
 		leaderboard.visible = true
 		GameManager.animate_panel_out(pfp_2)
 
-var number = [1,2,3,4,5,6]
+var number = [1,2,3,4,5,6,7]
 func _on_start_pressed() -> void:
 	GameManager.click()
 	if GameManager.tutorial == false:
