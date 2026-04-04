@@ -43,14 +43,16 @@ func _on_pfp_pressed() -> void:
 		exit.visible = true
 		leaderboard.visible = true
 		GameManager.animate_panel_out(pfp_2)
-
-var number = [1,2,3,4,5,6,7]
+		
+var number = [1,2,3,4,5,6,7,8]
 func _on_start_pressed() -> void:
 	GameManager.click()
 	if GameManager.tutorial == false:
 		Transition.change_scene(self,"MainMap")
 	else:
-		var numrandom = number.pick_random() 
+		var numrandom = GameManager.pn
+		while numrandom == GameManager.pn:
+			numrandom = number.pick_random()
 		Transition.change_scene(self, "Map" + str(numrandom))
 
 var point = preload("res://Assets/New Piskel-13.png (5).png")

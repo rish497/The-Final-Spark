@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dxybe6rkrn83l"]
+[gd_scene load_steps=25 format=3 uid="uid://dxybe6rkrn83l"]
 
 [ext_resource type="Script" uid="uid://darylyobwq2fo" path="res://Scripts/main_menu.gd" id="1_ghw46"]
 [ext_resource type="Texture2D" uid="uid://dpn5uoaya6ctn" path="res://Assets/New Piskel-2.png (3).png" id="1_tt5f1"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://cv27c0i8gxl8x" path="res://Scripts/shocktotal.gd" id="10_if7li"]
 [ext_resource type="Texture2D" uid="uid://ddifrk4piejvu" path="res://Assets/New Piskel (18).png" id="11_rrcx7"]
 [ext_resource type="Script" uid="uid://djspjjkimvcka" path="res://Scripts/nameprofiledisplay.gd" id="14_8e205"]
+[ext_resource type="PackedScene" uid="uid://breeqby10y8kq" path="res://Scenes/control.tscn" id="15_7467j"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8saeu"]
 
@@ -421,6 +422,11 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_fh7cp")
 text = "ChatGPT12222222221212121212"
 vertical_alignment = 1
 script = ExtResource("14_8e205")
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("15_7467j")]
+offset_left = -2.0
+offset_right = -2.0
+mouse_filter = 2
 
 [connection signal="mouse_entered" from="CanvasLayer/start/start" to="." method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/start/start" to="." method="_on_start_mouse_exited"]

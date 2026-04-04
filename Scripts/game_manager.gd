@@ -48,7 +48,8 @@ var p4 = false
 var p5 = false
 var p6 = false
 var signupdone = false
-var tutorial = false
+var tutorial = true
+var pn
 @onready var clicksound: AudioStreamPlayer = $AudioStreamPlayer
 @onready var humanwalkingsound: AudioStreamPlayer = $AudioStreamPlayer3
 @onready var robotwalkingsound: AudioStreamPlayer = $AudioStreamPlayer4
