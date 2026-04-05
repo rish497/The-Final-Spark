@@ -466,7 +466,6 @@ script = ExtResource("1_fx7jt")
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Chatbotscreen" type="NinePatchRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.39600003
@@ -493,7 +492,7 @@ scale = Vector2(4.4873004, 4.4873004)
 sprite_frames = SubResource("SpriteFrames_pxugv")
 animation = &"SED"
 autoplay = "SED"
-frame_progress = 0.2980623
+frame_progress = 0.59069574
 
 [node name="Label2" type="Label" parent="Chatbotscreen"]
 layout_mode = 0

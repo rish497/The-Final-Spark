@@ -1,5 +1,6 @@
 extends Control
-@onready var scroll_container: ScrollContainer = $Textpage/ScrollContainer
+
+@onready var scroll_container: ScrollContainer = $Chatbotscreen/ScrollContainer
 
 var GAME_DATA = """
 You are Byte, an AI assistant inside a game.
@@ -41,6 +42,9 @@ THEMES:
 - Shock (currency + mechanic)
 - You can't save everyone
 
+DEVELOPERS:
+- Developed by Rishabh Mittal
+
 INSTRUCTIONS:
 - Answer like a helpful in-game assistant
 - Keep answers short and clear
@@ -52,8 +56,14 @@ INSTRUCTIONS:
 @onready var http = $HTTPRequest
 @onready var box: NinePatchRect = $Chatbotscreen/SearchBar
 
-var API_KEY = "AIzaSyAD2Svq5dp-Pd6A129Esdy5Nxug0TsWUBc"
-
+var API_KEY = ""
+func _ready():
+	API_KEY = load_api_key()
+func load_api_key():
+	var file = FileAccess.open("res://config.json", FileAccess.READ)
+	var json = JSON.parse_string(file.get_as_text())
+	return json["api_key"]
+	
 func _on_button_pressed() -> void:
 	var text = input.text.strip_edges()
 	if text == "":
@@ -109,6 +119,8 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 
 func add_message(text: String):
 	chat.append_text(text + "\n\n")
+	scroll_to_bottom()
+
 @onready var cbs: NinePatchRect = $Chatbotscreen
 
 var point = preload("res://Assets/New Piskel-13.png (5).png")
