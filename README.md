@@ -11,8 +11,7 @@
 </li><li>All the assets and art is made by hand</li><li>Very fun and enjoyable. Has a really good game loop.</li></ol>
 <p><strong>Functionality 👾</strong>
 </p>
-<ol><li>Use W,S,A,D or Arrow keys to move
-</li><li>Try to not touch the humans. If humans touch you they die!</li><li>Buy upgrades from the shop!&nbsp;</li><li>Buy different Profile Pictures from the pfp shop!</li><li>On the side of the screen: PFP shop, Leaderboard, etc</li></ol>
+<ol><li>Use W,S,A,D or Arrow keys to move</li><li>A AI assistent, only works when downloaded, does not work on browser!</li>Try to not touch the humans. If humans touch you they die!</li><li>Buy upgrades from the shop!&nbsp;</li><li>Buy different Profile Pictures from the pfp shop!</li><li>On the side of the screen: PFP shop, Leaderboard, etc</li></ol>
 <p><strong>Storyline <strong>✏️</strong></strong></p>
 <p>You are the only robot left on earth. You were an AI (ChatGPT) who lives on with eternal power. All sources of energy are exhausted because of human carelessness. Now all humans want you. They are blinded by the fact that it causes electric shocks when they touch you. Your goal kill the least amount of people in given time.&nbsp;</p>
 <p><strong>Theme Usage&nbsp;</strong>⭐</p>
