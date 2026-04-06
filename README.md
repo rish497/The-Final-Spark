@@ -45,7 +45,7 @@ You are the only robot left on earth. You were an AI (ChatGPT) who lives on with
 
 **Time:** The whole game is based on how long you can survive.
 
-**Shock****:** The robot shocks the players when they touch him. Also the currency is literally called shocks.
+**Shock:** The robot shocks the players when they touch him. Also the currency is literally called shocks.
 
 **You can't save them all:** You can't save all the humans. Sometimes you have to sacrifice some humans to save others.  
 
