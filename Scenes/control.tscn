@@ -461,11 +461,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_fx7jt")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Chatbotscreen" type="NinePatchRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.39600003
@@ -492,7 +494,7 @@ scale = Vector2(4.4873004, 4.4873004)
 sprite_frames = SubResource("SpriteFrames_pxugv")
 animation = &"SED"
 autoplay = "SED"
-frame_progress = 0.59069574
+frame_progress = 0.7615619
 
 [node name="Label2" type="Label" parent="Chatbotscreen"]
 layout_mode = 0
@@ -585,9 +587,9 @@ expand_icon = true
 
 [node name="Button3" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 1020.3014
+offset_left = 1028.0
 offset_top = 531.0
-offset_right = 1114.0
+offset_right = 1121.6986
 offset_bottom = 621.0
 texture = ExtResource("5_sky72")
 patch_margin_left = 10
