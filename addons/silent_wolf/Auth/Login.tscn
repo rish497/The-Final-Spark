@@ -92,11 +92,11 @@ focus_mode = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_icons/checked = ExtResource("4_ak74a")
-theme_override_icons/unchecked = ExtResource("5_3asm1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_oxxi6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qt8ss")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o52ik")
+theme_override_icons/checked = ExtResource("4_ak74a")
+theme_override_icons/unchecked = ExtResource("5_3asm1")
 text = "Stay signed in for 30 days"
 expand_icon = true
 
