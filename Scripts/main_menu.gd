@@ -198,7 +198,7 @@ func _on_pfp_pressed() -> void:
 		leaderboard.visible = true
 		GameManager.animate_panel_out(pfp_2)
 		
-var number = [1,2,3,4,5,6,7,8]
+var number = [1,2,3,4,5,6,7,8,9,10]
 func _on_start_pressed() -> void:
 	GameManager.click()
 	if GameManager.tutorial == false:
@@ -246,3 +246,23 @@ func _on_lb_pressed() -> void:
 
 func _on_text_edit_text_changed() -> void:
 	pass # Replace with function body.
+
+@onready var achievements: ScrollContainer = $CanvasLayer/ScrollContainer
+
+func _on_openach_pressed() -> void:
+	if achievements.visible == false:
+		title.visible = false
+		start.visible = false
+		shop.visible = false
+		exit.visible = false
+		leaderboard.visible = false
+		GameManager.slide_in_from_left(achievements)
+	else:
+		title.visible = true
+		start.visible = true
+		shop.visible = true
+		exit.visible = true
+		leaderboard.visible = true
+		GameManager.slide_out_to_left(achievements)
+		await get_tree().create_timer(.5).timeout
+		achievements.visible = false

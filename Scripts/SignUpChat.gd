@@ -90,3 +90,11 @@ func _on_signupsubmit_pressed() -> void:
 		color_rect.visible = false
 		te.editable = true
 		SilentWolf.Auth.register_player(GameManager.profilename, emailentered, passwordentered, confirm_password)
+
+@onready var feature_in_production: Label = $"../feature in production"
+
+func _on_login_pressed() -> void:
+	GameManager.click()
+	GameManager.fade_in(feature_in_production)
+	await get_tree().create_timer(4).timeout
+	GameManager.fade_out(feature_in_production)

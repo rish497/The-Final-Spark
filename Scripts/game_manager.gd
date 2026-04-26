@@ -154,3 +154,34 @@ func _ready() -> void:
 
 func savescore():
 	SilentWolf.Scores.save_score(profilename, wb)
+
+func slide_in_from_left(node: Control, duration: float = 0.5):
+	node.visible = true
+	await get_tree().process_frame
+	
+	if not node.has_meta("original_pos"):
+		node.set_meta("original_pos", node.position)
+	
+	var original_pos = node.get_meta("original_pos")
+	
+	node.position.x = original_pos.x - node.size.x
+	node.modulate.a = 0
+	
+	var tween = create_tween()
+	tween.parallel().tween_property(node, "position:x", original_pos.x, duration)
+	tween.parallel().tween_property(node, "modulate:a", 1.0, duration)
+func slide_out_to_left(node: Control, duration: float = 0.5, distance: float = -1.0):
+	await get_tree().process_frame
+	
+	var original_pos = node.position
+	
+	# Auto distance = width
+	if distance == -1.0:
+		distance = -node.size.x
+	
+	var target_x = original_pos.x + distance
+	
+	var tween = create_tween()
+	tween.tween_property(node, "position:x", target_x, duration)\
+		.set_trans(Tween.TRANS_CUBIC)\
+		.set_ease(Tween.EASE_IN)

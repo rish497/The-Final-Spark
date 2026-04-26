@@ -777,6 +777,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="feature in production" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 268.0
+offset_top = 261.0
+offset_right = 1078.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("1_x7wcp")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_csmqq")
+text = "THIS FEATURE IS STILL BEING MADE AND IS DISABLE UNTIL FURTHER NOTICE"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [connection signal="mouse_entered" from="Textpage/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_entered"]
 [connection signal="mouse_exited" from="Textpage/SearchBar/TextEdit" to="." method="_on_text_edit_mouse_exited"]
 [connection signal="mouse_entered" from="Textpage/SearchBar/Button" to="." method="_on_button_mouse_entered"]
@@ -801,3 +816,4 @@ autowrap_mode = 3
 [connection signal="pressed" from="SignUpChat/PanelContainer/signupsubmit" to="SignUpChat" method="_on_signupsubmit_pressed"]
 [connection signal="mouse_entered" from="SignUpChat/login/login" to="SignUpChat" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="SignUpChat/login/login" to="SignUpChat" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="SignUpChat/login/login" to="SignUpChat" method="_on_login_pressed"]

@@ -22,13 +22,14 @@ func _process(delta: float) -> void:
 		current_value = GameManager.shocktotal
 	elif stat_type == "wave":
 		current_value = GameManager.wb
+	elif stat_type == "time":
+		current_value = GameManager.besttime
 
 	var progress = clamp(float(current_value) / target_value, 0.0, 1.0)
 
 	slider.size.x = progress * $Slider.size.x
-	if nameofachievement == "On the way to the top!":
-		if current_value >= target_value:
-			panel_container.visible = true
+	if current_value >= target_value:
+		panel_container.visible = true
 			
 @onready var claim: Label = $PanelContainer/Label
 
@@ -44,11 +45,26 @@ func _on_button_mouse_exited() -> void:
 var claimed = false
 
 func _on_button_pressed() -> void:
-	if claimed == false:
-		GameManager.shocktotal +=int(prize)
-		GameManager.click()
-		print(GameManager.shocktotal)
-		claimed = true
-		claim.text = "claimed"
-	elif claimed:
-		claim.text = "claimed"
+	if claimed:
+		return
+	
+	GameManager.shocktotal += int(prize)
+	GameManager.click()
+	print(GameManager.shocktotal)
+	
+	claimed = true
+	claim.text = "claimed"
+	
+	await slide_out_and_remove(self)
+	
+func slide_out_and_remove(node: Control, duration: float = 0.4):
+	await get_tree().process_frame
+	
+	var tween = create_tween()
+	tween.parallel().tween_property(node, "position:x", node.position.x - node.size.x, duration)
+	tween.parallel().tween_property(node, "modulate:a", 0.0, duration)
+	
+	await tween.finished
+	
+	# THIS is what triggers the shift-up
+	node.visible = false
