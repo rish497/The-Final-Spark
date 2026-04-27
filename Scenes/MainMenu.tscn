@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://d0av0jcvcn1kj" path="res://Assets/New Piskel-5.png (3).png" id="19_leunp"]
 [ext_resource type="Texture2D" uid="uid://d3qcyy3q20rxs" path="res://Assets/Base_SpriteSheet-1.png.png" id="20_h1v62"]
 [ext_resource type="Texture2D" uid="uid://b7bf3jnjskf6v" path="res://Assets/New Piskel-32.png.png" id="21_65hh5"]
-[ext_resource type="Script" uid="uid://7eiele8ustfg" path="res://scripts/achievement.gd" id="21_m7n2d"]
+[ext_resource type="Script" uid="uid://7eiele8ustfg" path="res://Scripts/achievement.gd" id="21_m7n2d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8saeu"]
 
@@ -1209,6 +1209,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement"]
@@ -1331,6 +1332,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement2"]
@@ -1454,6 +1456,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement3"]
@@ -1577,6 +1580,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement4"]
@@ -1701,6 +1705,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement5"]
@@ -1825,6 +1830,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement6"]
@@ -1949,6 +1955,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement7"]
@@ -2073,6 +2080,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement8"]
@@ -2197,6 +2205,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement10"]
@@ -2321,6 +2330,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement11"]
@@ -2445,6 +2455,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement12"]
@@ -2569,6 +2580,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 0.09599972
+grow_vertical = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/achievement9"]

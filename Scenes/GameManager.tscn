@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqoi6d7vc0g7b"]
+[gd_scene load_steps=10 format=3 uid="uid://dqoi6d7vc0g7b"]
 
 [ext_resource type="Script" uid="uid://xtcu4wq2nnlc" path="res://Scripts/game_manager.gd" id="1_m2tc1"]
 [ext_resource type="AudioStream" uid="uid://bt8hwbpi6h82j" path="res://Sounds/universfield-computer-mouse-click-351398 (1).mp3" id="2_bwyv8"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://ckpfi8t6mpbjw" path="res://Sounds/soul_serenity_sounds-typing-sound-02-229861 (1).mp3" id="6_xqbpr"]
 [ext_resource type="AudioStream" uid="uid://cear2v35yx4bx" path="res://Sounds/ribhavagrawal-purchase-succesful-ingame-230550.mp3" id="7_je8vj"]
 [ext_resource type="AudioStream" uid="uid://cs2upjf22y62y" path="res://Sounds/u_s026io00zm-beep-401570.mp3" id="8_f5c43"]
+[ext_resource type="AudioStream" uid="uid://chfxon00rj6st" path="res://Sounds/ribhavagrawal-achievement-video-game-type-1-230515.mp3" id="9_2ykxs"]
 [ext_resource type="AudioStream" uid="uid://co4b7xpoqopl4" path="res://Sounds/Long Preparation.ogg" id="9_8mb02"]
 
 [node name="Node" type="Node"]
@@ -41,3 +42,7 @@ volume_db = -11.0
 [node name="BgMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_8mb02")
 volume_db = -25.761
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_2ykxs")
+pitch_scale = 0.8

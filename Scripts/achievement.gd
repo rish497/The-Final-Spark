@@ -50,12 +50,11 @@ func _on_button_pressed() -> void:
 	
 	GameManager.shocktotal += int(prize)
 	GameManager.click()
-	print(GameManager.shocktotal)
 	
 	claimed = true
-	claim.text = "claimed"
+	claim.text = "CLAIMED!"
 	
-	await slide_out_and_remove(self)
+	await GameManager.claim_animation(self)
 	
 func slide_out_and_remove(node: Control, duration: float = 0.4):
 	await get_tree().process_frame

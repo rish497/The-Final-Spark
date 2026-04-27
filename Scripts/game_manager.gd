@@ -3,7 +3,7 @@ var strength = 110
 var humans: int = 1
 var money: int = 0
 var wave: int = 1
-var shocktotal:int = 0
+var shocktotal:int = 1000
 var timer: bool = false
 var pause: bool = false
 var play: bool = false
@@ -171,18 +171,26 @@ func slide_in_from_left(node: Control, duration: float = 0.5):
 	var tween = create_tween()
 	tween.parallel().tween_property(node, "position:x", original_pos.x, duration)
 	tween.parallel().tween_property(node, "modulate:a", 1.0, duration)
-func slide_out_to_left(node: Control, duration: float = 0.5, distance: float = -1.0):
+	
+@onready var achievementsound: AudioStreamPlayer = $AudioStreamPlayer2
+	
+func claim_animation(node: Control, duration: float = 0.4):
 	await get_tree().process_frame
 	
-	var original_pos = node.position
-	
-	# Auto distance = width
-	if distance == -1.0:
-		distance = -node.size.x
-	
-	var target_x = original_pos.x + distance
-	
 	var tween = create_tween()
-	tween.tween_property(node, "position:x", target_x, duration)\
+	achievementsound.play()
+	# --- 3. SHAKE ---
+	for i in range(4):
+		tween.tween_property(node, "position:x", node.position.x + 8, 0.03)
+		tween.tween_property(node, "position:x", node.position.x - 8, 0.03)
+
+	# --- 4. SLIDE OUT ---
+	tween.tween_property(node, "position:x", node.position.x - node.size.x, duration)\
 		.set_trans(Tween.TRANS_CUBIC)\
 		.set_ease(Tween.EASE_IN)
+
+	tween.parallel().tween_property(node, "modulate:a", 0.0, duration)
+
+	await tween.finished
+	
+	node.visible = false
