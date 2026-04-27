@@ -1798,12 +1798,12 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6), Packe
 outlines = Array[PackedVector2Array]([PackedVector2Array(-122, 84, -45, 0, 33, -28, 90, -27, 118.35115, -61.24202, 150, -59, 169.13239, -81.01999, 218, -83, 267.03445, -119.15027, 318, -139, 458.72772, -99.5536, 520, -44, 537, -62, 582, -65, 576, -40, 634, 6, 666.07794, -5.4986725, 703, 31, 856, 30, 941.55865, -10.071735, 973, -18, 991.5054, -33.4645, 1014, -44, 1025, -15, 1040, -12, 1074, -37, 1138, -20, 1155, 1, 1159, 34, 1173, 49, 1172, 79, 1192, 106, 1170, 127, 1172, 144, 1158, 157, 1163, 165, 1193, 163, 1213, 141, 1232, 154, 1237, 166, 1250, 169, 1257, 181, 1280, 184, 1312, 228, 1362, 226, 1430, 291, 1392, 371, 1361, 367, 1338, 397, 1314, 398, 1295, 418, 1233, 415, 1201, 442, 1007, 449, 985, 415, 919.16486, 411.94455, 879, 395, 784.5867, 427.00458, 734, 430, 702, 455, 591, 446, 583, 417, 545, 393, 406, 395, 360, 369, 323, 367, 305, 372, 323, 382, 319, 482, 306, 510, 306, 548, 323, 554, 323, 581, 333, 588, 340, 609, 331, 639, 318, 675, 336, 682, 328, 713, 304, 744, 258, 769, 230, 807, 162, 816, 123, 830, 83, 849, -1, 785, -100, 786, -80, 765, -117, 755, -143, 694, -87, 648, -86, 591, -67, 583, -73, 559, -111, 553, -157, 490, -155, 432, -166, 246, -184, 169)])
 agent_radius = 20.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ch5ch"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kma75"]
 bg_color = Color(0.03529412, 0.03529412, 0.03529412, 0)
 border_width_top = 1
 border_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8a21"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pv73p"]
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8s4wd"]
@@ -2757,7 +2757,7 @@ offset_left = 423.0
 offset_top = 124.0
 offset_right = 1052.0
 offset_bottom = 148.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ch5ch")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kma75")
 
 [node name="Button" type="Button" parent="CanvasLayer/Death Screen"]
 layout_mode = 0
@@ -2773,11 +2773,11 @@ theme_override_colors/font_hover_color = Color(0.12941177, 0.12941177, 0.1294117
 theme_override_colors/font_hover_pressed_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
 theme_override_fonts/font = ExtResource("7_iocve")
 theme_override_font_sizes/font_size = 39
-theme_override_styles/normal = SubResource("StyleBoxFlat_l8a21")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l8a21")
-theme_override_styles/hover = SubResource("StyleBoxFlat_l8a21")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_l8a21")
-theme_override_styles/focus = SubResource("StyleBoxFlat_l8a21")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pv73p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pv73p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pv73p")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pv73p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pv73p")
 text = "Main menu"
 
 [node name="person1" type="NinePatchRect" parent="CanvasLayer"]

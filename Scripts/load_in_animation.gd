@@ -36,11 +36,12 @@ func _on_button_pressed() -> void:
 		color_rect.visible = true
 		return
 		
-	var input_text = text_edit.text.to_lower()
+	var input_text = text_edit.text.to_lower().strip_edges()
+
 	text_edit.text = ""
 	text_edit.release_focus()
 
-	if input_text == "make a new game":
+	if input_text.contains("make") and input_text.contains("game"):
 		label.text = "Brand new game"
 		m_1.visible = true
 		r_1.visible = true
@@ -50,7 +51,7 @@ func _on_button_pressed() -> void:
 		text_edit.editable = true
 		text_edit.placeholder_text = 'Type "yes"'
 
-	elif input_text == "yes":
+	elif input_text in ["yes", "y", "yeah", "yep", "sure", "ok", "okay"]:
 		m_2.visible = true
 		r_2.visible = true
 		text_edit.editable = false
@@ -59,12 +60,12 @@ func _on_button_pressed() -> void:
 		await get_tree().create_timer(1).timeout
 		Transition.change_scene(self,"MainMenu")
 		GameManager.bgmusic()
+
 	else:
 		if not m_1.visible:
 			text_edit.placeholder_text = 'Type "make a new game"'
 		else:
 			text_edit.placeholder_text = 'TYPE "YES"'
-
 
 var sound_counter := 0
 

@@ -50,6 +50,7 @@ var p6 = false
 var signupdone = false
 var tutorial = false
 var pn
+var player_rank: int = -1
 @onready var clicksound: AudioStreamPlayer = $AudioStreamPlayer
 @onready var humanwalkingsound: AudioStreamPlayer = $AudioStreamPlayer3
 @onready var robotwalkingsound: AudioStreamPlayer = $AudioStreamPlayer4
