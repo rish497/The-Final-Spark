@@ -250,6 +250,7 @@ func _on_text_edit_text_changed() -> void:
 @onready var achievements: ScrollContainer = $CanvasLayer/ScrollContainer
 
 func _on_openach_pressed() -> void:
+	GameManager.click()
 	if achievements.visible == false:
 		title.visible = false
 		start.visible = false
