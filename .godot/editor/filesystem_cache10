@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777311927
+::res://::1777481010
 achievements.tscn::PackedScene::766707236097517296::1777188095::0::1::::<><><>0<>0<><>::
 config.json::JSON::-1::1777185916::0::1::::<><><>0<>0<><>::
 editundo.ttf::FontFile::3731424344729910977::1773155177::1773155177::1::::<><><>0<>0<>d2fb670c884f59daadbc3e441ea1bb57<>res://.godot/imported/editundo.ttf-077e38c22d202da0086250dcfa9a3e95.fontdata::
-export_presets.cfg::TextFile::-1::1777311927::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1777311946::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::3462513296609380292::1773150315::1773150328::1::::<><><>0<>0<>3756452922b00c53abd25fd2764bb81c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 Minecraft.ttf::FontFile::6952198871095206842::1773155267::1773155271::1::::<><><>0<>0<>58e02784e18d15ec084a716cfc2cbbec<>res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata::
 Mini Pixel.ttf::FontFile::8221805947996771014::1773155328::1773155328::1::::<><><>0<>0<>f0cda6cc0e17d21a247670dcd1d3f743<>res://.godot/imported/Mini Pixel.ttf-590bd13d57c2132008e1703337d3fe7c.fontdata::
@@ -150,17 +150,13 @@ New Piskel-33.png.png::CompressedTexture2D::7383495231327555484::1773552529::177
 Screenshot 2026-03-11 145949.png::CompressedTexture2D::1463938541753452626::1773221418::1773221418::1::::<><><>0<>0<>3a0ce52c4f950e5871214844bfd04f60<>res://.godot/imported/Screenshot 2026-03-11 145949.png-bc5b532bc7e57442c303de01bb1e61bd.ctex::
 Trees_rocks-1.png.png::CompressedTexture2D::3598775947839377016::1773327318::1773327318::1::::<><><>0<>0<>90aa7898e0c55ec140659c96305efbf3<>res://.godot/imported/Trees_rocks-1.png.png-f1b52209d0ba2a83292e204875520152.ctex::
 Water_coasts.png::CompressedTexture2D::7010354515289599439::1773216102::1773216103::1::::<><><>0<>0<>a695ad4fa32756d72fc009e7adea24f0<>res://.godot/imported/Water_coasts.png-26649e714ac3d3271826efa4df7154c3.ctex::
-::res://Export/::1777311923
-::res://Export/Export7/::1777311692
-::res://Export/ExportHTML5/::1775456607
-index.apple-touch-icon.png::CompressedTexture2D::1512148347103819510::1775456607::1775455174::1::::<><><>0<>0<>66e78efc045d04e8ca291f24f78aa567<>res://.godot/imported/index.apple-touch-icon.png-a9b5c5c645cbfbee2bceb0e9a5b5022b.ctex::
-index.icon.png::CompressedTexture2D::6918196185483074187::1775456607::1775455174::1::::<><><>0<>0<>40811a671c0d9b04fd7b62c4b44e6957<>res://.godot/imported/index.icon.png-39a34da20449ac0cf87217b264a06653.ctex::
-index.png::CompressedTexture2D::9164959749657714484::1775456607::1775455174::1::::<><><>0<>0<>49512abc3bc613fc9df2319777761584<>res://.godot/imported/index.png-906208f2e8295ef56de4cbde345ac414.ctex::
+::res://Export/::1777311953
+::res://Export/Export7/::1777311946
 ::res://Export/ExportHTML6/::1777311657
 index.apple-touch-icon.png::CompressedTexture2D::7320996702649898675::1777311631::1777311647::1::::<><><>0<>0<>d1a42fdac1deb44fea96e9d2372e516c<>res://.godot/imported/index.apple-touch-icon.png-a9fe23eb3301b393d6359ac16019cb11.ctex::
 index.icon.png::CompressedTexture2D::3642694558069865075::1777311631::1777311647::1::::<><><>0<>0<>78712ff2cc9801ee0b2f4eff6c5c5db2<>res://.godot/imported/index.icon.png-e60aada76bb53683b461d46c1a642ef4.ctex::
 index.png::CompressedTexture2D::4704319153082065736::1777311631::1777311648::1::::<><><>0<>0<>f0dbec1656a514d94ee080fa2be5b136<>res://.godot/imported/index.png-095f08d67ba4625572e99490ebf932dc.ctex::
-::res://Export/ExportHTML7/::1777311927
+::res://Export/ExportHTML7/::1777311960
 index.apple-touch-icon.png::CompressedTexture2D::555823862322009548::1777311927::1777311931::1::::<><><>0<>0<>3d258b33c3ce9451a73d3891d7f944a2<>res://.godot/imported/index.apple-touch-icon.png-8482b61d474e100cf586d69d4bca8961.ctex::
 index.icon.png::CompressedTexture2D::6533485776942056339::1777311927::1777311931::1::::<><><>0<>0<>0d085992795aea0a13c56deb041948c1<>res://.godot/imported/index.icon.png-4cf38c766dd1db0379f1a7c96ccd97c8.ctex::
 index.png::CompressedTexture2D::7304785102994156713::1777311927::1777311932::1::::<><><>0<>0<>0cf4ae041c86b1200ca1dbe6e09aaae3<>res://.godot/imported/index.png-9e9545c6997a7de3f5e2b1f56ea84c9a.ctex::
